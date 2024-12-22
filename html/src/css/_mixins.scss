@@ -1,0 +1,5 @@
+@mixin big-titles {
+    font-size: rem(40);
+    font-weight: bold;
+    color: $primaryColor;
+}
