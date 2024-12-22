@@ -12,12 +12,13 @@
 html, body {
     font-size: 16px;
     font-family: "Montserrat", serif;
+    box-sizing: border-box;
 }
 
 
 .container {
     width: 100%;
-    max-width: 1600px;
+    max-width: 1800px;
     margin: 0 auto;
 
     .logo {
@@ -44,23 +45,49 @@ header {
 
             font-size: 14px;
 
+            
 
-            li {
+            > li {
                 display: inline-block;
                 margin-inline: 2rem;
                 text-transform: uppercase;
                 color: #404040;
                 position: relative;
 
+
+
                 a {
                     color: inherit;
                     text-decoration: none;
                     font-weight: bold;
+                    display: block;
+                    padding-bottom: .5rem;
+                    border-bottom: solid 5px transparent;
+                    position: relative;
+                    
 
                     &:hover {
                         color: #6290fa;
+                        border-bottom: solid 5px #6290fa;
                         
                     }
+
+                    &.has-children::after {
+                        content: "";
+                        position: absolute;
+                        width: 12px;
+                        height: 12px;
+                        background-image: url("../../img/arrow-down.svg");
+                        background-size: 12px;
+                        background-repeat: no-repeat;
+                        right: -17px;
+                        transition: all 0.3s;
+                    }
+
+                    &.has-children-rotated::after {
+                        transform: rotate(180deg);
+                    }
+
                 }
 
                 ul {
@@ -70,6 +97,7 @@ header {
                     padding: 2rem;
                     background-color: white;
                     font-size: 1rem;
+                    margin-top: 2rem;
                     
 
                     li {
@@ -79,10 +107,14 @@ header {
                         padding-bottom: 1rem;
                         border-bottom: solid 1px #e0e0e0;
                         
+                        &:last-child {
+                            margin-left: 0;
+                        }
+
 
                         a {
                             font-weight: normal;
-                            
+
                             &:hover {
                                 color: #6290fa;
                                 font-weight: bold;
@@ -98,6 +130,20 @@ header {
                 }
 
 
+                &:last-child {
+
+                    margin-left: 6rem;
+
+                    ul {
+                        min-width: auto;
+                        max-width: 6ch;
+                        padding-inline: 1rem;
+                        margin-top: 0;
+                    }
+
+                }
+
+
             }
         }
     }
@@ -105,3 +151,63 @@ header {
 
 
 
+.rotator {
+    .slide-item {
+        position: relative;
+        text-align: right;
+
+        img {
+           display: inline-block;
+        }
+
+        .cta {
+            position: absolute;
+            left: 0;
+            top: 25%;
+            width: 40%;
+            text-align: left;
+
+            span {
+                background-color: blue;
+                background: linear-gradient(90deg, rgba(0,26,134,1) 30%, rgba(80,139,176,1) 100%);
+                color:white;
+                font-size: 3.5rem;
+                font-weight: bold;
+                line-height: 5.5rem;
+                border-top-left-radius: 1rem;
+                border-bottom-right-radius: 1rem;
+                display: inline;
+                padding: .35rem;
+                padding-inline: 1rem;
+
+                /* Needs prefixing */
+                box-decoration-break: clone;
+                -webkit-box-decoration-break: clone;
+
+            }
+        }
+    }    
+}
+
+
+.slick-dots {
+    text-align: left;
+    bottom: 45px;
+}
+
+.slick-dots li {
+    width: 50px;
+}
+
+.slick-dots li button:before {
+    font-size: 150px;
+}
+
+.slick-dots li button:before {
+    color: #55CCC9;
+}
+
+.slick-dots li.slick-active button:before {
+    color: #55CCC9;
+    opacity: .75;
+}
