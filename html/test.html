@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Red Boxes Layout</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                background-color: #00008b; /* Dark blue background */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+            .container {
+                display: flex;
+                gap: 20px;
+                position: relative;
+            }
+            .box {
+                width: 200px;
+                height: 300px;
+                background-color: #ff4500; /* OrangeRed */
+                color: white;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                padding: 20px;
+                position: relative;
+                z-index: 1;
+            }
+            .box::before,
+            .box::after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 20px;
+                background-color: #ff4500; /* OrangeRed */
+                z-index: 2;
+            }
+            .box::before {
+                top: -20px;
+            }
+            .box::after {
+                bottom: -20px;
+            }
+            .icon {
+                font-size: 60px;
+                margin-bottom: 20px;
+            }
+            .text {
+                font-size: 18px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="box">
+                <div class="icon">⚙️</div>
+                <div class="text">GODINA POSLOVANJA</div>
+            </div>
+            <div class="box">
+                <div class="icon">🤝</div>
+                <div class="text">OD 2001. GODINE MARKETING I DISTRIBUCIJA</div>
+            </div>
+            <div class="box">
+                <div class="icon">🇭🇷</div>
+                <div class="text">VIŠE OD 30 PROIZVODA U PORTFOLIU</div>
+            </div>
+        </div>
+    </body>
+</html>

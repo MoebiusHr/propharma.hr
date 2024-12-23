@@ -15,6 +15,143 @@ html, body {
     box-sizing: border-box;
 }
 
+h2 {
+
+    color: #001689;
+    font-size: 2.25rem;
+    font-weight: bold;
+    margin-bottom: 2.5rem;
+    padding-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 70%;
+        height: 7px;
+        background-color: #55CCC9;
+        bottom: 0;
+        left: 0;
+        margin: 0 auto;
+    }
+
+}
+
+
+h3 {
+
+    color: #404040;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+    padding-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+    letter-spacing: 3px;
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 70%;
+        height: 7px;
+        background-color: #55CCC9;
+        bottom: 0;
+        left: 0;
+        margin: 0 auto;
+    }
+
+}
+
+
+h4 {
+    font-size: 1.3125rem;
+    font-weight: bolder;
+    color: #404040;
+
+    span {
+        font-size: 1rem;
+        font-weight: normal;
+        display: block;
+    }
+}
+
+
+.slick-dots {
+    text-align: left;
+    bottom: 45px;
+
+    li::before {
+        background-image: none;
+    }
+}
+
+.slick-dots li {
+    width: 50px;
+}
+
+.slick-dots li button:before {
+    font-size: 150px;
+}
+
+.slick-dots li button:before {
+    color: #55CCC9;
+}
+
+.slick-dots li.slick-active button:before {
+    color: #55CCC9;
+    opacity: .75;
+}
+
+
+
+p {
+    margin-bottom: 1.5rem;
+}
+
+
+ul {
+    li {
+        position: relative;
+        padding-left: 45px;
+        margin-bottom: 1.5rem;
+
+        &::before {
+            position: absolute;
+            content: "";
+            position: absolute;
+            top: -5px;
+            left: 0;
+            background-image: url(../../img/arrow-right.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 35px;
+            height: 30px;
+        }
+    }
+}
+
+
+
+.btn {
+    display: inline-block;
+    padding: .75rem 2rem;
+    background-color: #55CCC9;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    border-radius: 1.25rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    letter-spacing: 5px;
+
+    &:hover {
+        background-color: #001689;
+        padding-inline: 4rem;
+    }
+}
+
 
 .container {
     width: 100%;
@@ -193,24 +330,137 @@ header {
 }
 
 
-.slick-dots {
-    text-align: left;
-    bottom: 45px;
+.about {
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+
+    h2 {
+        &::after {
+            left: 15%;
+        }
+    }
+
+    p {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        margin-bottom: 2rem;
+    }
 }
 
-.slick-dots li {
-    width: 50px;
+
+.prodajni-program {
+    display: flex;
+    background-image: url(../../img/pilule-farmaceutika.png);
+    background-repeat: no-repeat;
+    background-size: 65%;
+    background-position: right;
+    padding-block: 3rem;
+    margin-bottom: 6rem;
+
+    > div {
+        box-sizing: border-box;
+        flex: 0 0 45%;
+        background-color: rgba(5, 42, 67, .97);
+        padding: 7rem 5% 7rem 15%;
+        color: white;
+    }
+
+    h2 {
+        color: white;
+    }
 }
 
-.slick-dots li button:before {
-    font-size: 150px;
+
+
+.prodajni-program-izdvojeno {
+
+    text-align: center;
+
+    h3 {
+
+        margin-bottom: 3rem;
+        &::after {
+            width: 50%;
+            left: 25%;
+        }
+    }
+
 }
 
-.slick-dots li button:before {
-    color: #55CCC9;
+
+.product-item-wrapper {
+    display: flex;
+    margin-bottom: 6rem;
+    gap: 2rem;
+    justify-content: center;
+
+    .item {
+        flex: 0 0 20%;
+        border: #DCE3E1 solid 1px;
+        padding: 3rem;
+
+        img {
+            display: block;
+            width: 100%;
+            margin-bottom: 3rem;
+        }
+    }
 }
 
-.slick-dots li.slick-active button:before {
-    color: #55CCC9;
-    opacity: .75;
+
+.teaser-wrapper {
+    background-color: #000C4D;
+    position: relative;
+    margin-bottom: 6rem;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        height: 6rem;
+        background-color: white;
+        width: 100%;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        height: 6rem;
+        background-color: white;
+        width: 100%;
+        bottom: 0;
+    }
+
+}
+
+.teaser {
+    display: flex;
+    justify-content: center;
+    padding: 3rem;
+    gap: 3rem;
+    position: relative;
+
+    .item {
+        position: relative;
+        background-color: red;
+        background: linear-gradient(180deg, #618ef8 30%, #02114a 100%);
+        flex: 0 0 10%;
+        padding: 3rem;
+        text-align: center;
+        color: white;
+        font-size: 1.375rem;
+        text-transform: uppercase;
+        line-height: 2rem;
+        z-index: 100;
+        border-top-left-radius: 6rem;
+        border-bottom-right-radius: 6rem;
+
+
+        img {
+            display: inline-block;
+            margin-bottom: 3rem;
+        }
+    }
 }
