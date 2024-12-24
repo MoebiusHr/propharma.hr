@@ -15,6 +15,14 @@ html, body {
     box-sizing: border-box;
 }
 
+.center {
+    text-align: center;
+}
+
+.img-full {
+    max-width: 100%;
+}
+
 h2, h1 {
 
     color: #001689;
@@ -619,6 +627,17 @@ ul#bread {
             background-image: none;
         }
 
+        &:last-child {
+            font-weight: bold;
+
+            &::after {
+                content: "";
+            }
+
+        }
+
+
+
         a {
             color: inherit;
             text-decoration: none;
@@ -636,7 +655,6 @@ ul#bread {
 .about-teaser {
     display: flex;
     padding-block: 3rem;
-    margin-bottom: 6rem;
     position: relative;
     align-items: center;
     position: relative;
@@ -657,7 +675,7 @@ ul#bread {
         }
     }
 
-    >div.media {
+    > div.media {
         flex: 0 0 50%;
         text-align: right;
         position: relative;
@@ -666,10 +684,50 @@ ul#bread {
 
         img {
             width: calc(100% + 200px);
+            display: block;
         }
     }
 
     h2 {
         color: white;
     }
+}
+
+
+.facts {
+
+    padding-block: 6rem;
+
+    .item {
+        margin-left: 39%;
+        display: flex;
+
+        .ico {
+
+        }
+
+        .txt {
+            padding-left: 6rem;
+            font-size: 1.3125rem;
+            line-height: 1.95rem;
+
+            h3 {
+                color: #001689;
+                text-transform: none;
+                letter-spacing: normal;
+                margin-bottom: 0;
+                font-size: 1.9375rem;
+                font-weight: bold;
+
+                &::after {
+                    height: 0;
+                }
+            }
+        }
+
+    }
+}
+
+.facts--dark {
+    background-color: rgba(142, 172, 182, .14);
 }
