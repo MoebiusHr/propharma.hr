@@ -15,7 +15,7 @@ html, body {
     box-sizing: border-box;
 }
 
-h2 {
+h2, h1 {
 
     color: #001689;
     font-size: 2.25rem;
@@ -390,6 +390,8 @@ header {
 
 
 
+
+
 .prodajni-program-izdvojeno {
 
     text-align: center;
@@ -593,3 +595,74 @@ footer {
 
 }
 
+ul#bread {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    color: #000;
+    text-transform: uppercase;
+    margin: 3rem 0;    
+    font-size: .875rem;
+
+    li {
+        display: inline-block;
+        padding-right: 0;
+        padding-left: 0;
+        color: #000;
+
+        &::after {
+            content: " / ";
+            margin-left: 5px;
+        }
+
+        &::before {
+            background-image: none;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+}
+
+
+
+.about-teaser {
+    // display: flex;
+    // background-image: url(../../img/pilule-farmaceutika.png);
+    // background-repeat: no-repeat;
+    // background-size: 65%;
+    // background-position: right;
+    padding-block: 3rem;
+    margin-bottom: 6rem;
+    line-height: 1.5rem;
+    position: relative;
+    min-height: 600px;
+
+    > div.txt {
+        width: 45%;
+        box-sizing: border-box;
+        background: linear-gradient(180deg, rgba(0,26,134,.95) 30%, rgba(80,139,176,.95) 100%);
+        padding: 7rem 5% 7rem 15%;
+        color: white;
+        position: absolute;
+
+        p {
+            width: 80%;
+        }
+    }
+
+    >div.media {
+        text-align: right;
+    }
+
+    h2 {
+        color: white;
+    }
+}
