@@ -634,24 +634,23 @@ ul#bread {
 
 
 .about-teaser {
-    // display: flex;
-    // background-image: url(../../img/pilule-farmaceutika.png);
-    // background-repeat: no-repeat;
-    // background-size: 65%;
-    // background-position: right;
+    display: flex;
     padding-block: 3rem;
     margin-bottom: 6rem;
-    line-height: 1.5rem;
     position: relative;
-    min-height: 600px;
+    align-items: center;
+    position: relative;
 
     > div.txt {
-        width: 45%;
+        flex: 0 0 50%;
         box-sizing: border-box;
         background: linear-gradient(180deg, rgba(0,26,134,.95) 30%, rgba(80,139,176,.95) 100%);
-        padding: 7rem 5% 7rem 15%;
+        padding: 10rem 5% 10rem 15%;
         color: white;
-        position: absolute;
+        position: relative;
+        z-index: 100;
+        font-size: 1.125rem;
+        line-height: 2rem;
 
         p {
             width: 80%;
@@ -659,7 +658,15 @@ ul#bread {
     }
 
     >div.media {
+        flex: 0 0 50%;
         text-align: right;
+        position: relative;
+        z-index: 10;
+        left: -200px;
+
+        img {
+            width: calc(100% + 200px);
+        }
     }
 
     h2 {
