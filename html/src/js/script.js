@@ -19,6 +19,11 @@ $(function() {
         $(this).prev().removeClass("has-children-rotated");
     })
 
+
+    $(".filter>p").on("click", function() {
+        $(this).toggleClass("active");
+    })
+
     $(document).on( 
         'keydown', function(event) { 
         if (event.key == "Escape") { 
