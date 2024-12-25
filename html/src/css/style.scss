@@ -14,6 +14,7 @@ html, body {
     font-family: "Montserrat", serif;
     box-sizing: border-box;
     letter-spacing: 0.03rem;
+    color: #404040;
 }
 
 .center {
@@ -447,12 +448,13 @@ header {
 
 .product-item-wrapper {
     display: flex;
+    flex-wrap: wrap;
     margin-bottom: 6rem;
     gap: 2rem;
     justify-content: center;
 
     .item {
-        flex: 0 0 20%;
+        flex: 0 0 23.4%;
         border: #DCE3E1 solid 1px;
         padding: 3rem;
 
@@ -463,6 +465,12 @@ header {
         }
     }
 }
+
+
+.product-item-wrapper-left {
+    justify-content: flex-start;
+}
+
 
 
 .teaser-wrapper {
@@ -561,6 +569,17 @@ header {
             display: block;
             max-width: 100%;
         }
+    }
+}
+
+
+.more {
+
+    text-align: center;
+    margin-bottom: 2rem;
+
+    h5 {
+
     }
 }
 
@@ -766,6 +785,7 @@ ul#bread {
     padding-left: 11rem;
     display: flex;
     align-items: center;
+    margin-bottom: 3rem;
 
     .description {
         flex: 0 0 35%;
@@ -865,6 +885,86 @@ ul#bread {
 
         }
 
-
     }
+}
+
+
+.main-image {
+
+    img {
+        border: solid 1px #e0e0e0;
+    }
+
+}
+
+.product {
+
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 3rem;
+
+    .thumbs {
+        display: flex;
+        flex-direction: column;
+
+        .thumb {
+
+            margin-bottom: 1.5rem;
+
+            img {
+                max-width: 150px;
+                border: solid 1px #e0e0e0;
+            }
+        }
+    }
+
+    .product-content {
+
+        max-width: 70ch;
+        line-height: 1.75rem;
+
+        span.pre-title {
+            display: block;
+            margin-bottom: .5rem;
+            margin-top: 2rem;
+        }
+    
+
+        > div {
+            margin-bottom: 2rem;
+        }
+    
+        span.label {
+            display: block;
+            text-transform: uppercase;
+            font-size: 0.8125rem;
+            letter-spacing: 0.080625rem;
+            margin-bottom: 0rem;
+            font-weight: bolder;
+            margin-bottom: .5rem;
+        }
+    
+        h1 {
+            color: #404040;
+            font-size: 2rem;
+            margin-bottom: 6rem;
+    
+            &::after {
+                height: 0;
+            }
+        }
+
+        ul {
+            li {
+                margin-bottom: .5rem;
+
+                &::before {
+                    top: -1px
+                }
+            }
+        }
+    }
+
+
+
 }
