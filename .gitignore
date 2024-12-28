@@ -92,3 +92,13 @@ propharma.hr/site/assets/sessions/.htaccess
 propharma.hr/site/assets/sessions/sess_u4uqol8lglkboup9mhfn65pua0
 propharma.hr/site/templates/.parcel-cache/data.mdb
 propharma.hr/site/templates/.parcel-cache/lock.mdb
+propharma.hr/docker/mysql/docker/caches.MYD
+propharma.hr/docker/mysql/docker/field_slika.MYD
+propharma.hr/docker/mysql/docker/field_title.MYD
+propharma.hr/docker/mysql/docker/fieldgroups_fields.MYD
+propharma.hr/docker/mysql/docker/fieldgroups.MYD
+propharma.hr/docker/mysql/docker/fields.MYD
+propharma.hr/docker/mysql/docker/modules.MYD
+propharma.hr/docker/mysql/docker/pages_access.MYD
+propharma.hr/docker/mysql/docker/pages_parents.MYD
+propharma.hr/docker/mysql/docker/templates.MYD
