@@ -155,3 +155,12 @@ propharma.hr/docker/mysql/docker/session_login_throttle.MYD
 propharma.hr/docker/mysql/docker/session_login_throttle.MYI
 propharma.hr/docker/mysql/docker/templates.MYD
 propharma.hr/docker/mysql/docker/templates.MYI
+propharma.hr/docker/mysql/docker/caches.MYD
+propharma.hr/docker/mysql/docker/field_slika.MYD
+propharma.hr/docker/mysql/docker/field_title.MYD
+propharma.hr/docker/mysql/docker/fieldgroups_fields.MYD
+propharma.hr/docker/mysql/docker/fieldgroups.MYD
+propharma.hr/docker/mysql/docker/fields.MYD
+propharma.hr/docker/mysql/docker/pages_access.MYD
+propharma.hr/docker/mysql/docker/pages_parents.MYD
+propharma.hr/docker/mysql/docker/templates.MYD

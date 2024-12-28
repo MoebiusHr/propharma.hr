@@ -21,7 +21,7 @@ CREATE TABLE IF NOT EXISTS `caches` (
   KEY `expires` (`expires`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 
--- Dumping data for table docker.caches: 8 rows
+-- Dumping data for table docker.caches: 7 rows
 DELETE FROM `caches`;
 /*!40000 ALTER TABLE `caches` DISABLE KEYS */;
 INSERT INTO `caches` (`name`, `data`, `expires`) VALUES
@@ -31,8 +31,7 @@ INSERT INTO `caches` (`name`, `data`, `expires`) VALUES
 	('ModulesVerbose.info', '{"179":{"summary":"Field that stores a multiple lines of text in multiple languages","core":true,"versionStr":"1.0.0"},"171":{"summary":"ProcessWire multi-language support.","author":"Ryan Cramer","core":true,"versionStr":"1.0.3"},"181":{"summary":"Organizes multi-language fields into tabs for a cleaner easier to use interface.","author":"adamspruijt, ryan, flipzoom","core":true,"versionStr":"1.1.7"},"172":{"summary":"Manage system languages","author":"Ryan Cramer","core":true,"versionStr":"1.0.3","permissions":{"lang-edit":"Administer languages and static translation files"}},"178":{"summary":"Field that stores a page title in multiple languages. Use this only if you want title inputs created for ALL languages on ALL pages. Otherwise create separate languaged-named title fields, i.e. title_fr, title_es, title_fi, etc. ","author":"Ryan Cramer","core":true,"versionStr":"1.0.0"},"173":{"summary":"Provides language translation capabilities for ProcessWire core and modules.","author":"Ryan Cramer","core":true,"versionStr":"1.0.3"},"177":{"summary":"Field that stores a single line of text in multiple languages","core":true,"versionStr":"1.0.0"},"176":{"summary":"Required to use multi-language fields.","author":"Ryan Cramer","core":true,"versionStr":"1.0.1"},"180":{"summary":"Required to use multi-language page names.","author":"Ryan Cramer","core":true,"versionStr":"0.1.3"},"125":{"summary":"Throttles login attempts to help prevent dictionary attacks.","core":true,"versionStr":"1.0.3"},"115":{"summary":"Adds a render method to Page and caches page output.","core":true,"versionStr":"1.0.5"},"61":{"summary":"Entity encode ampersands, quotes (single and double) and greater-than\\/less-than signs using htmlspecialchars(str, ENT_QUOTES). It is recommended that you use this on all text\\/textarea fields except those using a rich text editor or a markup language like Markdown.","core":true,"versionStr":"1.0.0"},"156":{"summary":"Front-end to the HTML Purifier library.","core":true,"versionStr":"4.9.7"},"67":{"summary":"Generates markup for data tables used by ProcessWire admin","core":true,"versionStr":"1.0.7"},"98":{"summary":"Generates markup for pagination navigation","core":true,"versionStr":"1.0.5"},"113":{"summary":"Adds renderPager() method to all PaginatedArray types, for easy pagination output. Plus a render() method to PageArray instances.","core":true,"versionStr":"1.0.0"},"60":{"summary":"Select one or more pages","core":true,"versionStr":"1.0.8"},"36":{"summary":"Selection of a single value from a select pulldown","core":true,"versionStr":"1.0.2"},"86":{"summary":"Text input validated as a ProcessWire Page name field","core":true,"versionStr":"1.0.6"},"34":{"summary":"Single line of text","core":true,"versionStr":"1.0.6"},"174":{"summary":"Multiple Page selection using auto completion and sorting capability. Intended for use as an input field for Page reference fields.","core":true,"versionStr":"1.1.3"},"155":{"summary":"TinyMCE rich text editor version 6.4.1.","core":true,"versionStr":"6.1.6"},"15":{"summary":"Selection of a single page from a ProcessWire page tree list","core":true,"versionStr":"1.0.1"},"137":{"summary":"Selection of multiple pages from a ProcessWire page tree list","core":true,"versionStr":"1.0.3"},"25":{"summary":"Multiple selection, progressive enhancement to select multiple","core":true,"versionStr":"2.0.3"},"131":{"summary":"Form button element that you can optionally pass an href attribute to.","core":true,"versionStr":"1.0.0"},"78":{"summary":"Groups one or more fields together in a container","core":true,"versionStr":"1.0.1"},"80":{"summary":"E-Mail address in valid format","core":true,"versionStr":"1.0.2"},"90":{"summary":"Floating point number with precision","core":true,"versionStr":"1.0.5"},"182":{"summary":"CKEditor textarea rich text editor.","core":true,"versionStr":"1.7.1"},"39":{"summary":"Radio buttons for selection of a single item","core":true,"versionStr":"1.0.6"},"149":{"summary":"Build a page finding selector visually.","author":"Avoine + ProcessWire","core":true,"versionStr":"0.2.8"},"38":{"summary":"Multiple checkbox toggles","core":true,"versionStr":"1.0.8"},"112":{"summary":"Handles input of Page Title and auto-generation of Page Name (when name is blank)","core":true,"versionStr":"1.0.2"},"183":{"summary":"A toggle providing similar input capability to a checkbox but much more configurable.","core":true,"versionStr":"0.0.1"},"37":{"summary":"Single checkbox toggle","core":true,"versionStr":"1.0.6"},"30":{"summary":"Contains one or more fields in a form","core":true,"versionStr":"1.0.7"},"108":{"summary":"URL in valid format","core":true,"versionStr":"1.0.3"},"41":{"summary":"Text input validated as a ProcessWire name field","core":true,"versionStr":"1.0.0"},"43":{"summary":"Select multiple items from a list","core":true,"versionStr":"1.0.1"},"79":{"summary":"Contains any other markup and optionally child Inputfields","core":true,"versionStr":"1.0.2"},"55":{"summary":"One or more file uploads (sortable)","core":true,"versionStr":"1.2.8"},"122":{"summary":"Password input with confirmation field that doesn&#039;t ever echo the input back.","core":true,"versionStr":"1.0.2"},"32":{"summary":"Form submit button","core":true,"versionStr":"1.0.3"},"168":{"summary":"Select an icon","core":true,"versionStr":"0.0.3"},"56":{"summary":"One or more image uploads (sortable)","core":true,"versionStr":"1.2.7"},"85":{"summary":"Integer (positive or negative)","core":true,"versionStr":"1.0.5"},"35":{"summary":"Multiple lines of text","core":true,"versionStr":"1.0.3"},"94":{"summary":"Inputfield that accepts date and optionally time","core":true,"versionStr":"1.0.7"},"40":{"summary":"Hidden value in a form","core":true,"versionStr":"1.0.1"},"175":{"summary":"Enables input of user entered tags or selection of predefined tags.","core":true,"versionStr":"0.0.6"},"151":{"summary":"Provides lightbox capability for image galleries. Replacement for FancyBox. Uses Magnific Popup by @dimsemenov.","href":"https:\\/\\/github.com\\/dimsemenov\\/Magnific-Popup\\/","core":true,"versionStr":"1.1.0"},"103":{"summary":"Provides a jQuery plugin for sorting tables.","href":"https:\\/\\/mottie.github.io\\/tablesorter\\/","core":true,"versionStr":"2.31.3"},"116":{"summary":"jQuery Core as required by ProcessWire Admin and plugins","href":"https:\\/\\/jquery.com","core":true,"versionStr":"1.12.4"},"45":{"summary":"Provides a jQuery plugin for generating tabs in ProcessWire.","core":true,"versionStr":"1.1.0"},"117":{"summary":"jQuery UI as required by ProcessWire and plugins","href":"https:\\/\\/ui.jquery.com","core":true,"versionStr":"1.10.4"},"114":{"summary":"Adds various permission methods to Page objects that are used by Process modules.","core":true,"versionStr":"1.0.5"},"109":{"summary":"Handles emptying of Page trash","core":true,"versionStr":"1.0.3"},"17":{"summary":"Add a new page","core":true,"versionStr":"1.0.9"},"165":{"summary":"Shows a list of recently edited pages in your admin.","author":"Ryan Cramer","href":"http:\\/\\/modules.processwire.com\\/","core":true,"versionStr":"0.0.2","permissions":{"page-edit-recent":"Can see recently edited pages"},"page":{"name":"recent-pages","parent":"page","title":"Recent"}},"12":{"summary":"List pages in a hierarchical tree structure","core":true,"versionStr":"1.2.4"},"104":{"summary":"Provides a page search engine for admin use.","core":true,"versionStr":"1.0.8"},"7":{"summary":"Edit a Page","core":true,"versionStr":"1.1.2"},"47":{"summary":"List and edit the templates that control page output","core":true,"versionStr":"1.1.4","searchable":"templates"},"66":{"summary":"Manage system users","core":true,"versionStr":"1.0.7","searchable":"users"},"87":{"summary":"Acts as a placeholder Process for the admin root. Ensures proper flow control after login.","core":true,"versionStr":"1.0.1"},"83":{"summary":"All page views are routed through this Process","core":true,"versionStr":"1.0.6"},"167":{"summary":"View and manage system logs.","author":"Ryan Cramer","core":true,"versionStr":"0.0.2","permissions":{"logs-view":"Can view system logs","logs-edit":"Can manage system logs"},"page":{"name":"logs","parent":"setup","title":"Logs"}},"48":{"summary":"Edit individual fields that hold page data","core":true,"versionStr":"1.1.4","searchable":"fields"},"50":{"summary":"List, edit or install\\/uninstall modules","core":true,"versionStr":"1.2.0"},"138":{"summary":"Enables user to change their password, email address and other settings that you define.","core":true,"versionStr":"1.0.5"},"121":{"summary":"Provides a link capability as used by some Fieldtype modules (like rich text editors).","core":true,"versionStr":"1.1.2"},"136":{"summary":"Manage system permissions","core":true,"versionStr":"1.0.1"},"129":{"summary":"Provides image manipulation functions for image fields and rich text editors.","core":true,"versionStr":"1.2.1"},"76":{"summary":"Lists the Process assigned to each child page of the current","core":true,"versionStr":"1.0.1"},"134":{"summary":"List, Edit and Add pages of a specific type","core":true,"versionStr":"1.0.1"},"68":{"summary":"Manage user roles and what permissions are attached","core":true,"versionStr":"1.0.4"},"150":{"summary":"Admin tool for finding and listing pages by any property.","author":"Ryan Cramer","core":true,"versionStr":"0.2.6","permissions":{"page-lister":"Use Page Lister"}},"14":{"summary":"Handles page sorting and moving for PageList","core":true,"versionStr":"1.0.0"},"10":{"summary":"Login to ProcessWire","core":true,"versionStr":"1.0.9"},"27":{"summary":"Field that stores a reference to another module","core":true,"versionStr":"1.0.2"},"1":{"summary":"Field that stores multiple lines of text","core":true,"versionStr":"1.0.7"},"89":{"summary":"Field that stores a floating point number","core":true,"versionStr":"1.0.7"},"3":{"summary":"Field that stores a single line of text","core":true,"versionStr":"1.0.2"},"57":{"summary":"Field that stores one or more GIF, JPG, or PNG images","core":true,"versionStr":"1.0.2"},"4":{"summary":"Field that stores one or more references to ProcessWire pages","core":true,"versionStr":"1.0.7"},"84":{"summary":"Field that stores an integer","core":true,"versionStr":"1.0.2"},"28":{"summary":"Field that stores a date and optionally time","core":true,"versionStr":"1.0.5"},"111":{"summary":"Field that stores a page title","core":true,"versionStr":"1.0.0"},"107":{"summary":"Open a fieldset to group fields. Same as Fieldset (Open) except that it displays in a tab instead.","core":true,"versionStr":"1.0.0"},"133":{"summary":"Field that stores a hashed and salted password","core":true,"versionStr":"1.0.1"},"97":{"summary":"This Fieldtype stores an ON\\/OFF toggle via a single checkbox. The ON value is 1 and OFF value is 0.","core":true,"versionStr":"1.0.1"},"106":{"summary":"Close a fieldset opened by FieldsetOpen. ","core":true,"versionStr":"1.0.0"},"6":{"summary":"Field that stores one or more files","core":true,"versionStr":"1.0.7"},"135":{"summary":"Field that stores a URL","core":true,"versionStr":"1.0.1"},"29":{"summary":"Field that stores an e-mail address","core":true,"versionStr":"1.0.1"},"105":{"summary":"Open a fieldset to group fields. Should be followed by a Fieldset (Close) after one or more fields.","core":true,"versionStr":"1.0.1"},"169":{"summary":"Maintains a collection of fields that are repeated for any number of times.","core":true,"versionStr":"1.1.2"},"170":{"summary":"Repeats fields from another template. Provides the input for FieldtypeRepeater.","core":true,"versionStr":"1.1.1"},"139":{"summary":"Manages system versions and upgrades.","core":true,"versionStr":"0.2.0"},"148":{"summary":"Minimal admin theme that supports all ProcessWire features.","core":true,"versionStr":"0.1.4"},"166":{"summary":"Uikit v3 admin theme","core":true,"versionStr":"0.3.3"},"184":{"summary":"Validate JPG, PNG, or GIF bitmap image files","versionStr":"0.0.3"}}', '2010-04-08 03:10:01'),
 	('ModulesVersions.info', '[]', '2010-04-08 03:10:01'),
 	('Modules.info', '{"179":{"name":"FieldtypeTextareaLanguage","title":"Textarea (Multi-language)","version":100,"requiresVersions":{"LanguageSupportFields":[">=",0]},"singular":true,"created":1735207264},"171":{"name":"LanguageSupport","title":"Languages Support","version":103,"installs":["ProcessLanguage","ProcessLanguageTranslator"],"autoload":true,"singular":true,"created":1735207254,"configurable":3,"addFlag":32},"181":{"name":"LanguageTabs","title":"Languages Support - Tabs","version":117,"requiresVersions":{"LanguageSupport":[">=",0]},"autoload":"template=admin","singular":true,"created":1735207279,"configurable":4},"172":{"name":"ProcessLanguage","title":"Languages","version":103,"icon":"language","requiresVersions":{"LanguageSupport":[">=",0]},"permission":"lang-edit","singular":1,"created":1735207254,"configurable":3,"useNavJSON":true},"178":{"name":"FieldtypePageTitleLanguage","title":"Page Title (Multi-Language)","version":100,"requiresVersions":{"LanguageSupportFields":[">=",0],"FieldtypeTextLanguage":[">=",0]},"singular":true,"created":1735207264},"173":{"name":"ProcessLanguageTranslator","title":"Language Translator","version":103,"requiresVersions":{"LanguageSupport":[">=",0]},"permission":"lang-edit","singular":1,"created":1735207255,"configurable":4},"177":{"name":"FieldtypeTextLanguage","title":"Text (Multi-language)","version":100,"requiresVersions":{"LanguageSupportFields":[">=",0]},"singular":true,"created":1735207264},"176":{"name":"LanguageSupportFields","title":"Languages Support - Fields","version":101,"requiresVersions":{"LanguageSupport":[">=",0]},"installs":["FieldtypePageTitleLanguage","FieldtypeTextareaLanguage","FieldtypeTextLanguage"],"autoload":true,"singular":true,"created":1735207264},"180":{"name":"LanguageSupportPageNames","title":"Languages Support - Page Names","version":13,"requiresVersions":{"LanguageSupport":[">=",0],"LanguageSupportFields":[">=",0]},"autoload":true,"singular":true,"created":1735207270,"configurable":4},"125":{"name":"SessionLoginThrottle","title":"Session Login Throttle","version":103,"autoload":"function","singular":true,"created":1735206968,"configurable":3},"115":{"name":"PageRender","title":"Page Render","version":105,"autoload":true,"singular":true,"created":1735206968,"configurable":3,"permanent":true},"61":{"name":"TextformatterEntities","title":"HTML Entity Encoder (htmlspecialchars)","version":100,"created":1735206968},"156":{"name":"MarkupHTMLPurifier","title":"HTML Purifier","version":497,"created":1735206968},"67":{"name":"MarkupAdminDataTable","title":"Admin Data Table","version":107,"created":1735206968,"permanent":true},"98":{"name":"MarkupPagerNav","title":"Pager (Pagination) Navigation","version":105,"created":1735206968},"113":{"name":"MarkupPageArray","title":"PageArray Markup","version":100,"autoload":true,"singular":true,"created":1735206968},"60":{"name":"InputfieldPage","title":"Page","version":108,"created":1735206968,"configurable":3,"permanent":true},"36":{"name":"InputfieldSelect","title":"Select","version":102,"created":1735206968,"permanent":true},"86":{"name":"InputfieldPageName","title":"Page Name","version":106,"created":1735206968,"configurable":3,"permanent":true},"34":{"name":"InputfieldText","title":"Text","version":106,"created":1735206968,"permanent":true},"174":{"name":"InputfieldPageAutocomplete","title":"Page Auto Complete","version":113,"created":1735207255},"155":{"name":"InputfieldTinyMCE","title":"TinyMCE","version":616,"icon":"keyboard-o","requiresVersions":{"ProcessWire":[">=","3.0.200"],"MarkupHTMLPurifier":[">=",0]},"created":1735206968,"configurable":4},"15":{"name":"InputfieldPageListSelect","title":"Page List Select","version":101,"created":1735206968,"permanent":true},"137":{"name":"InputfieldPageListSelectMultiple","title":"Page List Select Multiple","version":103,"created":1735206968,"permanent":true},"25":{"name":"InputfieldAsmSelect","title":"asmSelect","version":203,"created":1735206968,"permanent":true},"131":{"name":"InputfieldButton","title":"Button","version":100,"created":1735206968,"permanent":true},"78":{"name":"InputfieldFieldset","title":"Fieldset","version":101,"created":1735206968,"permanent":true},"80":{"name":"InputfieldEmail","title":"Email","version":102,"created":1735206968},"90":{"name":"InputfieldFloat","title":"Float","version":105,"created":1735206968,"permanent":true},"182":{"name":"InputfieldCKEditor","title":"CKEditor","version":171,"installs":["MarkupHTMLPurifier"],"created":1735369410},"39":{"name":"InputfieldRadios","title":"Radio Buttons","version":106,"created":1735206968,"permanent":true},"149":{"name":"InputfieldSelector","title":"Selector","version":28,"autoload":"template=admin","created":1735206968,"configurable":3,"addFlag":32},"38":{"name":"InputfieldCheckboxes","title":"Checkboxes","version":108,"created":1735206968,"permanent":true},"112":{"name":"InputfieldPageTitle","title":"Page Title","version":102,"created":1735206968,"permanent":true},"183":{"name":"InputfieldToggle","title":"Toggle","version":1,"created":1735369410},"37":{"name":"InputfieldCheckbox","title":"Checkbox","version":106,"created":1735206968,"permanent":true},"30":{"name":"InputfieldForm","title":"Form","version":107,"created":1735206968,"permanent":true},"108":{"name":"InputfieldURL","title":"URL","version":103,"created":1735206968},"41":{"name":"InputfieldName","title":"Name","version":100,"created":1735206968,"permanent":true},"43":{"name":"InputfieldSelectMultiple","title":"Select Multiple","version":101,"created":1735206968,"permanent":true},"79":{"name":"InputfieldMarkup","title":"Markup","version":102,"created":1735206968,"permanent":true},"55":{"name":"InputfieldFile","title":"Files","version":128,"created":1735206968,"permanent":true},"122":{"name":"InputfieldPassword","title":"Password","version":102,"created":1735206968,"permanent":true},"32":{"name":"InputfieldSubmit","title":"Submit","version":103,"created":1735206968,"permanent":true},"168":{"name":"InputfieldIcon","title":"Icon","version":3,"created":1735207052},"56":{"name":"InputfieldImage","title":"Images","version":127,"created":1735206968,"permanent":true},"85":{"name":"InputfieldInteger","title":"Integer","version":105,"created":1735206968,"permanent":true},"35":{"name":"InputfieldTextarea","title":"Textarea","version":103,"created":1735206968,"permanent":true},"94":{"name":"InputfieldDatetime","title":"Datetime","version":107,"created":1735206968,"permanent":true},"40":{"name":"InputfieldHidden","title":"Hidden","version":101,"created":1735206968,"permanent":true},"175":{"name":"InputfieldTextTags","title":"Text Tags","version":6,"icon":"tags","created":1735207255},"151":{"name":"JqueryMagnific","title":"jQuery Magnific Popup","version":"1.1.0","singular":1,"created":1735206968},"103":{"name":"JqueryTableSorter","title":"jQuery Table Sorter Plugin","version":"2.31.3","singular":1,"created":1735206968},"116":{"name":"JqueryCore","title":"jQuery Core","version":"1.12.4","singular":true,"created":1735206968,"permanent":true},"45":{"name":"JqueryWireTabs","title":"jQuery Wire Tabs Plugin","version":110,"created":1735206968,"configurable":3,"permanent":true},"117":{"name":"JqueryUI","title":"jQuery UI","version":"1.10.4","singular":true,"created":1735206968,"permanent":true},"114":{"name":"PagePermissions","title":"Page Permissions","version":105,"autoload":true,"singular":true,"created":1735206968,"permanent":true},"109":{"name":"ProcessPageTrash","title":"Page Trash","version":103,"singular":1,"created":1735206968,"permanent":true},"17":{"name":"ProcessPageAdd","title":"Page Add","version":109,"icon":"plus-circle","permission":"page-edit","created":1735206968,"configurable":3,"permanent":true,"useNavJSON":true},"165":{"name":"ProcessRecentPages","title":"Recent Pages","version":2,"icon":"clock-o","permission":"page-edit-recent","singular":1,"created":1735207007,"useNavJSON":true,"nav":[{"url":"?edited=1","label":"Edited","icon":"users","navJSON":"navJSON\\/?edited=1"},{"url":"?added=1","label":"Created","icon":"users","navJSON":"navJSON\\/?added=1"},{"url":"?edited=1&me=1","label":"Edited by me","icon":"user","navJSON":"navJSON\\/?edited=1&me=1"},{"url":"?added=1&me=1","label":"Created by me","icon":"user","navJSON":"navJSON\\/?added=1&me=1"},{"url":"another\\/","label":"Add another","icon":"plus-circle","navJSON":"anotherNavJSON\\/"}]},"12":{"name":"ProcessPageList","title":"Page List","version":124,"icon":"sitemap","permission":"page-edit","created":1735206968,"configurable":3,"permanent":true,"useNavJSON":true},"104":{"name":"ProcessPageSearch","title":"Page Search","version":108,"permission":"page-edit","singular":1,"created":1735206968,"configurable":3,"permanent":true},"7":{"name":"ProcessPageEdit","title":"Page Edit","version":112,"icon":"edit","permission":"page-edit","singular":1,"created":1735206968,"configurable":3,"permanent":true,"useNavJSON":true},"47":{"name":"ProcessTemplate","title":"Templates","version":114,"icon":"cubes","permission":"template-admin","created":1735206968,"configurable":4,"permanent":true,"useNavJSON":true},"66":{"name":"ProcessUser","title":"Users","version":107,"icon":"group","permission":"user-admin","created":1735206968,"configurable":"ProcessUserConfig.php","permanent":true,"useNavJSON":true},"87":{"name":"ProcessHome","title":"Admin Home","version":101,"permission":"page-view","created":1735206968,"permanent":true},"83":{"name":"ProcessPageView","title":"Page View","version":106,"permission":"page-view","created":1735206968,"permanent":true},"167":{"name":"ProcessLogger","title":"Logs","version":2,"icon":"tree","permission":"logs-view","singular":1,"created":1735207052,"useNavJSON":true},"48":{"name":"ProcessField","title":"Fields","version":114,"icon":"cube","permission":"field-admin","created":1735206968,"configurable":3,"permanent":true,"useNavJSON":true,"addFlag":32},"50":{"name":"ProcessModule","title":"Modules","version":120,"permission":"module-admin","created":1735206968,"permanent":true,"useNavJSON":true,"nav":[{"url":"?site#tab_site_modules","label":"Site","icon":"plug","navJSON":"navJSON\\/?site=1"},{"url":"?core#tab_core_modules","label":"Core","icon":"plug","navJSON":"navJSON\\/?core=1"},{"url":"?configurable#tab_configurable_modules","label":"Configure","icon":"gear","navJSON":"navJSON\\/?configurable=1"},{"url":"?install#tab_install_modules","label":"Install","icon":"sign-in","navJSON":"navJSON\\/?install=1"},{"url":"?new#tab_new_modules","label":"New","icon":"plus"},{"url":"?reset=1","label":"Refresh","icon":"refresh"}]},"138":{"name":"ProcessProfile","title":"User Profile","version":105,"permission":"profile-edit","singular":1,"created":1735206968,"configurable":3,"permanent":true},"121":{"name":"ProcessPageEditLink","title":"Page Edit Link","version":112,"icon":"link","permission":"page-edit","singular":1,"created":1735206968,"configurable":4,"permanent":true},"136":{"name":"ProcessPermission","title":"Permissions","version":101,"icon":"gear","permission":"permission-admin","singular":1,"created":1735206968,"configurable":3,"permanent":true,"useNavJSON":true},"129":{"name":"ProcessPageEditImageSelect","title":"Page Edit Image","version":121,"permission":"page-edit","singular":1,"created":1735206968,"configurable":3,"permanent":true},"76":{"name":"ProcessList","title":"List","version":101,"permission":"page-view","created":1735206968,"permanent":true},"134":{"name":"ProcessPageType","title":"Page Type","version":101,"singular":1,"created":1735206968,"configurable":3,"permanent":true,"useNavJSON":true,"addFlag":32},"68":{"name":"ProcessRole","title":"Roles","version":104,"icon":"gears","permission":"role-admin","created":1735206968,"configurable":3,"permanent":true,"useNavJSON":true},"150":{"name":"ProcessPageLister","title":"Lister","version":26,"icon":"search","permission":"page-lister","created":1735206968,"configurable":true,"permanent":true,"useNavJSON":true,"addFlag":32},"14":{"name":"ProcessPageSort","title":"Page Sort and Move","version":100,"permission":"page-edit","created":1735206968,"permanent":true},"10":{"name":"ProcessLogin","title":"Login","version":109,"permission":"page-view","created":1735206968,"configurable":4,"permanent":true},"27":{"name":"FieldtypeModule","title":"Module Reference","version":102,"created":1735206968,"permanent":true},"1":{"name":"FieldtypeTextarea","title":"Textarea","version":107,"created":1735206968,"permanent":true},"89":{"name":"FieldtypeFloat","title":"Float","version":107,"singular":true,"created":1735206968,"permanent":true},"3":{"name":"FieldtypeText","title":"Text","version":102,"created":1735206968,"permanent":true},"57":{"name":"FieldtypeImage","title":"Images","version":102,"created":1735206968,"configurable":4,"permanent":true},"4":{"name":"FieldtypePage","title":"Page Reference","version":107,"created":1735206968,"configurable":3,"permanent":true},"84":{"name":"FieldtypeInteger","title":"Integer","version":102,"created":1735206968,"permanent":true},"28":{"name":"FieldtypeDatetime","title":"Datetime","version":105,"created":1735206968},"111":{"name":"FieldtypePageTitle","title":"Page Title","version":100,"singular":true,"created":1735206968,"permanent":true},"107":{"name":"FieldtypeFieldsetTabOpen","title":"Fieldset in Tab (Open)","version":100,"singular":true,"created":1735206968,"permanent":true},"133":{"name":"FieldtypePassword","title":"Password","version":101,"singular":true,"created":1735206968,"permanent":true},"97":{"name":"FieldtypeCheckbox","title":"Checkbox","version":101,"singular":true,"created":1735206968,"permanent":true},"106":{"name":"FieldtypeFieldsetClose","title":"Fieldset (Close)","version":100,"singular":true,"created":1735206968,"permanent":true},"6":{"name":"FieldtypeFile","title":"Files","version":107,"created":1735206968,"configurable":4,"permanent":true},"135":{"name":"FieldtypeURL","title":"URL","version":101,"singular":true,"created":1735206968,"permanent":true},"29":{"name":"FieldtypeEmail","title":"E-Mail","version":101,"created":1735206968},"105":{"name":"FieldtypeFieldsetOpen","title":"Fieldset (Open)","version":101,"singular":true,"created":1735206968,"permanent":true},"169":{"name":"FieldtypeRepeater","title":"Repeater","version":112,"installs":["InputfieldRepeater"],"autoload":true,"singular":true,"created":1735207215,"configurable":3},"170":{"name":"InputfieldRepeater","title":"Repeater","version":111,"requiresVersions":{"FieldtypeRepeater":[">=",0]},"created":1735207215},"139":{"name":"SystemUpdater","title":"System Updater","version":20,"singular":true,"created":1735206968,"configurable":3,"permanent":true},"148":{"name":"AdminThemeDefault","title":"Default","version":14,"autoload":"template=admin","created":1735206968,"configurable":19},"166":{"name":"AdminThemeUikit","title":"Uikit","version":33,"autoload":"template=admin","created":1735207007,"configurable":4},"184":{"name":"FileValidatorImage","title":"Image File Validator","version":3,"validates":["jpg","jpeg","png","gif"]}}', '2010-04-08 03:10:01'),
-	('Permissions.names', '{"lang-edit":1016,"logs-edit":1014,"logs-view":1013,"page-delete":34,"page-edit":32,"page-edit-recent":1011,"page-lister":1006,"page-lock":54,"page-move":35,"page-sort":50,"page-template":51,"page-view":36,"profile-edit":53,"user-admin":52}', '2010-04-08 03:10:10'),
-	('nav', '{"PageArray":[1021,1022,1023],"template":29}', '2024-12-28 11:09:55');
+	('Permissions.names', '{"lang-edit":1016,"logs-edit":1014,"logs-view":1013,"page-delete":34,"page-edit":32,"page-edit-recent":1011,"page-lister":1006,"page-lock":54,"page-move":35,"page-sort":50,"page-template":51,"page-view":36,"profile-edit":53,"user-admin":52}', '2010-04-08 03:10:10');
 /*!40000 ALTER TABLE `caches` ENABLE KEYS */;
 
 -- Dumping structure for table docker.fieldgroups
@@ -41,9 +40,9 @@ CREATE TABLE IF NOT EXISTS `fieldgroups` (
   `name` varchar(250) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `name` (`name`)
-) ENGINE=MyISAM AUTO_INCREMENT=99 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=105 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 
--- Dumping data for table docker.fieldgroups: 8 rows
+-- Dumping data for table docker.fieldgroups: 14 rows
 DELETE FROM `fieldgroups`;
 /*!40000 ALTER TABLE `fieldgroups` DISABLE KEYS */;
 INSERT INTO `fieldgroups` (`id`, `name`) VALUES
@@ -55,7 +54,12 @@ INSERT INTO `fieldgroups` (`id`, `name`) VALUES
 	(83, 'basic-page'),
 	(97, 'language'),
 	(98, 'repeater_rotator'),
-	(99, 'repeater_call_to_action');
+	(99, 'repeater_call_to_action'),
+	(100, 'program'),
+	(101, 'grupa'),
+	(102, 'product'),
+	(103, 'brand-wrapper'),
+	(104, 'brand');
 /*!40000 ALTER TABLE `fieldgroups` ENABLE KEYS */;
 
 -- Dumping structure for table docker.fieldgroups_fields
@@ -67,7 +71,7 @@ CREATE TABLE IF NOT EXISTS `fieldgroups_fields` (
   PRIMARY KEY (`fieldgroups_id`,`fields_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 
--- Dumping data for table docker.fieldgroups_fields: 26 rows
+-- Dumping data for table docker.fieldgroups_fields: 55 rows
 DELETE FROM `fieldgroups_fields`;
 /*!40000 ALTER TABLE `fieldgroups_fields` DISABLE KEYS */;
 INSERT INTO `fieldgroups_fields` (`fieldgroups_id`, `fields_id`, `sort`, `data`) VALUES
@@ -101,7 +105,31 @@ INSERT INTO `fieldgroups_fields` (`fieldgroups_id`, `fields_id`, `sort`, `data`)
 	(1, 1, 0, NULL),
 	(99, 107, 1, NULL),
 	(99, 1, 0, NULL),
-	(1, 105, 9, NULL);
+	(1, 105, 9, NULL),
+	(101, 105, 3, NULL),
+	(101, 102, 2, NULL),
+	(101, 101, 1, NULL),
+	(101, 1, 0, NULL),
+	(100, 1, 0, NULL),
+	(100, 101, 1, NULL),
+	(100, 102, 2, NULL),
+	(100, 105, 3, NULL),
+	(100, 103, 4, NULL),
+	(100, 104, 5, NULL),
+	(101, 103, 4, NULL),
+	(101, 104, 5, NULL),
+	(102, 116, 1, NULL),
+	(102, 101, 2, '{"columnWidth":50,"label":"Opis proizvoda"}'),
+	(102, 114, 3, '{"columnWidth":50,"label":"Karakteristike"}'),
+	(102, 109, 4, NULL),
+	(102, 102, 5, NULL),
+	(102, 105, 6, NULL),
+	(102, 103, 7, NULL),
+	(102, 104, 8, NULL),
+	(103, 1, 0, NULL),
+	(104, 1, 0, NULL),
+	(104, 107, 1, NULL),
+	(102, 1, 0, NULL);
 /*!40000 ALTER TABLE `fieldgroups_fields` ENABLE KEYS */;
 
 -- Dumping structure for table docker.fields
@@ -115,9 +143,9 @@ CREATE TABLE IF NOT EXISTS `fields` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `name` (`name`),
   KEY `type` (`type`)
-) ENGINE=MyISAM AUTO_INCREMENT=113 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=117 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 
--- Dumping data for table docker.fields: 22 rows
+-- Dumping data for table docker.fields: 26 rows
 DELETE FROM `fields`;
 /*!40000 ALTER TABLE `fields` DISABLE KEYS */;
 INSERT INTO `fields` (`id`, `type`, `name`, `flags`, `label`, `data`) VALUES
@@ -131,7 +159,7 @@ INSERT INTO `fields` (`id`, `type`, `name`, `flags`, `label`, `data`) VALUES
 	(98, 'FieldtypeFile', 'language_files_site', 24, 'Site Translation Files', '{"extensions":"json csv","maxFiles":0,"inputfieldClass":"InputfieldFile","unzip":1,"description":"Use this field for translations specific to your site (like files in \\/site\\/templates\\/ for example).","descriptionRows":0,"fileSchema":14}'),
 	(99, 'FieldtypeFile', 'language_files', 24, 'Core Translation Files', '{"extensions":"json csv","maxFiles":0,"inputfieldClass":"InputfieldFile","unzip":1,"description":"Use this field for [language packs](http:\\/\\/modules.processwire.com\\/categories\\/language-pack\\/). To delete all files, double-click the trash can for any file, then save.","descriptionRows":0,"fileSchema":14}'),
 	(100, 'FieldtypePage', 'language', 24, 'Language', '{"derefAsPage":1,"parent_id":1017,"labelFieldName":"title","inputfield":"InputfieldRadios","required":1}'),
-	(101, 'FieldtypeTextareaLanguage', 'content', 0, 'Sadržaj', '{"inputfieldClass":"InputfieldCKEditor","contentType":1,"rows":15,"toolbar":"Format, Styles, -, Bold, Italic, -, RemoveFormat\\nNumberedList, BulletedList, -, Blockquote\\nPWLink, Unlink, Anchor\\nPWImage, Table, HorizontalRule, SpecialChar\\nPasteText, PasteFromWord, Iframe\\nScayt, -, Sourcedialog","usePurifier":1,"formatTags":"p;h1;h2;h3;h4;h5;h6;pre;address","extraPlugins":["pwimage","pwlink","sourcedialog"],"removePlugins":"image,magicline","tags":"common","htmlOptions":[4,8,16],"useACF":1,"textformatters":["TextformatterEntities"]}'),
+	(101, 'FieldtypeTextareaLanguage', 'content', 0, 'Sadržaj', '{"inputfieldClass":"InputfieldCKEditor","contentType":1,"rows":10,"toolbar":"Format, Styles, -, Bold, Italic, -, RemoveFormat\\nNumberedList, BulletedList, -, Blockquote\\nPWLink, Unlink, Anchor\\nPWImage, Table, HorizontalRule, SpecialChar\\nPasteText, PasteFromWord, Iframe\\nScayt, -, Sourcedialog","usePurifier":1,"formatTags":"p;h1;h2;h3;h4;h5;h6;pre;address","extraPlugins":["pwimage","pwlink","sourcedialog"],"removePlugins":"image,magicline","tags":"common","htmlOptions":[4,8,16],"useACF":1,"textformatters":["TextformatterEntities"],"langBlankInherit":0,"collapsed":0,"minlength":0,"maxlength":0,"showCount":0,"inlineMode":0}'),
 	(102, 'FieldtypeFieldsetTabOpen', 'seo', 0, 'SEO', '{"closeFieldID":105}'),
 	(103, 'FieldtypeTextareaLanguage', 'seo_description', 1, 'SEO opis', '{"textformatters":["TextformatterEntities"],"maxlength":2048,"tags":"SEO","inputfieldClass":"InputfieldTextarea","rows":5,"notes":"do 155 slovnih znakova"}'),
 	(104, 'FieldtypeFieldsetClose', 'seo_END', 0, 'Close an open fieldset', '{"description":"This field was added automatically to accompany fieldset \'seo\'. It should be placed in your template\\/fieldgroup wherever you want the fieldset to end."}'),
@@ -139,13 +167,14 @@ INSERT INTO `fields` (`id`, `type`, `name`, `flags`, `label`, `data`) VALUES
 	(106, 'FieldtypeTextareaLanguage', 'short_description', 0, 'Uvodni sadržaj', '{"inputfieldClass":"InputfieldCKEditor","contentType":1,"collapsed":0,"rows":5,"toolbar":"Bold, Italic, -, RemoveFormat\\nNumberedList, BulletedList\\nPWLink, Unlink, Anchor\\nPasteText, PasteFromWord\\nSourcedialog","useACF":1,"usePurifier":1,"formatTags":"p;h1;h2;h3;h4;h5;h6;pre;address","extraPlugins":["pwimage","pwlink","sourcedialog"],"removePlugins":"image,magicline","tags":"common","langBlankInherit":0,"minlength":0,"maxlength":0,"showCount":0,"inlineMode":0}'),
 	(107, 'FieldtypeImage', 'slika', 0, 'Slika', '{"extensions":"gif jpg jpeg png svg","maxFiles":1,"inputfieldClass":"InputfieldImage","descriptionRows":1,"fileSchema":270,"gridMode":"left","focusMode":"on","clientQuality":90,"okExtensions":["svg"],"outputFormat":0,"useTags":0,"collapsed":0,"resizeServer":0,"maxReject":0,"dimensionsByAspectRatio":0,"defaultValuePage":0}'),
 	(108, 'FieldtypeImage', 'slika_mobile', 0, 'Slika (za mobilne uređaje)', '{"extensions":"gif jpg jpeg png svg","maxFiles":1,"inputfieldClass":"InputfieldImage","descriptionRows":1,"fileSchema":270,"gridMode":"left","focusMode":"on","clientQuality":90}'),
-	(109, 'FieldtypeImage', 'slike', 0, 'Slike za sadržaj', '{"extensions":"gif jpg jpeg png svg","inputfieldClass":"InputfieldImage","descriptionRows":1,"fileSchema":262,"gridMode":"left","focusMode":"on","clientQuality":90,"outputFormat":1}'),
+	(109, 'FieldtypeImage', 'slike', 0, 'Slike za sadržaj', '{"extensions":"gif jpg jpeg png svg","inputfieldClass":"InputfieldImage","descriptionRows":1,"fileSchema":270,"gridMode":"left","focusMode":"on","clientQuality":90,"outputFormat":1}'),
 	(110, 'FieldtypeRepeater', 'rotator', 0, 'Rotator', '{"template_id":44,"parent_id":1030,"repeaterFields":[1,107,108,111],"familyFriendly":0,"repeaterCollapse":0,"repeaterLoading":1,"rememberOpen":0,"accordionMode":0,"loudControls":0,"collapsed":0,"repeaterTitle":"#n: {title}"}'),
 	(111, 'FieldtypePage', 'link', 1, 'Link', '{"derefAsPage":1,"inputfield":"InputfieldPageListSelect","labelFieldName":"title"}'),
 	(112, 'FieldtypeTextLanguage', 'subtitle', 0, 'Subtitle', '{"textformatters":["TextformatterEntities"],"langBlankInherit":0,"collapsed":0,"minlength":0,"maxlength":2048,"showCount":0,"size":0}'),
 	(113, 'FieldtypeTextLanguage', 'subtitle2', 0, 'Subtitle', '{"textformatters":["TextformatterEntities"],"langBlankInherit":0,"minlength":0,"maxlength":2048,"showCount":0,"size":0,"collapsed":0}'),
-	(114, 'FieldtypeTextareaLanguage', 'short_description_2', 0, 'Short description 2', '{"inputfieldClass":"InputfieldCKEditor","contentType":1,"collapsed":0,"rows":5,"toolbar":"Bold, Italic, -, RemoveFormat\\nNumberedList, BulletedList\\nPWLink, Unlink, Anchor\\nPasteText, PasteFromWord\\nSourcedialog","useACF":1,"usePurifier":1,"formatTags":"p;h1;h2;h3;h4;h5;h6;pre;address","extraPlugins":["pwimage","pwlink","sourcedialog"],"removePlugins":"image,magicline","tags":"common","langBlankInherit":0,"minlength":0,"maxlength":0,"showCount":0,"inlineMode":0}'),
-	(115, 'FieldtypeRepeater', 'call_to_action', 0, 'Call to action', '{"template_id":45,"parent_id":1035,"repeaterFields":[1,107],"familyFriendly":0,"repeaterCollapse":0,"repeaterLoading":1,"rememberOpen":0,"accordionMode":0,"loudControls":0,"collapsed":0,"repeaterTitle":"#n: {title}"}');
+	(114, 'FieldtypeTextareaLanguage', 'short_description_2', 0, 'Short description 2', '{"inputfieldClass":"InputfieldCKEditor","contentType":1,"collapsed":0,"rows":10,"toolbar":"Bold, Italic, -, RemoveFormat\\nNumberedList, BulletedList\\nPWLink, Unlink, Anchor\\nPasteText, PasteFromWord\\nSourcedialog","useACF":1,"usePurifier":1,"formatTags":"p;h1;h2;h3;h4;h5;h6;pre;address","extraPlugins":["pwimage","pwlink","sourcedialog"],"removePlugins":"image,magicline","tags":"common","langBlankInherit":0,"minlength":0,"maxlength":0,"showCount":0,"inlineMode":0}'),
+	(115, 'FieldtypeRepeater', 'call_to_action', 0, 'Call to action', '{"template_id":45,"parent_id":1035,"repeaterFields":[1,107],"familyFriendly":0,"repeaterCollapse":0,"repeaterLoading":1,"rememberOpen":0,"accordionMode":0,"loudControls":0,"collapsed":0,"repeaterTitle":"#n: {title}"}'),
+	(116, 'FieldtypePage', 'brand', 0, 'Brand', '{"derefAsPage":2,"inputfield":"InputfieldPageListSelect","distinctAutojoin":true,"parent_id":1045,"template_id":50,"labelFieldName":"title","collapsed":0}');
 /*!40000 ALTER TABLE `fields` ENABLE KEYS */;
 
 -- Dumping structure for table docker.field_admin_theme
@@ -163,6 +192,42 @@ INSERT INTO `field_admin_theme` (`pages_id`, `data`) VALUES
 	(41, 166);
 /*!40000 ALTER TABLE `field_admin_theme` ENABLE KEYS */;
 
+-- Dumping structure for table docker.field_brand
+CREATE TABLE IF NOT EXISTS `field_brand` (
+  `pages_id` int(10) unsigned NOT NULL,
+  `data` int(11) NOT NULL,
+  `sort` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`pages_id`,`sort`),
+  KEY `data` (`data`,`pages_id`,`sort`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+
+-- Dumping data for table docker.field_brand: 1 rows
+DELETE FROM `field_brand`;
+/*!40000 ALTER TABLE `field_brand` DISABLE KEYS */;
+INSERT INTO `field_brand` (`pages_id`, `data`, `sort`) VALUES
+	(1052, 1051, 0);
+/*!40000 ALTER TABLE `field_brand` ENABLE KEYS */;
+
+-- Dumping structure for table docker.field_call_to_action
+CREATE TABLE IF NOT EXISTS `field_call_to_action` (
+  `pages_id` int(10) unsigned NOT NULL,
+  `data` text NOT NULL,
+  `count` int(11) NOT NULL,
+  `parent_id` int(11) NOT NULL,
+  PRIMARY KEY (`pages_id`),
+  KEY `data_exact` (`data`(1)),
+  KEY `count` (`count`,`pages_id`),
+  KEY `parent_id` (`parent_id`,`pages_id`),
+  FULLTEXT KEY `data` (`data`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+
+-- Dumping data for table docker.field_call_to_action: 1 rows
+DELETE FROM `field_call_to_action`;
+/*!40000 ALTER TABLE `field_call_to_action` DISABLE KEYS */;
+INSERT INTO `field_call_to_action` (`pages_id`, `data`, `count`, `parent_id`) VALUES
+	(1, '1037,1038,1039', 3, 1036);
+/*!40000 ALTER TABLE `field_call_to_action` ENABLE KEYS */;
+
 -- Dumping structure for table docker.field_content
 CREATE TABLE IF NOT EXISTS `field_content` (
   `pages_id` int(10) unsigned NOT NULL,
@@ -174,9 +239,14 @@ CREATE TABLE IF NOT EXISTS `field_content` (
   FULLTEXT KEY `data1020` (`data1020`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 
--- Dumping data for table docker.field_content: 0 rows
+-- Dumping data for table docker.field_content: 4 rows
 DELETE FROM `field_content`;
 /*!40000 ALTER TABLE `field_content` DISABLE KEYS */;
+INSERT INTO `field_content` (`pages_id`, `data`, `data1020`) VALUES
+	(1042, '', ''),
+	(1043, '', ''),
+	(1044, '', ''),
+	(1052, '<p>Beskontaktni infracrveni toplomjer Vaše je rješenje ako tražite brzo i pouzdano mjerenje temperature. Osim tjelesne temperature, u posebnom načinu rada mjeri temperaturu tekućina te objekata.</p>', '');
 /*!40000 ALTER TABLE `field_content` ENABLE KEYS */;
 
 -- Dumping structure for table docker.field_email
@@ -424,9 +494,14 @@ CREATE TABLE IF NOT EXISTS `field_seo_description` (
   FULLTEXT KEY `data1020` (`data1020`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 
--- Dumping data for table docker.field_seo_description: 0 rows
+-- Dumping data for table docker.field_seo_description: 4 rows
 DELETE FROM `field_seo_description`;
 /*!40000 ALTER TABLE `field_seo_description` DISABLE KEYS */;
+INSERT INTO `field_seo_description` (`pages_id`, `data`, `data1020`) VALUES
+	(1042, '', ''),
+	(1043, '', ''),
+	(1044, '', ''),
+	(1052, '', '');
 /*!40000 ALTER TABLE `field_seo_description` ENABLE KEYS */;
 
 -- Dumping structure for table docker.field_seo_end
@@ -454,9 +529,14 @@ CREATE TABLE IF NOT EXISTS `field_seo_title` (
   FULLTEXT KEY `data1020` (`data1020`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 
--- Dumping data for table docker.field_seo_title: 0 rows
+-- Dumping data for table docker.field_seo_title: 4 rows
 DELETE FROM `field_seo_title`;
 /*!40000 ALTER TABLE `field_seo_title` DISABLE KEYS */;
+INSERT INTO `field_seo_title` (`pages_id`, `data`, `data1020`) VALUES
+	(1042, '', ''),
+	(1043, '', ''),
+	(1044, '', ''),
+	(1052, '', '');
 /*!40000 ALTER TABLE `field_seo_title` ENABLE KEYS */;
 
 -- Dumping structure for table docker.field_short_description
@@ -476,6 +556,25 @@ DELETE FROM `field_short_description`;
 INSERT INTO `field_short_description` (`pages_id`, `data`, `data1020`) VALUES
 	(1, '<p><strong>PROPHARMA</strong> je brzorastuća farmaceutska tvrtka specijalizirana za registraciju, distribuciju i promociju visokokvalitetnih medicinskih proizvoda i medicinskih uređaja za regionalno tržište.</p>', '');
 /*!40000 ALTER TABLE `field_short_description` ENABLE KEYS */;
+
+-- Dumping structure for table docker.field_short_description_2
+CREATE TABLE IF NOT EXISTS `field_short_description_2` (
+  `pages_id` int(10) unsigned NOT NULL,
+  `data` mediumtext NOT NULL,
+  `data1020` mediumtext DEFAULT NULL,
+  PRIMARY KEY (`pages_id`),
+  KEY `data_exact` (`data`(250)),
+  FULLTEXT KEY `data` (`data`),
+  FULLTEXT KEY `data1020` (`data1020`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+
+-- Dumping data for table docker.field_short_description_2: 2 rows
+DELETE FROM `field_short_description_2`;
+/*!40000 ALTER TABLE `field_short_description_2` DISABLE KEYS */;
+INSERT INTO `field_short_description_2` (`pages_id`, `data`, `data1020`) VALUES
+	(1, '<p>Prodajni program Propharme zastupa sljedeće segmente:</p>', ''),
+	(1052, '<ul>\n	<li>1 sekunda do rezultata mjerenja</li>\n	<li>svjetleći prikaz rezultata u boji</li>\n	<li>praktičan i jednostavan za upotrebu</li>\n	<li>za cijelu obitelj</li>\n</ul>', '');
+/*!40000 ALTER TABLE `field_short_description_2` ENABLE KEYS */;
 
 -- Dumping structure for table docker.field_slika
 CREATE TABLE IF NOT EXISTS `field_slika` (
@@ -504,7 +603,7 @@ CREATE TABLE IF NOT EXISTS `field_slika` (
   FULLTEXT KEY `filedata` (`filedata`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 
--- Dumping data for table docker.field_slika: 3 rows
+-- Dumping data for table docker.field_slika: 12 rows
 DELETE FROM `field_slika`;
 /*!40000 ALTER TABLE `field_slika` DISABLE KEYS */;
 INSERT INTO `field_slika` (`pages_id`, `data`, `sort`, `description`, `modified`, `created`, `filedata`, `filesize`, `created_users_id`, `modified_users_id`, `width`, `height`, `ratio`) VALUES
@@ -513,7 +612,13 @@ INSERT INTO `field_slika` (`pages_id`, `data`, `sort`, `description`, `modified`
 	(1034, 'beba-rotator-propharma.png', 0, '[""]', '2024-12-28 09:14:51', '2024-12-28 09:14:51', '{"uploadName":"beba-rotator-Propharma.png"}', 1162018, 41, 41, 1228, 558, 2.20),
 	(1037, '1-ikona-marketing.png', 0, '[""]', '2024-12-28 11:00:24', '2024-12-28 11:00:24', '{"uploadName":"1-ikona-MARKETING.png"}', 5239, 41, 41, 142, 142, 1.00),
 	(1038, '1-ikona-marketing.png', 0, '[""]', '2024-12-28 11:00:24', '2024-12-28 11:00:24', '{"uploadName":"1-ikona-MARKETING.png"}', 5239, 41, 41, 142, 142, 1.00),
-	(1039, 'ikona_products.png', 0, '[""]', '2024-12-28 11:00:24', '2024-12-28 11:00:24', '{"uploadName":"ikona PRODUCTS.png"}', 3605, 41, 41, 152, 141, 1.08);
+	(1039, 'ikona_products.png', 0, '[""]', '2024-12-28 11:00:24', '2024-12-28 11:00:24', '{"uploadName":"ikona PRODUCTS.png"}', 3605, 41, 41, 152, 141, 1.08),
+	(1046, 'emser-logo.png', 0, '[""]', '2024-12-28 22:49:18', '2024-12-28 22:49:18', '', 12977, 41, 41, 218, 156, 1.40),
+	(1047, 'gothaplast-logo.png', 0, '[""]', '2024-12-28 22:49:29', '2024-12-28 22:49:29', '', 12291, 41, 41, 218, 156, 1.40),
+	(1048, 'pangao.png', 0, '[""]', '2024-12-28 22:49:43', '2024-12-28 22:49:43', '{"uploadName":"PANGAO.png"}', 17031, 41, 41, 218, 156, 1.40),
+	(1049, 'primapuls-logo.png', 0, '[""]', '2024-12-28 22:49:54', '2024-12-28 22:49:54', '', 6338, 41, 41, 218, 156, 1.40),
+	(1050, 'primatest-logo.png', 0, '[""]', '2024-12-28 22:50:04', '2024-12-28 22:50:04', '', 8559, 41, 41, 218, 156, 1.40),
+	(1051, 'primatherm-logo.png', 0, '[""]', '2024-12-28 22:50:13', '2024-12-28 22:50:13', '{"uploadName":"primaTHERM-logo.png"}', 8565, 41, 41, 218, 156, 1.40);
 /*!40000 ALTER TABLE `field_slika` ENABLE KEYS */;
 
 -- Dumping structure for table docker.field_slika_mobile
@@ -575,9 +680,13 @@ CREATE TABLE IF NOT EXISTS `field_slike` (
   FULLTEXT KEY `filedata` (`filedata`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 
--- Dumping data for table docker.field_slike: 0 rows
+-- Dumping data for table docker.field_slike: 3 rows
 DELETE FROM `field_slike`;
 /*!40000 ALTER TABLE `field_slike` DISABLE KEYS */;
+INSERT INTO `field_slike` (`pages_id`, `data`, `sort`, `description`, `modified`, `created`, `filedata`, `filesize`, `created_users_id`, `modified_users_id`, `width`, `height`, `ratio`) VALUES
+	(1052, 'proizvod-2.jpg', 2, '[""]', '2024-12-28 23:00:02', '2024-12-28 23:00:02', '{"uploadName":"proizvod.jpg"}', 50159, 41, 41, 627, 627, 1.00),
+	(1052, 'proizvod-1.jpg', 1, '[""]', '2024-12-28 23:00:02', '2024-12-28 23:00:02', '{"uploadName":"proizvod.jpg"}', 50159, 41, 41, 627, 627, 1.00),
+	(1052, 'proizvod.jpg', 0, '[""]', '2024-12-28 23:00:02', '2024-12-28 23:00:02', '', 50159, 41, 41, 627, 627, 1.00);
 /*!40000 ALTER TABLE `field_slike` ENABLE KEYS */;
 
 -- Dumping structure for table docker.field_subtitle
@@ -599,6 +708,25 @@ INSERT INTO `field_subtitle` (`pages_id`, `data`, `data1020`) VALUES
 	(1, 'O nama', '');
 /*!40000 ALTER TABLE `field_subtitle` ENABLE KEYS */;
 
+-- Dumping structure for table docker.field_subtitle2
+CREATE TABLE IF NOT EXISTS `field_subtitle2` (
+  `pages_id` int(10) unsigned NOT NULL,
+  `data` text NOT NULL,
+  `data1020` text DEFAULT NULL,
+  PRIMARY KEY (`pages_id`),
+  KEY `data_exact` (`data`(250)),
+  KEY `data_exact1020` (`data1020`(250)),
+  FULLTEXT KEY `data` (`data`),
+  FULLTEXT KEY `data1020` (`data1020`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+
+-- Dumping data for table docker.field_subtitle2: 1 rows
+DELETE FROM `field_subtitle2`;
+/*!40000 ALTER TABLE `field_subtitle2` DISABLE KEYS */;
+INSERT INTO `field_subtitle2` (`pages_id`, `data`, `data1020`) VALUES
+	(1, 'Prodajni program', '');
+/*!40000 ALTER TABLE `field_subtitle2` ENABLE KEYS */;
+
 -- Dumping structure for table docker.field_title
 CREATE TABLE IF NOT EXISTS `field_title` (
   `pages_id` int(10) unsigned NOT NULL,
@@ -611,7 +739,7 @@ CREATE TABLE IF NOT EXISTS `field_title` (
   FULLTEXT KEY `data1020` (`data1020`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 
--- Dumping data for table docker.field_title: 58 rows
+-- Dumping data for table docker.field_title: 76 rows
 DELETE FROM `field_title`;
 /*!40000 ALTER TABLE `field_title` DISABLE KEYS */;
 INSERT INTO `field_title` (`pages_id`, `data`, `data1020`) VALUES
@@ -678,7 +806,19 @@ INSERT INTO `field_title` (`pages_id`, `data`, `data1020`) VALUES
 	(1037, 'godina poslovanja', ''),
 	(1038, 'od 2001. godine martketing i distribucija', ''),
 	(1039, 'više od 30 proizvoda u portfoliu', ''),
-	(1040, 'Company information', 'Podaci o tvrtki');
+	(1040, 'Company information', 'Podaci o tvrtki'),
+	(1041, 'aaa', ''),
+	(1042, 'Pressure gauges', 'Tlakomjeri'),
+	(1043, 'Thermometers', 'Toplomjeri'),
+	(1044, 'Oximeters', 'Oksimetri'),
+	(1045, 'Brands', 'Brandovi'),
+	(1046, 'EMS', 'EMS'),
+	(1047, 'Gotha plast', ''),
+	(1048, 'Pangao', ''),
+	(1049, 'PrimaPuls', ''),
+	(1050, 'PrimaTest', ''),
+	(1051, 'PrimaTherm', ''),
+	(1052, 'Infrared forehead thermometer', 'Infracrveni toplomjer za čelo');
 /*!40000 ALTER TABLE `field_title` ENABLE KEYS */;
 
 -- Dumping structure for table docker.modules
@@ -690,9 +830,9 @@ CREATE TABLE IF NOT EXISTS `modules` (
   `created` timestamp NOT NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`id`),
   UNIQUE KEY `class` (`class`)
-) ENGINE=MyISAM AUTO_INCREMENT=184 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=185 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 
--- Dumping data for table docker.modules: 108 rows
+-- Dumping data for table docker.modules: 109 rows
 DELETE FROM `modules`;
 /*!40000 ALTER TABLE `modules` DISABLE KEYS */;
 INSERT INTO `modules` (`id`, `class`, `flags`, `data`, `created`) VALUES
@@ -831,9 +971,9 @@ CREATE TABLE IF NOT EXISTS `pages` (
   KEY `status` (`status`),
   KEY `published` (`published`),
   KEY `parent_name1020` (`parent_id`,`name1020`)
-) ENGINE=MyISAM AUTO_INCREMENT=1035 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=1053 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 
--- Dumping data for table docker.pages: 62 rows
+-- Dumping data for table docker.pages: 80 rows
 DELETE FROM `pages`;
 /*!40000 ALTER TABLE `pages` DISABLE KEYS */;
 INSERT INTO `pages` (`id`, `parent_id`, `templates_id`, `name`, `status`, `modified`, `modified_users_id`, `created`, `created_users_id`, `published`, `sort`, `name1020`, `status1020`) VALUES
@@ -887,14 +1027,14 @@ INSERT INTO `pages` (`id`, `parent_id`, `templates_id`, `name`, `status`, `modif
 	(1019, 22, 2, 'language-translator', 1040, '2024-12-26 11:00:55', 41, '2024-12-26 11:00:55', 41, '2024-12-26 11:00:55', 4, NULL, 1),
 	(1020, 1017, 43, 'hrvatski', 1, '2024-12-28 09:05:46', 41, '2024-12-26 11:02:13', 41, '2024-12-26 11:02:13', 1, NULL, 1),
 	(1021, 1, 29, 'about-us', 1, '2024-12-26 11:03:52', 41, '2024-12-26 11:03:52', 41, '2024-12-26 11:03:52', 3, 'o-nama', 1),
-	(1022, 1, 29, 'our-products', 1, '2024-12-26 11:04:29', 41, '2024-12-26 11:04:29', 41, '2024-12-26 11:04:29', 4, 'prodajni-program', 1),
+	(1022, 1, 46, 'our-products', 1, '2024-12-28 21:30:05', 41, '2024-12-26 11:04:29', 41, '2024-12-26 11:04:29', 4, 'prodajni-program', 1),
 	(1023, 1, 29, 'contact', 1, '2024-12-26 11:04:43', 41, '2024-12-26 11:04:43', 41, '2024-12-26 11:04:43', 5, 'kontakt', 1),
 	(1024, 1021, 29, 'about-propharma', 1, '2024-12-26 11:06:37', 41, '2024-12-26 11:06:37', 41, '2024-12-26 11:06:37', 0, 'o-propharmi', 1),
 	(1025, 1021, 29, 'news', 1, '2024-12-26 11:06:54', 41, '2024-12-26 11:06:54', 41, '2024-12-26 11:06:54', 1, 'aktualno', 1),
 	(1026, 1021, 29, 'privacy-policy', 1, '2024-12-26 11:07:23', 41, '2024-12-26 11:07:23', 41, '2024-12-26 11:07:23', 2, 'politika-zastite-privatnosti', 1),
-	(1027, 1022, 29, 'pharmacy', 1, '2024-12-26 11:07:46', 41, '2024-12-26 11:07:46', 41, '2024-12-26 11:07:46', 0, 'farmacija', 1),
-	(1028, 1022, 29, 'hospital-program', 1, '2024-12-26 11:08:03', 41, '2024-12-26 11:08:03', 41, '2024-12-26 11:08:03', 1, 'bolnicki-program', 1),
-	(1029, 1022, 29, 'medical-devices', 1, '2024-12-26 11:08:23', 41, '2024-12-26 11:08:23', 41, '2024-12-26 11:08:23', 2, 'medicinski-uredjaji', 1),
+	(1027, 1022, 47, 'pharmacy', 1, '2024-12-28 21:20:54', 41, '2024-12-26 11:07:46', 41, '2024-12-26 11:07:46', 0, 'farmacija', 1),
+	(1028, 1022, 47, 'hospital-program', 1, '2024-12-28 21:21:24', 41, '2024-12-26 11:08:03', 41, '2024-12-26 11:08:03', 1, 'bolnicki-program', 1),
+	(1029, 1022, 47, 'medical-devices', 1, '2024-12-28 21:21:37', 41, '2024-12-26 11:08:23', 41, '2024-12-26 11:08:23', 2, 'medicinski-uredjaji', 1),
 	(1030, 1015, 2, 'for-field-110', 17, '2024-12-28 08:04:27', 41, '2024-12-28 08:04:27', 41, '2024-12-28 08:04:27', 0, NULL, 0),
 	(1031, 1030, 2, 'for-page-1', 17, '2024-12-28 08:10:41', 41, '2024-12-28 08:10:41', 41, '2024-12-28 08:10:41', 0, NULL, 0),
 	(1032, 1031, 44, '1735373561-7219-1', 1, '2024-12-28 08:14:51', 41, '2024-12-28 08:12:41', 41, '2024-12-28 08:12:56', 0, NULL, 1),
@@ -904,7 +1044,19 @@ INSERT INTO `pages` (`id`, `parent_id`, `templates_id`, `name`, `status`, `modif
 	(1037, 1036, 45, '1735379985-3973-1', 1, '2024-12-28 10:00:24', 41, '2024-12-28 09:59:45', 41, '2024-12-28 10:00:24', 2, NULL, 1),
 	(1038, 1036, 45, '1735380009-486-1', 1, '2024-12-28 10:00:24', 41, '2024-12-28 10:00:09', 41, '2024-12-28 10:00:24', 3, NULL, 1),
 	(1039, 1036, 45, '1735380015-1483-1', 1, '2024-12-28 10:00:24', 41, '2024-12-28 10:00:15', 41, '2024-12-28 10:00:24', 4, NULL, 1),
-	(1040, 1021, 29, 'company-information', 1025, '2024-12-28 10:08:48', 41, '2024-12-28 10:07:59', 41, '2024-12-28 10:07:59', 3, 'podaci-o-tvrtki', 1);
+	(1040, 1021, 29, 'company-information', 1025, '2024-12-28 10:08:48', 41, '2024-12-28 10:07:59', 41, '2024-12-28 10:07:59', 3, 'podaci-o-tvrtki', 1),
+	(1041, 7, 29, '1041.1.6_aaa', 8193, '2024-12-28 21:35:53', 41, '2024-12-28 21:35:06', 41, '2024-12-28 21:35:06', 6, NULL, 1),
+	(1042, 1029, 47, 'pressure-gauges', 1, '2024-12-28 21:42:52', 41, '2024-12-28 21:42:50', 41, '2024-12-28 21:42:52', 0, 'tlakomjeri', 1),
+	(1043, 1029, 47, 'thermometers', 1, '2024-12-28 21:43:09', 41, '2024-12-28 21:43:08', 41, '2024-12-28 21:43:09', 1, 'toplomjeri', 1),
+	(1044, 1029, 47, 'oximeters', 1, '2024-12-28 21:43:25', 41, '2024-12-28 21:43:23', 41, '2024-12-28 21:43:25', 2, 'oksimetri', 1),
+	(1045, 1, 49, 'brands', 1025, '2024-12-28 21:47:12', 41, '2024-12-28 21:46:03', 41, '2024-12-28 21:46:03', 6, 'brandovi', 1),
+	(1046, 1045, 50, 'ems', 1, '2024-12-28 21:49:18', 41, '2024-12-28 21:47:40', 41, '2024-12-28 21:47:44', 0, NULL, 1),
+	(1047, 1045, 50, 'gotha-plast', 1, '2024-12-28 21:49:29', 41, '2024-12-28 21:47:59', 41, '2024-12-28 21:48:01', 1, NULL, 1),
+	(1048, 1045, 50, 'pangao', 1, '2024-12-28 21:49:43', 41, '2024-12-28 21:48:12', 41, '2024-12-28 21:48:14', 2, NULL, 1),
+	(1049, 1045, 50, 'primapuls', 1, '2024-12-28 21:49:54', 41, '2024-12-28 21:48:23', 41, '2024-12-28 21:48:25', 3, NULL, 1),
+	(1050, 1045, 50, 'primatest', 1, '2024-12-28 21:50:04', 41, '2024-12-28 21:48:42', 41, '2024-12-28 21:48:44', 4, NULL, 1),
+	(1051, 1045, 50, 'primatherm', 1, '2024-12-28 21:50:13', 41, '2024-12-28 21:48:58', 41, '2024-12-28 21:49:00', 5, NULL, 1),
+	(1052, 1043, 48, 'infrared-forehead-thermometer', 1, '2024-12-28 22:00:18', 41, '2024-12-28 21:57:58', 41, '2024-12-28 21:58:00', 0, 'infracrveni-toplomjer-za-celo', 1);
 /*!40000 ALTER TABLE `pages` ENABLE KEYS */;
 
 -- Dumping structure for table docker.pages_access
@@ -916,7 +1068,7 @@ CREATE TABLE IF NOT EXISTS `pages_access` (
   KEY `templates_id` (`templates_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 
--- Dumping data for table docker.pages_access: 29 rows
+-- Dumping data for table docker.pages_access: 45 rows
 DELETE FROM `pages_access`;
 /*!40000 ALTER TABLE `pages_access` DISABLE KEYS */;
 INSERT INTO `pages_access` (`pages_id`, `templates_id`, `ts`) VALUES
@@ -944,15 +1096,27 @@ INSERT INTO `pages_access` (`pages_id`, `templates_id`, `ts`) VALUES
 	(1024, 1, '2024-12-26 11:06:37'),
 	(1025, 1, '2024-12-26 11:06:54'),
 	(1026, 1, '2024-12-26 11:07:23'),
-	(1027, 1, '2024-12-26 11:07:46'),
-	(1028, 1, '2024-12-26 11:08:03'),
-	(1029, 1, '2024-12-26 11:08:23'),
+	(1029, 1, '2024-12-28 21:21:35'),
+	(1028, 1, '2024-12-28 21:21:24'),
+	(1027, 1, '2024-12-28 21:20:54'),
 	(1032, 2, '2024-12-28 08:12:41'),
 	(1037, 2, '2024-12-28 09:59:45'),
 	(1034, 2, '2024-12-28 08:14:38'),
 	(1038, 2, '2024-12-28 10:00:09'),
 	(1039, 2, '2024-12-28 10:00:15'),
-	(1040, 1, '2024-12-28 10:07:59');
+	(1040, 1, '2024-12-28 10:07:59'),
+	(1041, 2, '2024-12-28 21:35:53'),
+	(1042, 1, '2024-12-28 21:42:51'),
+	(1043, 1, '2024-12-28 21:43:08'),
+	(1044, 1, '2024-12-28 21:43:23'),
+	(1045, 1, '2024-12-28 21:46:03'),
+	(1046, 1, '2024-12-28 21:47:40'),
+	(1047, 1, '2024-12-28 21:47:59'),
+	(1048, 1, '2024-12-28 21:48:12'),
+	(1049, 1, '2024-12-28 21:48:23'),
+	(1050, 1, '2024-12-28 21:48:42'),
+	(1051, 1, '2024-12-28 21:48:58'),
+	(1052, 1, '2024-12-28 21:57:58');
 /*!40000 ALTER TABLE `pages_access` ENABLE KEYS */;
 
 -- Dumping structure for table docker.pages_parents
@@ -962,7 +1126,7 @@ CREATE TABLE IF NOT EXISTS `pages_parents` (
   PRIMARY KEY (`pages_id`,`parents_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 
--- Dumping data for table docker.pages_parents: 25 rows
+-- Dumping data for table docker.pages_parents: 34 rows
 DELETE FROM `pages_parents`;
 /*!40000 ALTER TABLE `pages_parents` DISABLE KEYS */;
 INSERT INTO `pages_parents` (`pages_id`, `parents_id`) VALUES
@@ -986,6 +1150,7 @@ INSERT INTO `pages_parents` (`pages_id`, `parents_id`) VALUES
 	(1015, 2),
 	(1017, 2),
 	(1017, 22),
+	(1029, 1022),
 	(1030, 2),
 	(1030, 1015),
 	(1031, 2),
@@ -995,7 +1160,10 @@ INSERT INTO `pages_parents` (`pages_id`, `parents_id`) VALUES
 	(1035, 1015),
 	(1036, 2),
 	(1036, 1015),
-	(1036, 1035);
+	(1036, 1035),
+	(1041, 7),
+	(1043, 1022),
+	(1043, 1029);
 /*!40000 ALTER TABLE `pages_parents` ENABLE KEYS */;
 
 -- Dumping structure for table docker.pages_sortfields
@@ -1022,7 +1190,7 @@ CREATE TABLE IF NOT EXISTS `session_login_throttle` (
 DELETE FROM `session_login_throttle`;
 /*!40000 ALTER TABLE `session_login_throttle` DISABLE KEYS */;
 INSERT INTO `session_login_throttle` (`name`, `attempts`, `last_attempt`) VALUES
-	('admin', 1, 1735372670);
+	('admin', 1, 1735420593);
 /*!40000 ALTER TABLE `session_login_throttle` ENABLE KEYS */;
 
 -- Dumping structure for table docker.templates
@@ -1036,9 +1204,9 @@ CREATE TABLE IF NOT EXISTS `templates` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `name` (`name`),
   KEY `fieldgroups_id` (`fieldgroups_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=45 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=51 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 
--- Dumping data for table docker.templates: 8 rows
+-- Dumping data for table docker.templates: 14 rows
 DELETE FROM `templates`;
 /*!40000 ALTER TABLE `templates` DISABLE KEYS */;
 INSERT INTO `templates` (`id`, `name`, `fieldgroups_id`, `flags`, `cache_time`, `data`) VALUES
@@ -1047,10 +1215,15 @@ INSERT INTO `templates` (`id`, `name`, `fieldgroups_id`, `flags`, `cache_time`, 
 	(4, 'role', 4, 8, 0, '{"noChildren":1,"parentTemplates":[2],"slashUrls":1,"pageClass":"Role","noGlobal":1,"noMove":1,"noTrash":1,"noSettings":1,"noChangeTemplate":1,"nameContentTab":1}'),
 	(5, 'permission', 5, 8, 0, '{"noChildren":1,"parentTemplates":[2],"slashUrls":1,"guestSearchable":1,"pageClass":"Permission","noGlobal":1,"noMove":1,"noTrash":1,"noSettings":1,"noChangeTemplate":1,"nameContentTab":1}'),
 	(1, 'home', 1, 0, 0, '{"useRoles":1,"noParents":1,"slashUrls":1,"compile":0,"modified":1735380282,"ns":"ProcessWire","_lazy":1,"roles":[37]}'),
-	(29, 'basic-page', 83, 0, 0, '{"slashUrls":1,"compile":3,"modified":1696020400,"ns":"ProcessWire","_lazy":1}'),
+	(29, 'basic-page', 83, 0, 0, '{"slashUrls":1,"compile":3,"modified":1735423696,"ns":"ProcessWire","_lazy":1}'),
 	(43, 'language', 97, 8, 0, '{"parentTemplates":[2],"slashUrls":1,"pageClass":"Language","pageLabelField":"name","noGlobal":1,"noMove":1,"noTrash":1,"noChangeTemplate":1,"noUnpublish":1,"compile":3,"nameContentTab":1,"modified":1735210855}'),
 	(44, 'repeater_rotator', 98, 8, 0, '{"noChildren":1,"noParents":1,"slashUrls":1,"pageClass":"RepeaterPage","noGlobal":1,"compile":3,"modified":1735373067}'),
-	(45, 'repeater_call_to_action', 99, 8, 0, '{"noChildren":1,"noParents":1,"slashUrls":1,"pageClass":"RepeaterPage","noGlobal":1,"compile":3,"modified":1735379751}');
+	(45, 'repeater_call_to_action', 99, 8, 0, '{"noChildren":1,"noParents":1,"slashUrls":1,"pageClass":"RepeaterPage","noGlobal":1,"compile":3,"modified":1735379751}'),
+	(46, 'program', 100, 0, 0, '{"parentTemplates":[47],"slashUrls":1,"compile":0,"modified":1735424741,"ns":"ProcessWire","_lazy":1}'),
+	(47, 'grupa', 101, 0, 0, '{"childTemplates":[47,48],"slashUrls":1,"compile":0,"modified":1735424684,"ns":"ProcessWire","_lazy":1}'),
+	(48, 'product', 102, 0, 0, '{"slashUrls":1,"compile":0,"modified":1735422755,"_lazy":1}'),
+	(49, 'brand-wrapper', 103, 0, 0, '{"childTemplates":[50],"slashUrls":1,"compile":0,"modified":1735422415,"_lazy":1}'),
+	(50, 'brand', 104, 0, 0, '{"slashUrls":1,"compile":0,"modified":1735422407,"_lazy":1}');
 /*!40000 ALTER TABLE `templates` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
