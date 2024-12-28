@@ -1,0 +1,3 @@
+2024-12-28 10:59:57	admin	http://localhost:8888/backend/page/edit/?id=1037&InputfieldFileAjax=1	Image: VALID: /site/assets/files/1037/1-ikona-marketing.png
+2024-12-28 11:00:13	admin	http://localhost:8888/backend/page/edit/?id=1038&InputfieldFileAjax=1	Image: VALID: /site/assets/files/1038/1-ikona-marketing.png
+2024-12-28 11:00:23	admin	http://localhost:8888/backend/page/edit/?id=1039&InputfieldFileAjax=1	Image: VALID: /site/assets/files/1039/ikona_products.png

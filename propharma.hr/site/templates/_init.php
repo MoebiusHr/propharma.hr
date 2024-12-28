@@ -6,7 +6,10 @@
 
 $home = $pages->get(1);
 $about = $pages->get(1024);
+$about_top = $pages->get(1021);
+$program = $pages->get(1022);
 $privacy = $pages->get(1026);
+$company_info = $pages->get(1040);
 
 if ($page->redirect) {
     header("HTTP/1.1 301 Moved Permanently");

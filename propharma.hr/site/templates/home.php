@@ -42,20 +42,24 @@
 	<div class="full-container">
 		<div class="prodajni-program">
 			<div>
-				<h2>Prodajni program</h2>
-				<p>Prodajni program Propharme zastupa sljedeće segmente:</p>
-				<ul>
-					<li>farmacija</li>
-					<li>bolnički program</li>
-					<li>medicinski uređaji</li>
-				</ul>
+				<h2><?php echo $page->subtitle2 ?></h2>
+				<?php echo $page->short_description_2 ?>
+
+				<?php 
+					echo "<ul>";
+					foreach ($program->children as $item) {
+						echo "<li><a href='{$item->url}'>{$item->title}</a></li>";
+					}
+					echo "</ul>";
+				?>
+
 			</div>
 		</div>
 	</div>
 
 	<div class="container">
 		<div class="prodajni-program-izdvojeno">
-			<h3>Izdvojeno iz proizvodnog programa</h3>
+			<h3><?php echo __("Izdvojeno iz proizvodnog programa") ?></h3>
 		</div>
 		<div class="product-item-wrapper">
 			<div class="item">
@@ -75,18 +79,15 @@
 
 	<div class="full-container teaser-wrapper">
 		<div class="teaser">
-			<div class="item">
-				<img src="<?php echo $config->urls->templates; ?>img/1-ikona-MARKETING.png" alt="" />
-				<p>godina poslovanja</p>
-			</div>
-			<div class="item">
-				<img src="img/ikona PRODUCTS.png" alt="" />
-				<p>od 2001. godine martketing i distribucija</p>
-			</div>
-			<div class="item">
-				<img src="<?php echo $config->urls->templates; ?>img/ikona PRODUCTS.png" alt="" />
-				<p>više od 30 proizvoda u portfoliu</p>
-			</div>
+
+			<?php foreach ($page->call_to_action as $item) { ?>
+				<div class="item">
+					<img src="<?php echo $item->slika->url ?>" alt="<?php echo $item->slika->description ?>" />
+					<p><?php echo $item->title ?></p>
+				</div>
+			<?php } ?>
+
+
 		</div>
 	</div>
 </div>	

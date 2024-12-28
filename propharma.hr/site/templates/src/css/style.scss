@@ -21,6 +21,11 @@ html, body {
     text-align: center;
 }
 
+
+a {
+    text-decoration: none;
+}
+
 .img-full {
     max-width: 100%;
 }
@@ -425,6 +430,16 @@ header {
     h2 {
         color: white;
     }
+
+    a {
+        color: white;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+
 }
 
 

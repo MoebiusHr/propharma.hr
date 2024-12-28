@@ -106,19 +106,23 @@
                     </div>
 
                     <div class="item">
-                        <p class="title">O nama</p>
+                        <p class="title"><?php echo $about_top->title ?></p>
                         <ul>
-                            <li><a href="">O Propharmi</a></li>
-                            <li><a href="">Aktualno</a></li>
-                            <li><a href="">Politika zaštite</a></li>
+                            <?php
+                                foreach ($about_top->children as $item) {
+                                    echo "<li><a href='{$item->url}'>{$item->title}</a></li>";
+                                }
+                            ?>
                         </ul>
                     </div>
                     <div class="item">
-                        <p class="title">Prodajni program</p>
+                        <p class="title"><?php echo $program->title ?></p>
                         <ul>
-                            <li><a href="">Farmacija</a></li>
-                            <li><a href="">Bolnički program</a></li>
-                            <li><a href="">Medicinski uređaji</a></li>
+                        <?php
+                                foreach ($program->children as $item) {
+                                    echo "<li><a href='{$item->url}'>{$item->title}</a></li>";
+                                }
+                            ?>
                         </ul>
                     </div>
                 </div>
@@ -127,7 +131,7 @@
                     <p>
                         &copy; Propharma
                         2024.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="">Podaci o tvrtki</a>
+                        <a href="<?php echo $company_info->url ?>"><?php echo $company_info->title ?></a>
                     </p>
                 </div>
             </div>
