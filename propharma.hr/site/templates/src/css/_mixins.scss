@@ -1,0 +1,7 @@
+@use "functions";
+
+@mixin big-titles {
+    font-size: functions.rem(40);
+    font-weight: bold;
+    color: $primaryColor;
+}
