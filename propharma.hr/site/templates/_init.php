@@ -29,6 +29,10 @@ if ($page->seo_description != "") $description = $page->seo_description;
 $description = str_replace("'", "", $description);
 
 
-$nav = $cache->get("nav", "+30 minutes", function($pages) {
-  return $pages->find("parent=1");
-}); 
+
+// $nav = $cache->get("nav", "30 minutes", function($pages) {
+//   return $pages->find("parent=1");
+// }); 
+
+
+$nav = $pages->find("parent=1");

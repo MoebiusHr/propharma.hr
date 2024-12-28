@@ -64,24 +64,13 @@
                 <h5><span>Izdvojeni brandovi</span></h5>
 
                 <div class="container list">
-                    <div class="item">
-                        <img src="<?php echo $config->urls->templates; ?>img/emser-logo.png" alt="" />
-                    </div>
-                    <div class="item">
-                        <img src="<?php echo $config->urls->templates; ?>img/gothaplast-logo.png" alt="" />
-                    </div>
-                    <div class="item">
-                        <img src="<?php echo $config->urls->templates; ?>img/PANGAO.png" alt="" />
-                    </div>
-                    <div class="item">
-                        <img src="<?php echo $config->urls->templates; ?>img/primapuls-logo.png" alt="" />
-                    </div>
-                    <div class="item">
-                        <img src="<?php echo $config->urls->templates; ?>img/primatest-logo.png" alt="" />
-                    </div>
-                    <div class="item">
-                        <img src="<?php echo $config->urls->templates; ?>img/primaTHERM-logo.png" alt="" />
-                    </div>
+
+                    <?php foreach ($pages->find("parent=1045") as $item) { ?>
+                        <div class="item">
+                            <img src="<?php echo $item->slika->url ?>" alt="<?php echo $item->title ?>" />
+                        </div>
+                    <?php } ?>
+
                 </div>
             </div>
         </div>

@@ -1,3 +1,12 @@
 2024-12-28 10:59:57	admin	http://localhost:8888/backend/page/edit/?id=1037&InputfieldFileAjax=1	Image: VALID: /site/assets/files/1037/1-ikona-marketing.png
 2024-12-28 11:00:13	admin	http://localhost:8888/backend/page/edit/?id=1038&InputfieldFileAjax=1	Image: VALID: /site/assets/files/1038/1-ikona-marketing.png
 2024-12-28 11:00:23	admin	http://localhost:8888/backend/page/edit/?id=1039&InputfieldFileAjax=1	Image: VALID: /site/assets/files/1039/ikona_products.png
+2024-12-28 22:49:17	admin	http://localhost:8888/backend/page/edit/?id=1046&InputfieldFileAjax=1	Image: VALID: /site/assets/files/1046/emser-logo.png
+2024-12-28 22:49:28	admin	http://localhost:8888/backend/page/edit/?id=1047&InputfieldFileAjax=1	Image: VALID: /site/assets/files/1047/gothaplast-logo.png
+2024-12-28 22:49:40	admin	http://localhost:8888/backend/page/edit/?id=1048&InputfieldFileAjax=1	Image: VALID: /site/assets/files/1048/pangao.png
+2024-12-28 22:49:52	admin	http://localhost:8888/backend/page/edit/?id=1049&InputfieldFileAjax=1	Image: VALID: /site/assets/files/1049/primapuls-logo.png
+2024-12-28 22:50:02	admin	http://localhost:8888/backend/page/edit/?id=1050&InputfieldFileAjax=1	Image: VALID: /site/assets/files/1050/primatest-logo.png
+2024-12-28 22:50:11	admin	http://localhost:8888/backend/page/edit/?id=1051&InputfieldFileAjax=1	Image: VALID: /site/assets/files/1051/primatherm-logo.png
+2024-12-28 22:59:52	admin	http://localhost:8888/backend/page/edit/?id=1052&InputfieldFileAjax=1	Image: VALID: /site/assets/files/1052/proizvod.jpg
+2024-12-28 22:59:55	admin	http://localhost:8888/backend/page/edit/?id=1052&InputfieldFileAjax=1	Image: VALID: /site/assets/files/1052/proizvod-1.jpg
+2024-12-28 22:59:57	admin	http://localhost:8888/backend/page/edit/?id=1052&InputfieldFileAjax=1	Image: VALID: /site/assets/files/1052/proizvod-2.jpg

@@ -24,6 +24,7 @@ html, body {
 
 a {
     text-decoration: none;
+    color: inherit;
 }
 
 .img-full {
@@ -681,6 +682,7 @@ ul#bread {
         padding-right: 0;
         padding-left: 0;
         color: #000;
+        margin-left: .5rem;
 
         &::after {
             content: " / ";
@@ -689,6 +691,10 @@ ul#bread {
 
         &::before {
             background-image: none;
+        }
+
+        &:first-child {
+            margin-left: 0;
         }
 
         &:last-child {

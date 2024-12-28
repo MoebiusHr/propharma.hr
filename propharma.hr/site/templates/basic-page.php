@@ -11,5 +11,5 @@
 ?>
 
 <div id="content">
-	Basic page content 
+
 </div>	
