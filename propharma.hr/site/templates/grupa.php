@@ -8,6 +8,9 @@
 // See the Markup Regions documentation:
 // https://processwire.com/docs/front-end/output/markup-regions/
 
+
+$podgrupe = $page->children;
+
 ?>
 
 <div id="content">
@@ -28,11 +31,13 @@
         </div>
         <div class="filters">
             <div class="filter">
-                <p>Svi UREĐAJI</p>
+                <p><?php echo __("Svi UREĐAJI") ?></p>
                 <ul>
-                    <li><a href="">Tlakomjeri</a></li>
-                    <li><a href="">Toplomjeri</a></li>
-                    <li><a href="">Oksimetri</a></li>
+                    <?php 
+                        foreach ($podgrupe as $item) {
+                            echo "<li><a href='javascript:;'>{$item->title}</a></li>";
+                        }
+                    ?>
                 </ul>
             </div>
 
@@ -40,6 +45,15 @@
                 <p>Svi BRANDOVI</p>
             </div>
         </div>
+    </div>
+
+
+    <div class="container">
+        <?php
+            echo wireRenderFile("partial/product-list", array(
+                'products' => $pages->find("template=product, has_parent={$page}")
+            ));
+        ?>
     </div>
 
 

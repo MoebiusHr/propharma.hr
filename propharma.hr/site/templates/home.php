@@ -61,20 +61,11 @@
 		<div class="prodajni-program-izdvojeno">
 			<h3><?php echo __("Izdvojeno iz proizvodnog programa") ?></h3>
 		</div>
-		<div class="product-item-wrapper">
-			<div class="item">
-				<img src="<?php echo $config->urls->templates; ?>img/toplomjer.png" alt="" />
-				<h4><span>Pangao</span>Beskontaktni toplomjer</h4>
-			</div>
-			<div class="item">
-				<img src="<?php echo $config->urls->templates; ?>img/toplomjer.png" alt="" />
-				<h4><span>Pangao</span>Beskontaktni toplomjer</h4>
-			</div>
-			<div class="item">
-				<img src="<?php echo $config->urls->templates; ?>img/toplomjer.png" alt="" />
-				<h4><span>Pangao</span>Beskontaktni toplomjer</h4>
-			</div>
-		</div>
+        <?php
+            echo wireRenderFile("partial/product-list", array(
+                'products' => $page->products_on_homepage
+            ));
+        ?>
 	</div>
 
 	<div class="full-container teaser-wrapper">

@@ -25,7 +25,7 @@
     </div>
 
     <div class="container">
-        <ul>
+        <ul style="margin: 4rem 0;">
         <?php  
             foreach ($page->children as $item) {
                 echo "<li><a href='{$item->url}'>{$item->title}</a></li>";
