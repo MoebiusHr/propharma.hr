@@ -76,7 +76,7 @@ CREATE TABLE IF NOT EXISTS `fieldgroups_fields` (
   PRIMARY KEY (`fieldgroups_id`,`fields_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 
--- Dumping data for table docker.fieldgroups_fields: 69 rows
+-- Dumping data for table docker.fieldgroups_fields: 76 rows
 DELETE FROM `fieldgroups_fields`;
 /*!40000 ALTER TABLE `fieldgroups_fields` DISABLE KEYS */;
 INSERT INTO `fieldgroups_fields` (`fieldgroups_id`, `fields_id`, `sort`, `data`) VALUES
@@ -148,7 +148,14 @@ INSERT INTO `fieldgroups_fields` (`fieldgroups_id`, `fields_id`, `sort`, `data`)
 	(105, 101, 2, NULL),
 	(106, 107, 2, NULL),
 	(106, 106, 1, NULL),
-	(106, 1, 0, NULL);
+	(106, 1, 0, NULL),
+	(83, 103, 5, NULL),
+	(83, 101, 1, NULL),
+	(83, 109, 2, NULL),
+	(83, 102, 3, NULL),
+	(83, 105, 4, NULL),
+	(83, 120, 6, NULL),
+	(83, 104, 7, NULL);
 /*!40000 ALTER TABLE `fieldgroups_fields` ENABLE KEYS */;
 
 -- Dumping structure for table docker.fields
@@ -163,9 +170,9 @@ CREATE TABLE IF NOT EXISTS `fields` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `name` (`name`),
   KEY `type` (`type`)
-) ENGINE=MyISAM AUTO_INCREMENT=120 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=121 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 
--- Dumping data for table docker.fields: 29 rows
+-- Dumping data for table docker.fields: 30 rows
 DELETE FROM `fields`;
 /*!40000 ALTER TABLE `fields` DISABLE KEYS */;
 INSERT INTO `fields` (`id`, `type`, `name`, `flags`, `label`, `data`) VALUES
@@ -197,7 +204,8 @@ INSERT INTO `fields` (`id`, `type`, `name`, `flags`, `label`, `data`) VALUES
 	(116, 'FieldtypePage', 'brand', 0, 'Brand', '{"derefAsPage":2,"inputfield":"InputfieldPageListSelect","distinctAutojoin":true,"parent_id":1045,"template_id":50,"labelFieldName":"title","collapsed":0}'),
 	(117, 'FieldtypePage', 'products_on_homepage', 0, 'Proizvodi na naslovnici', '{"derefAsPage":0,"inputfield":"InputfieldPageListSelectMultiple","distinctAutojoin":true,"size":10,"parent_id":0,"template_id":48,"labelFieldName":"title","collapsed":0}'),
 	(118, 'FieldtypeImage', 'slika_2', 0, 'Slika 2', '{"extensions":"gif jpg jpeg png svg","maxFiles":1,"inputfieldClass":"InputfieldImage","descriptionRows":1,"fileSchema":270,"gridMode":"left","focusMode":"on","clientQuality":90,"okExtensions":["svg"],"outputFormat":0,"useTags":0,"resizeServer":0,"maxReject":0,"dimensionsByAspectRatio":0,"defaultValuePage":0,"collapsed":0}'),
-	(119, 'FieldtypeRepeater', 'about_repeater', 0, 'O nama stavke', '{"template_id":52,"parent_id":1062,"repeaterFields":[1,106,107],"familyFriendly":0,"repeaterCollapse":0,"repeaterLoading":1,"rememberOpen":0,"accordionMode":0,"loudControls":0,"collapsed":0,"repeaterTitle":"#n: {title}"}');
+	(119, 'FieldtypeRepeater', 'about_repeater', 0, 'O nama stavke', '{"template_id":52,"parent_id":1062,"repeaterFields":[1,106,107],"familyFriendly":0,"repeaterCollapse":0,"repeaterLoading":1,"rememberOpen":0,"accordionMode":0,"loudControls":0,"collapsed":0,"repeaterTitle":"#n: {title}"}'),
+	(120, 'FieldtypePage', 'redirect', 0, 'Preusmjerenje', '{"distinctAutojoin":true,"derefAsPage":1,"inputfield":"InputfieldPageListSelect","parent_id":1,"labelFieldName":"title","description":"Ako je popunjeno onda se klikom na ovu stranicu radi redirekcija na sadr\\u017eaj ovog polja."}');
 /*!40000 ALTER TABLE `fields` ENABLE KEYS */;
 
 -- Dumping structure for table docker.field_about_repeater
@@ -291,7 +299,7 @@ CREATE TABLE IF NOT EXISTS `field_content` (
   FULLTEXT KEY `data1020` (`data1020`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 
--- Dumping data for table docker.field_content: 10 rows
+-- Dumping data for table docker.field_content: 11 rows
 DELETE FROM `field_content`;
 /*!40000 ALTER TABLE `field_content` DISABLE KEYS */;
 INSERT INTO `field_content` (`pages_id`, `data`, `data1020`) VALUES
@@ -304,7 +312,8 @@ INSERT INTO `field_content` (`pages_id`, `data`, `data1020`) VALUES
 	(1057, '<p>Beskontaktni infracrveni toplomjer Vaše je rješenje ako tražite brzo i pouzdano mjerenje temperature. Osim tjelesne temperature, u posebnom načinu rada mjeri temperaturu tekućina te objekata.</p>', ''),
 	(1058, '<p>Beskontaktni infracrveni toplomjer Vaše je rješenje ako tražite brzo i pouzdano mjerenje temperature. Osim tjelesne temperature, u posebnom načinu rada mjeri temperaturu tekućina te objekata.</p>', ''),
 	(1059, '<p>Beskontaktni infracrveni toplomjer Vaše je rješenje ako tražite brzo i pouzdano mjerenje temperature. Osim tjelesne temperature, u posebnom načinu rada mjeri temperaturu tekućina te objekata.</p>', ''),
-	(1024, '<p>PROPHARMA je brzorastuća farmaceutska tvrtka specijalizirana za registraciju, distribuciju i promociju visokokvalitetnih medicinskih proizvoda i medicinskih uređaja za regionalno tržište.</p>', '');
+	(1024, '<p>PROPHARMA je brzorastuća farmaceutska tvrtka specijalizirana za registraciju, distribuciju i promociju visokokvalitetnih medicinskih proizvoda i medicinskih uređaja za regionalno tržište.</p>', ''),
+	(1026, '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut purus purus. Nam ligula nunc, pellentesque non lobortis eget, auctor non eros. Etiam hendrerit, neque vestibulum vehicula consectetur, elit turpis semper urna, sit amet pretium est odio eu est. Phasellus pellentesque ante vel erat vulputate, non ornare turpis euismod. Donec purus lectus, consectetur nec neque et, placerat bibendum nisi. Curabitur gravida tortor dignissim tempus aliquam. Pellentesque eleifend ac turpis nec lacinia. Vivamus molestie velit vel mollis efficitur. Ut convallis, nisl sit amet porta facilisis, ex velit luctus nunc, ac eleifend ipsum metus id odio. Praesent non mi sollicitudin, porta nisl ut, malesuada mi. Fusce vestibulum ipsum at urna sagittis, vitae sodales nulla bibendum. Cras sapien ex, aliquet eu hendrerit a, pretium eu enim. Pellentesque sit amet aliquam dolor, ut fringilla odio. In quis nisl odio.</p>\n\n<p>Suspendisse velit tortor, malesuada id feugiat vel, porttitor vel mauris. Maecenas aliquam sit amet augue cursus vestibulum. Vivamus accumsan, lacus in rhoncus dignissim, nisi justo egestas massa, vel scelerisque arcu ligula ac elit. Duis facilisis dolor vitae orci dignissim imperdiet dapibus ac velit. Integer sed porttitor lacus. Nam auctor mi et ornare semper. In hac habitasse platea dictumst. Aliquam a mattis velit. Quisque elementum, felis a ullamcorper commodo, neque neque sodales eros, vel molestie purus nunc non ex. Suspendisse nulla sem, molestie sed volutpat id, dapibus vitae turpis. Praesent commodo maximus diam, sit amet auctor ante dignissim ut.</p>\n\n<p>Morbi convallis lobortis semper. Cras pulvinar iaculis turpis, sit amet sodales tortor aliquet sit amet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed mauris ante, eleifend viverra libero et, sodales scelerisque velit. Cras viverra nunc quis libero congue, ac egestas lectus venenatis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque molestie pretium velit, non interdum purus posuere vel. Suspendisse pretium fringilla rutrum. In hac habitasse platea dictumst. Etiam a maximus mauris. Donec molestie tempor imperdiet. Nullam varius imperdiet condimentum. Sed ultrices et elit quis euismod. Suspendisse et diam quis est pharetra vestibulum et nec leo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>', '');
 /*!40000 ALTER TABLE `field_content` ENABLE KEYS */;
 
 -- Dumping structure for table docker.field_email
@@ -517,6 +526,23 @@ INSERT INTO `field_products_on_homepage` (`pages_id`, `data`, `sort`) VALUES
 	(1, 1056, 1),
 	(1, 1057, 2);
 /*!40000 ALTER TABLE `field_products_on_homepage` ENABLE KEYS */;
+
+-- Dumping structure for table docker.field_redirect
+DROP TABLE IF EXISTS `field_redirect`;
+CREATE TABLE IF NOT EXISTS `field_redirect` (
+  `pages_id` int(10) unsigned NOT NULL,
+  `data` int(11) NOT NULL,
+  `sort` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`pages_id`,`sort`),
+  KEY `data` (`data`,`pages_id`,`sort`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+
+-- Dumping data for table docker.field_redirect: 1 rows
+DELETE FROM `field_redirect`;
+/*!40000 ALTER TABLE `field_redirect` DISABLE KEYS */;
+INSERT INTO `field_redirect` (`pages_id`, `data`, `sort`) VALUES
+	(1021, 1024, 0);
+/*!40000 ALTER TABLE `field_redirect` ENABLE KEYS */;
 
 -- Dumping structure for table docker.field_roles
 DROP TABLE IF EXISTS `field_roles`;
@@ -1198,12 +1224,12 @@ INSERT INTO `pages` (`id`, `parent_id`, `templates_id`, `name`, `status`, `modif
 	(1018, 1017, 43, 'default', 16, '2024-12-28 09:06:15', 41, '2024-12-26 11:00:55', 41, '2024-12-26 11:00:55', 0, NULL, 1),
 	(1019, 22, 2, 'language-translator', 1040, '2024-12-26 11:00:55', 41, '2024-12-26 11:00:55', 41, '2024-12-26 11:00:55', 4, NULL, 1),
 	(1020, 1017, 43, 'hrvatski', 1, '2024-12-28 09:05:46', 41, '2024-12-26 11:02:13', 41, '2024-12-26 11:02:13', 1, NULL, 1),
-	(1021, 1, 29, 'about-us', 1, '2024-12-26 11:03:52', 41, '2024-12-26 11:03:52', 41, '2024-12-26 11:03:52', 3, 'o-nama', 1),
+	(1021, 1, 29, 'about-us', 1, '2024-12-30 19:40:36', 41, '2024-12-26 11:03:52', 41, '2024-12-26 11:03:52', 3, 'o-nama', 1),
 	(1022, 1, 46, 'our-products', 1, '2024-12-28 21:30:05', 41, '2024-12-26 11:04:29', 41, '2024-12-26 11:04:29', 4, 'prodajni-program', 1),
 	(1023, 1, 29, 'contact', 1, '2024-12-26 11:04:43', 41, '2024-12-26 11:04:43', 41, '2024-12-26 11:04:43', 5, 'kontakt', 1),
 	(1024, 1021, 51, 'about-propharma', 1, '2024-12-30 11:03:16', 41, '2024-12-26 11:06:37', 41, '2024-12-26 11:06:37', 0, 'o-propharmi', 1),
 	(1025, 1021, 29, 'news', 1, '2024-12-26 11:06:54', 41, '2024-12-26 11:06:54', 41, '2024-12-26 11:06:54', 1, 'aktualno', 1),
-	(1026, 1021, 29, 'privacy-policy', 1, '2024-12-26 11:07:23', 41, '2024-12-26 11:07:23', 41, '2024-12-26 11:07:23', 2, 'politika-zastite-privatnosti', 1),
+	(1026, 1021, 29, 'privacy-policy', 1, '2024-12-30 19:44:38', 41, '2024-12-26 11:07:23', 41, '2024-12-26 11:07:23', 2, 'politika-zastite-privatnosti', 1),
 	(1027, 1022, 47, 'pharmacy', 1, '2024-12-28 21:20:54', 41, '2024-12-26 11:07:46', 41, '2024-12-26 11:07:46', 0, 'farmacija', 1),
 	(1028, 1022, 47, 'hospital-program', 1, '2024-12-28 21:21:24', 41, '2024-12-26 11:08:03', 41, '2024-12-26 11:08:03', 1, 'bolnicki-program', 1),
 	(1029, 1022, 47, 'medical-devices', 1, '2024-12-29 23:10:20', 41, '2024-12-26 11:08:23', 41, '2024-12-26 11:08:23', 2, 'medicinski-uredjaji', 1),
@@ -1398,7 +1424,7 @@ CREATE TABLE IF NOT EXISTS `session_login_throttle` (
 DELETE FROM `session_login_throttle`;
 /*!40000 ALTER TABLE `session_login_throttle` DISABLE KEYS */;
 INSERT INTO `session_login_throttle` (`name`, `attempts`, `last_attempt`) VALUES
-	('admin', 1, 1735545654);
+	('admin', 1, 1735587532);
 /*!40000 ALTER TABLE `session_login_throttle` ENABLE KEYS */;
 
 -- Dumping structure for table docker.templates
@@ -1424,13 +1450,13 @@ INSERT INTO `templates` (`id`, `name`, `fieldgroups_id`, `flags`, `cache_time`, 
 	(4, 'role', 4, 8, 0, '{"noChildren":1,"parentTemplates":[2],"slashUrls":1,"pageClass":"Role","noGlobal":1,"noMove":1,"noTrash":1,"noSettings":1,"noChangeTemplate":1,"nameContentTab":1}'),
 	(5, 'permission', 5, 8, 0, '{"noChildren":1,"parentTemplates":[2],"slashUrls":1,"guestSearchable":1,"pageClass":"Permission","noGlobal":1,"noMove":1,"noTrash":1,"noSettings":1,"noChangeTemplate":1,"nameContentTab":1}'),
 	(1, 'home', 1, 0, 0, '{"useRoles":1,"noParents":1,"slashUrls":1,"compile":0,"modified":1735562488,"ns":"ProcessWire","_lazy":1,"roles":[37]}'),
-	(29, 'basic-page', 83, 0, 0, '{"slashUrls":1,"compile":3,"modified":1735423696,"ns":"ProcessWire","_lazy":1}'),
+	(29, 'basic-page', 83, 0, 0, '{"slashUrls":1,"compile":0,"modified":1735588178,"ns":"ProcessWire","_lazy":1}'),
 	(43, 'language', 97, 8, 0, '{"parentTemplates":[2],"slashUrls":1,"pageClass":"Language","pageLabelField":"name","noGlobal":1,"noMove":1,"noTrash":1,"noChangeTemplate":1,"noUnpublish":1,"compile":3,"nameContentTab":1,"modified":1735210855}'),
 	(44, 'repeater_rotator', 98, 8, 0, '{"noChildren":1,"noParents":1,"slashUrls":1,"pageClass":"RepeaterPage","noGlobal":1,"compile":3,"modified":1735373067}'),
 	(45, 'repeater_call_to_action', 99, 8, 0, '{"noChildren":1,"noParents":1,"slashUrls":1,"pageClass":"RepeaterPage","noGlobal":1,"compile":3,"modified":1735379751}'),
 	(46, 'program', 100, 0, 0, '{"parentTemplates":[47],"slashUrls":1,"compile":0,"modified":1735513452,"ns":"ProcessWire","_lazy":1}'),
-	(47, 'grupa', 101, 0, 0, '{"childTemplates":[47,48],"slashUrls":1,"compile":0,"modified":1735559024,"ns":"ProcessWire","_lazy":1}'),
-	(48, 'product', 102, 0, 0, '{"slashUrls":1,"compile":0,"modified":1735515107,"_lazy":1}'),
+	(47, 'grupa', 101, 0, 0, '{"childTemplates":[47,48],"slashUrls":1,"compile":0,"modified":1735593665,"ns":"ProcessWire","_lazy":1}'),
+	(48, 'product', 102, 0, 0, '{"slashUrls":1,"compile":0,"modified":1735593299,"ns":"ProcessWire","_lazy":1}'),
 	(49, 'brand-wrapper', 103, 0, 0, '{"childTemplates":[50],"slashUrls":1,"compile":0,"modified":1735422415,"_lazy":1}'),
 	(50, 'brand', 104, 0, 0, '{"slashUrls":1,"compile":0,"modified":1735422407,"_lazy":1}'),
 	(51, 'about', 105, 0, 0, '{"slashUrls":1,"compile":0,"modified":1735562339,"ns":"ProcessWire","_lazy":1}'),
