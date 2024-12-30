@@ -1,1 +1,2 @@
 2024-12-28 10:46:54	admin	http://localhost:8888/	Method Pages::parent does not exist or is not callable in this context (in /wire/core/Wire.php line 563)
+2024-12-30 12:00:05	admin	http://localhost:8888/backend/setup/field/save?id=0	FieldtypeRepeater does not currently support field cloning. (in /wire/modules/Fieldtype/FieldtypeRepeater/FieldtypeRepeater.module line 1950)

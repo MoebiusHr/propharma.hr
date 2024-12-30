@@ -10,3 +10,15 @@
 2024-12-28 22:59:52	admin	http://localhost:8888/backend/page/edit/?id=1052&InputfieldFileAjax=1	Image: VALID: /site/assets/files/1052/proizvod.jpg
 2024-12-28 22:59:55	admin	http://localhost:8888/backend/page/edit/?id=1052&InputfieldFileAjax=1	Image: VALID: /site/assets/files/1052/proizvod-1.jpg
 2024-12-28 22:59:57	admin	http://localhost:8888/backend/page/edit/?id=1052&InputfieldFileAjax=1	Image: VALID: /site/assets/files/1052/proizvod-2.jpg
+2024-12-30 09:08:13	admin	http://localhost:8888/backend/page/edit/?id=1056&InputfieldFileAjax=1	Image: VALID: /site/assets/files/1056/proizvod2.jpg
+2024-12-30 09:08:34	admin	http://localhost:8888/backend/page/edit/?id=1057&InputfieldFileAjax=1	Image: VALID: /site/assets/files/1057/proizvod3.jpg
+2024-12-30 09:08:38	admin	http://localhost:8888/backend/page/edit/?id=1057&InputfieldFileAjax=1	Image: VALID: /site/assets/files/1057/proizvod3-1.jpg
+2024-12-30 09:11:05	admin	http://localhost:8888/backend/page/edit/?id=1058&InputfieldFileAjax=1	Image: VALID: /site/assets/files/1058/proizvod4.jpg
+2024-12-30 09:11:52	admin	http://localhost:8888/backend/page/edit/?id=1059&InputfieldFileAjax=1	Image: VALID: /site/assets/files/1059/proizvod5.jpg
+2024-12-30 12:01:34	admin	http://localhost:8888/backend/page/edit/?id=1024&InputfieldFileAjax=1	Image: VALID: /site/assets/files/1024/media.png
+2024-12-30 12:01:42	admin	http://localhost:8888/backend/page/edit/?id=1024&InputfieldFileAjax=1	Image: VALID: /site/assets/files/1024/vrijednosti-4.png
+2024-12-30 12:03:02	admin	http://localhost:8888/backend/page/edit/?id=1064&InputfieldFileAjax=1	Image: VALID: /site/assets/files/1064/ico-misija.png
+2024-12-30 12:03:15	admin	http://localhost:8888/backend/page/edit/?id=1065&InputfieldFileAjax=1	Image: VALID: /site/assets/files/1065/ico-vizija.png
+2024-12-30 13:42:01	admin	http://localhost:8888/backend/page/edit/?id=1067&InputfieldFileAjax=1	Image: VALID: /site/assets/files/1067/1-ikona-marketing.png
+2024-12-30 13:42:26	admin	http://localhost:8888/backend/page/edit/?id=1068&InputfieldFileAjax=1	Image: VALID: /site/assets/files/1068/ikona_products.png
+2024-12-30 13:42:39	admin	http://localhost:8888/backend/page/edit/?id=1069&InputfieldFileAjax=1	Image: VALID: /site/assets/files/1069/ikona_products.png
