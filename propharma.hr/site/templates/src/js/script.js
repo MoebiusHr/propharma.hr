@@ -5,6 +5,10 @@ import $ from "jquery";
 import '../../node_modules/slick-carousel/slick/slick.min.js';
 import '../../node_modules/jquery.cookie/jquery.cookie.js';
 
+
+var group_id = null;
+var brand_id = null;
+
 $(function() {
 
     $("header .container nav > ul > li > a.has-children").on("mouseenter", function() {
@@ -37,6 +41,44 @@ $(function() {
         dots: true,
         arrows: false
     });
+
+
+
+    $(".group-trigger").on("click", function() {
+        group_id = $(this).data("id");
+        $(this).parent().parent().prev().html($(this).html());
+        $(this).parent().parent().prev().removeClass("active");
+        filterProductList(group_id, brand_id);
+    })
+
+    $(".brand-trigger").on("click", function() {
+        brand_id = $(this).data("id");
+        $(this).parent().parent().prev().html($(this).html());
+        $(this).parent().parent().prev().removeClass("active");
+        filterProductList(group_id, brand_id);
+    })
+
+
+
+    function filterProductList(group_id, brand_id) {
+
+        console.log("group_id", group_id);
+        console.log("brand_id", brand_id);
+
+        $(".product-item-wrapper > div").hide();
+
+        if (group_id != null && brand_id == null) {
+            $(".product-item-wrapper > div[data-group='" + group_id + "']").show();
+        } else if (group_id == null && brand_id != null) {
+            $(".product-item-wrapper > div[data-brand='" + brand_id + "']").show();
+        } else if (group_id != null && brand_id != null) {
+            $(".product-item-wrapper > div[data-group='" + group_id + "'][data-brand='" + brand_id + "']").show();
+        } else if (group_id == null && brand_id == null) {
+            $(".product-item-wrapper > div").show();
+        }
+
+    }
+
     
 
 })

@@ -63,7 +63,8 @@
 		</div>
         <?php
             echo wireRenderFile("partial/product-list", array(
-                'products' => $page->products_on_homepage
+                'products' => $page->products_on_homepage,
+				'center' => true
             ));
         ?>
 	</div>

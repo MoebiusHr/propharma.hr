@@ -1,4 +1,4 @@
-<div class="product-item-wrapper">
+<div class="product-item-wrapper<?php echo (!$center ? " product-item-wrapper-left" : "") ?>"> 
     <?php foreach ($products as $item) { ?>
         <div class="item" data-group="<?php echo $item->parentID ?>" data-brand="<?php echo $item->brand->id ?>">
             <a href="<?php echo $item->url ?>">

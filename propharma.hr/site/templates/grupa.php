@@ -8,8 +8,20 @@
 // See the Markup Regions documentation:
 // https://processwire.com/docs/front-end/output/markup-regions/
 
-
+$products = $pages->find("template=product, has_parent={$page}");
 $podgrupe = $page->children;
+
+
+$podgrupe_filtered = new PageArray();
+$brands_filtered = new PageArray();
+
+foreach ($products as $item) {
+    $podgrupe_filtered[] = $item->parent;
+    $brands_filtered[] = $item->brand;
+}
+
+$podgrupe_filtered = $podgrupe_filtered->unique();
+$brands_filtered = $brands_filtered->unique();
 
 ?>
 
@@ -33,16 +45,25 @@ $podgrupe = $page->children;
             <div class="filter">
                 <p><?php echo __("Svi UREĐAJI") ?></p>
                 <ul>
+                    <li><a href="javascript:;" class="group-trigger" data-id=null><?php echo __("Svi UREĐAJI") ?></a></li>
                     <?php 
-                        foreach ($podgrupe as $item) {
-                            echo "<li><a href='javascript:;'>{$item->title}</a></li>";
+                        foreach ($podgrupe_filtered as $item) {
+                            echo "<li><a href='javascript:;' class='group-trigger' data-id='{$item->id}'>{$item->title}</a></li>";
                         }
                     ?>
                 </ul>
             </div>
 
             <div class="filter">
-                <p>Svi BRANDOVI</p>
+                <p><?php echo __("Svi BRANDOVI") ?></p>
+                <ul>
+                    <li><a href="javascript:;" class="brand-trigger" data-id=null><?php echo __("Svi BRANDOVI") ?></a></li>
+                    <?php 
+                        foreach ($brands_filtered as $item) {
+                            echo "<li><a href='javascript:;' class='brand-trigger' data-id='{$item->id}'>{$item->title}</a></li>";
+                        }
+                    ?>
+                </ul>
             </div>
         </div>
     </div>
@@ -51,10 +72,14 @@ $podgrupe = $page->children;
     <div class="container">
         <?php
             echo wireRenderFile("partial/product-list", array(
-                'products' => $pages->find("template=product, has_parent={$page}")
+                'products' => $products,
+                'center' => false
             ));
         ?>
     </div>
 
 
 </div>	
+
+
+

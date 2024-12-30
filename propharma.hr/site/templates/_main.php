@@ -127,5 +127,8 @@
         </footer>
 
         <script src="<?php echo $config->urls->templates; ?>dist/js/script.js"></script>
+
+
+
     </body>
 </html>
