@@ -8,8 +8,28 @@
 // See the Markup Regions documentation:
 // https://processwire.com/docs/front-end/output/markup-regions/
 
+
 ?>
 
 <div id="content">
 
+    <div class="container container-compact">
+        <article>
+            <?php
+                echo wireRenderFile("partial/breadcrumbs", array(
+                    'page' => $page,
+                    'home' => $home
+                ));
+            ?>
+            <h1><?php echo $page->title ?></h1>
+
+            <?php echo $page->content ?>
+        </article>
+    </div>
+
+
+
 </div>	
+
+
+

@@ -41,6 +41,9 @@ $brands_filtered = $brands_filtered->unique();
         <div class="description">
             <?php echo $page->content ?>
         </div>
+
+        <?php if (count($products) > 0) { ?>
+
         <div class="filters">
             <div class="filter">
                 <p><?php echo __("Svi UREĐAJI") ?></p>
@@ -66,15 +69,24 @@ $brands_filtered = $brands_filtered->unique();
                 </ul>
             </div>
         </div>
+
+
+        <?php } ?>
+
+
     </div>
 
 
     <div class="container">
         <?php
-            echo wireRenderFile("partial/product-list", array(
-                'products' => $products,
-                'center' => false
-            ));
+            if (count($products) > 0) {
+                echo wireRenderFile("partial/product-list", array(
+                    'products' => $products,
+                    'center' => false
+                ));
+            } else {
+                echo "<p>" . __("Trenutno nema proizvoda u ovoj grupi") . "</p>";
+            }
         ?>
     </div>
 

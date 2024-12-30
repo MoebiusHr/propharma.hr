@@ -220,6 +220,16 @@ ul {
     }
 }
 
+article {
+    font-size: 1rem;
+    line-height: 1.75rem;
+}
+
+
+.container-compact {
+    max-width: 1200px;
+}
+
 
 header {
     width: 100%;
@@ -939,12 +949,14 @@ ul#bread {
 
         .thumb {
 
+            cursor: pointer;
             margin-bottom: 1.5rem;
 
             img {
                 max-width: 150px;
                 border: solid 1px #e0e0e0;
             }
+            
         }
     }
 
@@ -978,6 +990,7 @@ ul#bread {
             color: #404040;
             font-size: 2rem;
             margin-bottom: 6rem;
+            line-height: 2.5rem;
     
             &::after {
                 height: 0;

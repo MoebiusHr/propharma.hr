@@ -59,6 +59,11 @@ $(function() {
     })
 
 
+    $(".thumb").on("click", function() {
+        var src = $(this).data("src");
+        $(".main-image img").attr("src", src);
+    })
+
 
     function filterProductList(group_id, brand_id) {
 
