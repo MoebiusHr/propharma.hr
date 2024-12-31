@@ -42,9 +42,9 @@ CREATE TABLE IF NOT EXISTS `fieldgroups` (
   `name` varchar(250) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `name` (`name`)
-) ENGINE=MyISAM AUTO_INCREMENT=107 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=108 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 
--- Dumping data for table docker.fieldgroups: 16 rows
+-- Dumping data for table docker.fieldgroups: 17 rows
 DELETE FROM `fieldgroups`;
 /*!40000 ALTER TABLE `fieldgroups` DISABLE KEYS */;
 INSERT INTO `fieldgroups` (`id`, `name`) VALUES
@@ -63,7 +63,8 @@ INSERT INTO `fieldgroups` (`id`, `name`) VALUES
 	(103, 'brand-wrapper'),
 	(104, 'brand'),
 	(105, 'about'),
-	(106, 'repeater_about_repeater');
+	(106, 'repeater_about_repeater'),
+	(107, 'contact');
 /*!40000 ALTER TABLE `fieldgroups` ENABLE KEYS */;
 
 -- Dumping structure for table docker.fieldgroups_fields
@@ -76,7 +77,7 @@ CREATE TABLE IF NOT EXISTS `fieldgroups_fields` (
   PRIMARY KEY (`fieldgroups_id`,`fields_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 
--- Dumping data for table docker.fieldgroups_fields: 76 rows
+-- Dumping data for table docker.fieldgroups_fields: 84 rows
 DELETE FROM `fieldgroups_fields`;
 /*!40000 ALTER TABLE `fieldgroups_fields` DISABLE KEYS */;
 INSERT INTO `fieldgroups_fields` (`fieldgroups_id`, `fields_id`, `sort`, `data`) VALUES
@@ -155,7 +156,15 @@ INSERT INTO `fieldgroups_fields` (`fieldgroups_id`, `fields_id`, `sort`, `data`)
 	(83, 102, 3, NULL),
 	(83, 105, 4, NULL),
 	(83, 120, 6, NULL),
-	(83, 104, 7, NULL);
+	(83, 104, 7, NULL),
+	(107, 1, 0, NULL),
+	(107, 101, 1, NULL),
+	(107, 109, 2, NULL),
+	(107, 102, 3, NULL),
+	(107, 105, 4, NULL),
+	(107, 103, 5, NULL),
+	(107, 120, 6, NULL),
+	(107, 104, 7, NULL);
 /*!40000 ALTER TABLE `fieldgroups_fields` ENABLE KEYS */;
 
 -- Dumping structure for table docker.fields
@@ -299,7 +308,7 @@ CREATE TABLE IF NOT EXISTS `field_content` (
   FULLTEXT KEY `data1020` (`data1020`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 
--- Dumping data for table docker.field_content: 11 rows
+-- Dumping data for table docker.field_content: 12 rows
 DELETE FROM `field_content`;
 /*!40000 ALTER TABLE `field_content` DISABLE KEYS */;
 INSERT INTO `field_content` (`pages_id`, `data`, `data1020`) VALUES
@@ -313,7 +322,8 @@ INSERT INTO `field_content` (`pages_id`, `data`, `data1020`) VALUES
 	(1058, '<p>Beskontaktni infracrveni toplomjer Vaše je rješenje ako tražite brzo i pouzdano mjerenje temperature. Osim tjelesne temperature, u posebnom načinu rada mjeri temperaturu tekućina te objekata.</p>', ''),
 	(1059, '<p>Beskontaktni infracrveni toplomjer Vaše je rješenje ako tražite brzo i pouzdano mjerenje temperature. Osim tjelesne temperature, u posebnom načinu rada mjeri temperaturu tekućina te objekata.</p>', ''),
 	(1024, '<p>PROPHARMA je brzorastuća farmaceutska tvrtka specijalizirana za registraciju, distribuciju i promociju visokokvalitetnih medicinskih proizvoda i medicinskih uređaja za regionalno tržište.</p>', ''),
-	(1026, '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut purus purus. Nam ligula nunc, pellentesque non lobortis eget, auctor non eros. Etiam hendrerit, neque vestibulum vehicula consectetur, elit turpis semper urna, sit amet pretium est odio eu est. Phasellus pellentesque ante vel erat vulputate, non ornare turpis euismod. Donec purus lectus, consectetur nec neque et, placerat bibendum nisi. Curabitur gravida tortor dignissim tempus aliquam. Pellentesque eleifend ac turpis nec lacinia. Vivamus molestie velit vel mollis efficitur. Ut convallis, nisl sit amet porta facilisis, ex velit luctus nunc, ac eleifend ipsum metus id odio. Praesent non mi sollicitudin, porta nisl ut, malesuada mi. Fusce vestibulum ipsum at urna sagittis, vitae sodales nulla bibendum. Cras sapien ex, aliquet eu hendrerit a, pretium eu enim. Pellentesque sit amet aliquam dolor, ut fringilla odio. In quis nisl odio.</p>\n\n<p>Suspendisse velit tortor, malesuada id feugiat vel, porttitor vel mauris. Maecenas aliquam sit amet augue cursus vestibulum. Vivamus accumsan, lacus in rhoncus dignissim, nisi justo egestas massa, vel scelerisque arcu ligula ac elit. Duis facilisis dolor vitae orci dignissim imperdiet dapibus ac velit. Integer sed porttitor lacus. Nam auctor mi et ornare semper. In hac habitasse platea dictumst. Aliquam a mattis velit. Quisque elementum, felis a ullamcorper commodo, neque neque sodales eros, vel molestie purus nunc non ex. Suspendisse nulla sem, molestie sed volutpat id, dapibus vitae turpis. Praesent commodo maximus diam, sit amet auctor ante dignissim ut.</p>\n\n<p>Morbi convallis lobortis semper. Cras pulvinar iaculis turpis, sit amet sodales tortor aliquet sit amet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed mauris ante, eleifend viverra libero et, sodales scelerisque velit. Cras viverra nunc quis libero congue, ac egestas lectus venenatis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque molestie pretium velit, non interdum purus posuere vel. Suspendisse pretium fringilla rutrum. In hac habitasse platea dictumst. Etiam a maximus mauris. Donec molestie tempor imperdiet. Nullam varius imperdiet condimentum. Sed ultrices et elit quis euismod. Suspendisse et diam quis est pharetra vestibulum et nec leo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>', '');
+	(1026, '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut purus purus. Nam ligula nunc, pellentesque non lobortis eget, auctor non eros. Etiam hendrerit, neque vestibulum vehicula consectetur, elit turpis semper urna, sit amet pretium est odio eu est. Phasellus pellentesque ante vel erat vulputate, non ornare turpis euismod. Donec purus lectus, consectetur nec neque et, placerat bibendum nisi. Curabitur gravida tortor dignissim tempus aliquam. Pellentesque eleifend ac turpis nec lacinia. Vivamus molestie velit vel mollis efficitur. Ut convallis, nisl sit amet porta facilisis, ex velit luctus nunc, ac eleifend ipsum metus id odio. Praesent non mi sollicitudin, porta nisl ut, malesuada mi. Fusce vestibulum ipsum at urna sagittis, vitae sodales nulla bibendum. Cras sapien ex, aliquet eu hendrerit a, pretium eu enim. Pellentesque sit amet aliquam dolor, ut fringilla odio. In quis nisl odio.</p>\n\n<p>Suspendisse velit tortor, malesuada id feugiat vel, porttitor vel mauris. Maecenas aliquam sit amet augue cursus vestibulum. Vivamus accumsan, lacus in rhoncus dignissim, nisi justo egestas massa, vel scelerisque arcu ligula ac elit. Duis facilisis dolor vitae orci dignissim imperdiet dapibus ac velit. Integer sed porttitor lacus. Nam auctor mi et ornare semper. In hac habitasse platea dictumst. Aliquam a mattis velit. Quisque elementum, felis a ullamcorper commodo, neque neque sodales eros, vel molestie purus nunc non ex. Suspendisse nulla sem, molestie sed volutpat id, dapibus vitae turpis. Praesent commodo maximus diam, sit amet auctor ante dignissim ut.</p>\n\n<p>Morbi convallis lobortis semper. Cras pulvinar iaculis turpis, sit amet sodales tortor aliquet sit amet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed mauris ante, eleifend viverra libero et, sodales scelerisque velit. Cras viverra nunc quis libero congue, ac egestas lectus venenatis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque molestie pretium velit, non interdum purus posuere vel. Suspendisse pretium fringilla rutrum. In hac habitasse platea dictumst. Etiam a maximus mauris. Donec molestie tempor imperdiet. Nullam varius imperdiet condimentum. Sed ultrices et elit quis euismod. Suspendisse et diam quis est pharetra vestibulum et nec leo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>', ''),
+	(1023, '<p>Sjedište<br />\n<strong>PROPHARMA d.o.o.</strong><br />\nSlovenska 1<br />\n10000 Zagreb</p>\n\n<p>Telefon: <a href="tel:+38513757460">+385 1 3757 460</a><br />\nFax: +385 1 3757 461<br />\nE-mail: <a href="mailto:info@propharma.hr">info@propharma.hr</a></p>', '');
 /*!40000 ALTER TABLE `field_content` ENABLE KEYS */;
 
 -- Dumping structure for table docker.field_email
@@ -524,7 +534,7 @@ DELETE FROM `field_products_on_homepage`;
 INSERT INTO `field_products_on_homepage` (`pages_id`, `data`, `sort`) VALUES
 	(1, 1052, 0),
 	(1, 1056, 1),
-	(1, 1057, 2);
+	(1, 1059, 2);
 /*!40000 ALTER TABLE `field_products_on_homepage` ENABLE KEYS */;
 
 -- Dumping structure for table docker.field_redirect
@@ -822,9 +832,12 @@ CREATE TABLE IF NOT EXISTS `field_slika_mobile` (
   FULLTEXT KEY `filedata` (`filedata`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 
--- Dumping data for table docker.field_slika_mobile: 0 rows
+-- Dumping data for table docker.field_slika_mobile: 2 rows
 DELETE FROM `field_slika_mobile`;
 /*!40000 ALTER TABLE `field_slika_mobile` DISABLE KEYS */;
+INSERT INTO `field_slika_mobile` (`pages_id`, `data`, `sort`, `description`, `modified`, `created`, `filedata`, `filesize`, `created_users_id`, `modified_users_id`, `width`, `height`, `ratio`) VALUES
+	(1032, 'mobile1.jpg', 0, '[""]', '2024-12-31 20:25:15', '2024-12-31 20:25:15', '', 74834, 41, 41, 558, 558, 1.00),
+	(1034, 'mobile2.jpg', 0, '[""]', '2024-12-31 20:25:15', '2024-12-31 20:25:15', '', 126899, 41, 41, 558, 558, 1.00);
 /*!40000 ALTER TABLE `field_slika_mobile` ENABLE KEYS */;
 
 -- Dumping structure for table docker.field_slike
@@ -1175,7 +1188,7 @@ CREATE TABLE IF NOT EXISTS `pages` (
 DELETE FROM `pages`;
 /*!40000 ALTER TABLE `pages` DISABLE KEYS */;
 INSERT INTO `pages` (`id`, `parent_id`, `templates_id`, `name`, `status`, `modified`, `modified_users_id`, `created`, `created_users_id`, `published`, `sort`, `name1020`, `status1020`) VALUES
-	(1, 0, 1, 'en', 9, '2024-12-30 12:42:42', 41, '2024-12-26 10:56:08', 41, '2024-12-26 10:56:08', 0, 'hr', 1),
+	(1, 0, 1, 'en', 9, '2024-12-31 19:37:57', 41, '2024-12-26 10:56:08', 41, '2024-12-26 10:56:08', 0, 'hr', 1),
 	(2, 1, 2, 'backend', 1035, '2024-12-26 10:56:47', 40, '2024-12-26 10:56:08', 41, '2024-12-26 10:56:08', 5, NULL, 1),
 	(3, 2, 2, 'page', 21, '2024-12-26 10:56:08', 41, '2024-12-26 10:56:08', 41, '2024-12-26 10:56:08', 0, NULL, 1),
 	(6, 3, 2, 'add', 21, '2024-12-26 10:57:36', 40, '2024-12-26 10:56:08', 41, '2024-12-26 10:56:08', 1, NULL, 1),
@@ -1226,7 +1239,7 @@ INSERT INTO `pages` (`id`, `parent_id`, `templates_id`, `name`, `status`, `modif
 	(1020, 1017, 43, 'hrvatski', 1, '2024-12-28 09:05:46', 41, '2024-12-26 11:02:13', 41, '2024-12-26 11:02:13', 1, NULL, 1),
 	(1021, 1, 29, 'about-us', 1, '2024-12-30 19:40:36', 41, '2024-12-26 11:03:52', 41, '2024-12-26 11:03:52', 3, 'o-nama', 1),
 	(1022, 1, 46, 'our-products', 1, '2024-12-28 21:30:05', 41, '2024-12-26 11:04:29', 41, '2024-12-26 11:04:29', 4, 'prodajni-program', 1),
-	(1023, 1, 29, 'contact', 1, '2024-12-26 11:04:43', 41, '2024-12-26 11:04:43', 41, '2024-12-26 11:04:43', 5, 'kontakt', 1),
+	(1023, 1, 53, 'contact', 1, '2024-12-31 19:09:44', 41, '2024-12-26 11:04:43', 41, '2024-12-26 11:04:43', 5, 'kontakt', 1),
 	(1024, 1021, 51, 'about-propharma', 1, '2024-12-30 11:03:16', 41, '2024-12-26 11:06:37', 41, '2024-12-26 11:06:37', 0, 'o-propharmi', 1),
 	(1025, 1021, 29, 'news', 1, '2024-12-26 11:06:54', 41, '2024-12-26 11:06:54', 41, '2024-12-26 11:06:54', 1, 'aktualno', 1),
 	(1026, 1021, 29, 'privacy-policy', 1, '2024-12-30 19:44:38', 41, '2024-12-26 11:07:23', 41, '2024-12-26 11:07:23', 2, 'politika-zastite-privatnosti', 1),
@@ -1235,9 +1248,9 @@ INSERT INTO `pages` (`id`, `parent_id`, `templates_id`, `name`, `status`, `modif
 	(1029, 1022, 47, 'medical-devices', 1, '2024-12-29 23:10:20', 41, '2024-12-26 11:08:23', 41, '2024-12-26 11:08:23', 2, 'medicinski-uredjaji', 1),
 	(1030, 1015, 2, 'for-field-110', 17, '2024-12-28 08:04:27', 41, '2024-12-28 08:04:27', 41, '2024-12-28 08:04:27', 0, NULL, 0),
 	(1031, 1030, 2, 'for-page-1', 17, '2024-12-28 08:10:41', 41, '2024-12-28 08:10:41', 41, '2024-12-28 08:10:41', 0, NULL, 0),
-	(1032, 1031, 44, '1735373561-7219-1', 1, '2024-12-28 08:14:51', 41, '2024-12-28 08:12:41', 41, '2024-12-28 08:12:56', 0, NULL, 1),
+	(1032, 1031, 44, '1735373561-7219-1', 1, '2024-12-31 19:25:15', 41, '2024-12-28 08:12:41', 41, '2024-12-28 08:12:56', 0, NULL, 1),
 	(1035, 1015, 2, 'for-field-115', 17, '2024-12-28 09:55:51', 41, '2024-12-28 09:55:51', 41, '2024-12-28 09:55:51', 1, NULL, 0),
-	(1034, 1031, 44, '1735373678-2165-1', 1, '2024-12-28 08:15:27', 41, '2024-12-28 08:14:38', 41, '2024-12-28 08:14:51', 1, NULL, 1),
+	(1034, 1031, 44, '1735373678-2165-1', 1, '2024-12-31 19:25:15', 41, '2024-12-28 08:14:38', 41, '2024-12-28 08:14:51', 1, NULL, 1),
 	(1065, 1063, 52, '1735556584-1058-1', 1, '2024-12-30 11:03:16', 41, '2024-12-30 11:03:04', 41, '2024-12-30 11:03:16', 3, NULL, 1),
 	(1066, 1035, 2, 'for-page-1', 17, '2024-12-30 12:41:33', 41, '2024-12-30 12:41:33', 41, '2024-12-30 12:41:33', 0, NULL, 0),
 	(1067, 1066, 45, '1735562498-757-1', 1, '2024-12-30 12:42:42', 41, '2024-12-30 12:41:38', 41, '2024-12-30 12:42:07', 0, NULL, 1),
@@ -1264,8 +1277,8 @@ INSERT INTO `pages` (`id`, `parent_id`, `templates_id`, `name`, `status`, `modif
 	(1063, 1062, 2, 'for-page-1024', 17, '2024-12-30 11:02:36', 41, '2024-12-30 11:02:36', 41, '2024-12-30 11:02:36', 0, NULL, 0),
 	(1064, 1063, 52, '1735556566-2426-1', 1, '2024-12-30 11:03:16', 41, '2024-12-30 11:02:46', 41, '2024-12-30 11:03:16', 2, NULL, 1),
 	(1062, 1015, 2, 'for-field-119', 17, '2024-12-30 11:00:30', 41, '2024-12-30 11:00:30', 41, '2024-12-30 11:00:30', 2, NULL, 0),
-	(1068, 1066, 45, '1735562541-4959-1', 1, '2024-12-30 12:42:42', 41, '2024-12-30 12:42:21', 41, '2024-12-30 12:42:42', 3, NULL, 1),
-	(1069, 1066, 45, '1735562548-465-1', 1, '2024-12-30 12:42:42', 41, '2024-12-30 12:42:28', 41, '2024-12-30 12:42:42', 4, NULL, 1);
+	(1068, 1066, 45, '1735562541-4959-1', 1, '2024-12-31 19:25:15', 41, '2024-12-30 12:42:21', 41, '2024-12-30 12:42:42', 1, NULL, 1),
+	(1069, 1066, 45, '1735562548-465-1', 1, '2024-12-31 19:25:15', 41, '2024-12-30 12:42:28', 41, '2024-12-30 12:42:42', 2, NULL, 1);
 /*!40000 ALTER TABLE `pages` ENABLE KEYS */;
 
 -- Dumping structure for table docker.pages_access
@@ -1424,7 +1437,7 @@ CREATE TABLE IF NOT EXISTS `session_login_throttle` (
 DELETE FROM `session_login_throttle`;
 /*!40000 ALTER TABLE `session_login_throttle` DISABLE KEYS */;
 INSERT INTO `session_login_throttle` (`name`, `attempts`, `last_attempt`) VALUES
-	('admin', 1, 1735587532);
+	('admin', 1, 1735671155);
 /*!40000 ALTER TABLE `session_login_throttle` ENABLE KEYS */;
 
 -- Dumping structure for table docker.templates
@@ -1439,9 +1452,9 @@ CREATE TABLE IF NOT EXISTS `templates` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `name` (`name`),
   KEY `fieldgroups_id` (`fieldgroups_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=53 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=54 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 
--- Dumping data for table docker.templates: 16 rows
+-- Dumping data for table docker.templates: 17 rows
 DELETE FROM `templates`;
 /*!40000 ALTER TABLE `templates` DISABLE KEYS */;
 INSERT INTO `templates` (`id`, `name`, `fieldgroups_id`, `flags`, `cache_time`, `data`) VALUES
@@ -1449,18 +1462,19 @@ INSERT INTO `templates` (`id`, `name`, `fieldgroups_id`, `flags`, `cache_time`, 
 	(3, 'user', 3, 8, 0, '{"useRoles":1,"noChildren":1,"parentTemplates":[2],"slashUrls":1,"pageClass":"User","noGlobal":1,"noMove":1,"noTrash":1,"noSettings":1,"noChangeTemplate":1,"nameContentTab":1}'),
 	(4, 'role', 4, 8, 0, '{"noChildren":1,"parentTemplates":[2],"slashUrls":1,"pageClass":"Role","noGlobal":1,"noMove":1,"noTrash":1,"noSettings":1,"noChangeTemplate":1,"nameContentTab":1}'),
 	(5, 'permission', 5, 8, 0, '{"noChildren":1,"parentTemplates":[2],"slashUrls":1,"guestSearchable":1,"pageClass":"Permission","noGlobal":1,"noMove":1,"noTrash":1,"noSettings":1,"noChangeTemplate":1,"nameContentTab":1}'),
-	(1, 'home', 1, 0, 0, '{"useRoles":1,"noParents":1,"slashUrls":1,"compile":0,"modified":1735562488,"ns":"ProcessWire","_lazy":1,"roles":[37]}'),
-	(29, 'basic-page', 83, 0, 0, '{"slashUrls":1,"compile":0,"modified":1735588178,"ns":"ProcessWire","_lazy":1}'),
+	(1, 'home', 1, 0, 0, '{"useRoles":1,"noParents":1,"slashUrls":1,"compile":0,"modified":1735673525,"ns":"ProcessWire","_lazy":1,"roles":[37]}'),
+	(29, 'basic-page', 83, 0, 0, '{"slashUrls":1,"compile":0,"modified":1735672219,"ns":"ProcessWire","_lazy":1}'),
 	(43, 'language', 97, 8, 0, '{"parentTemplates":[2],"slashUrls":1,"pageClass":"Language","pageLabelField":"name","noGlobal":1,"noMove":1,"noTrash":1,"noChangeTemplate":1,"noUnpublish":1,"compile":3,"nameContentTab":1,"modified":1735210855}'),
 	(44, 'repeater_rotator', 98, 8, 0, '{"noChildren":1,"noParents":1,"slashUrls":1,"pageClass":"RepeaterPage","noGlobal":1,"compile":3,"modified":1735373067}'),
 	(45, 'repeater_call_to_action', 99, 8, 0, '{"noChildren":1,"noParents":1,"slashUrls":1,"pageClass":"RepeaterPage","noGlobal":1,"compile":3,"modified":1735379751}'),
 	(46, 'program', 100, 0, 0, '{"parentTemplates":[47],"slashUrls":1,"compile":0,"modified":1735513452,"ns":"ProcessWire","_lazy":1}'),
-	(47, 'grupa', 101, 0, 0, '{"childTemplates":[47,48],"slashUrls":1,"compile":0,"modified":1735593665,"ns":"ProcessWire","_lazy":1}'),
+	(47, 'grupa', 101, 0, 0, '{"childTemplates":[47,48],"slashUrls":1,"compile":0,"modified":1735671037,"ns":"ProcessWire","_lazy":1}'),
 	(48, 'product', 102, 0, 0, '{"slashUrls":1,"compile":0,"modified":1735593299,"ns":"ProcessWire","_lazy":1}'),
 	(49, 'brand-wrapper', 103, 0, 0, '{"childTemplates":[50],"slashUrls":1,"compile":0,"modified":1735422415,"_lazy":1}'),
 	(50, 'brand', 104, 0, 0, '{"slashUrls":1,"compile":0,"modified":1735422407,"_lazy":1}'),
 	(51, 'about', 105, 0, 0, '{"slashUrls":1,"compile":0,"modified":1735562339,"ns":"ProcessWire","_lazy":1}'),
-	(52, 'repeater_about_repeater', 106, 8, 0, '{"noChildren":1,"noParents":1,"slashUrls":1,"pageClass":"RepeaterPage","noGlobal":1,"compile":3,"modified":1735556430}');
+	(52, 'repeater_about_repeater', 106, 8, 0, '{"noChildren":1,"noParents":1,"slashUrls":1,"pageClass":"RepeaterPage","noGlobal":1,"compile":3,"modified":1735556430}'),
+	(53, 'contact', 107, 0, 0, '{"slashUrls":1,"compile":3,"modified":1735672735,"ns":"ProcessWire","_lazy":1}');
 /*!40000 ALTER TABLE `templates` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
