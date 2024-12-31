@@ -223,6 +223,14 @@ ul {
 article {
     font-size: 1rem;
     line-height: 1.75rem;
+
+    a {
+        color: #39aca9;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }
 
 
@@ -488,6 +496,7 @@ header {
 
         &:hover {
             border: #55CCC9 solid 1px;
+            text-decoration: underline;
         }
 
         img {
@@ -495,13 +504,17 @@ header {
             width: 100%;
             margin-bottom: 3rem;
         }
+
+
     }
+    
 }
 
 
 .product-item-wrapper-left {
     justify-content: flex-start;
 }
+
 
 
 
@@ -937,6 +950,7 @@ ul#bread {
 
 }
 
+
 .product {
 
     display: flex;
@@ -1008,6 +1022,20 @@ ul#bread {
         }
     }
 
+}
 
+.contact {
+    display: flex;
+    flex-wrap: nowrap;
 
+    > div {
+
+        flex: 0 0 20%;
+
+        &:last-child {
+            padding-left: 3rem;
+            flex: 0 0 80%;
+        }
+
+    }
 }

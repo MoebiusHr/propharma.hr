@@ -22,3 +22,5 @@
 2024-12-30 13:42:01	admin	http://localhost:8888/backend/page/edit/?id=1067&InputfieldFileAjax=1	Image: VALID: /site/assets/files/1067/1-ikona-marketing.png
 2024-12-30 13:42:26	admin	http://localhost:8888/backend/page/edit/?id=1068&InputfieldFileAjax=1	Image: VALID: /site/assets/files/1068/ikona_products.png
 2024-12-30 13:42:39	admin	http://localhost:8888/backend/page/edit/?id=1069&InputfieldFileAjax=1	Image: VALID: /site/assets/files/1069/ikona_products.png
+2024-12-31 20:25:07	admin	http://localhost:8888/backend/page/edit/?id=1032&InputfieldFileAjax=1	Image: VALID: /site/assets/files/1032/mobile1.jpg
+2024-12-31 20:25:12	admin	http://localhost:8888/backend/page/edit/?id=1034&InputfieldFileAjax=1	Image: VALID: /site/assets/files/1034/mobile2.jpg

@@ -12,6 +12,7 @@
 
 ?>
 
+ 
 <div id="content">
 	<div class="container">
 
@@ -25,7 +26,13 @@
 						<span><?php echo $item->title ?></span
 						>
 					</div>
-					<img src="<?php echo $item->slika->url ?>" alt="<?php echo $item->slika->description ?>" />
+					
+
+					<picture>
+						<source media="(max-width: 768px)" srcset="<?php echo $item->slika_mobile->url ?>">
+						<img src="<?php echo $item->slika->url ?>" alt="<?php echo $item->slika->description ?>" loading="lazy" />
+					</picture>
+
 				</div>
 			<?php } ?>
 		</div>
@@ -35,7 +42,7 @@
 		<div class="about">
 			<h2><?php echo $page->subtitle ?></h2>
 			<?php echo $page->short_description ?>
-			<a href="<?php $about->url ?>" class="btn"><?php echo __("Više") ?></a>
+			<a href="<?php echo $about->url ?>" class="btn"><?php echo __("Više") ?></a>
 		</div>
 	</div>
 
@@ -78,7 +85,6 @@
 					<p><?php echo $item->title ?></p>
 				</div>
 			<?php } ?>
-
 
 		</div>
 	</div>
