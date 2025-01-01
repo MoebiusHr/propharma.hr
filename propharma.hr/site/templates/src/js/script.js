@@ -11,14 +11,14 @@ var brand_id = null;
 
 $(function() {
 
-    $("header .container nav > ul > li > a.has-children").on("mouseenter", function() {
+    $("header .container nav.desktop > ul > li > a.has-children").on("mouseenter", function() {
         $("header ul.dropdown").hide();
         $(this).next().show();
         $(this).addClass("has-children-rotated");
     })
 
 
-    $("header .container ul li ul").on("mouseleave", function() {
+    $("header .container nav.desktop ul li ul").on("mouseleave", function() {
         $(this).hide();
         $(this).prev().removeClass("has-children-rotated");
     })
@@ -59,9 +59,19 @@ $(function() {
     })
 
 
+
     $(".thumb").on("click", function() {
         var src = $(this).data("src");
         $(".main-image img").attr("src", src);
+    })
+
+
+    $(".menu-trigger, img.close").on("click", function() {
+        if ($("nav.mobile").is(":visible")) {
+            $("nav.mobile").css("display", "none");
+        } else {
+            $("nav.mobile").css("display", "flex");
+        }
     })
 
 

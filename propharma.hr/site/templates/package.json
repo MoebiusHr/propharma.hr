@@ -3,28 +3,27 @@
     "version": "1.0.0",
     "description": "",
     "scripts": {
-      "watch:js": "parcel watch src/js/* --no-source-maps --no-cache --dist-dir dist/js/",
-      "watch:sass": "sass --watch src/css:dist/css --style=compressed --no-source-map",
-      "build:js": "parcel build src/js/* --no-source-maps --no-cache --dist-dir dist/js/",
-      "build:sass": "sass src/css:dist/css --style=compressed --no-source-map",
-      "dev": "npm-run-all --parallel watch:js watch:sass",
-      "build": "npm-run-all --parallel build:js build:sass",
-      "server": "http-server -c-1 -p 8081" 
+        "watch:js": "parcel watch src/js/* --no-source-maps --no-cache --dist-dir dist/js/",
+        "watch:sass": "node-sass --watch --output-style=compressed --no-cache --omit-source-map-url src/css --output=dist/css",
+        "build:js": "parcel build src/js/* --no-source-maps --no-cache --dist-dir dist/js/",
+        "build:sass": "node-sass --output-style=compressed --no-cache --omit-source-map-url src/css --output=dist/css",
+        "dev": "npm-run-all --parallel watch:js watch:sass",
+        "build": "npm-run-all --parallel build:js build:sass",
+        "server": "http-server -c-1 -p 8081"
     },
     "author": "",
     "license": "ISC",
     "dependencies": {
-      "http-server": "^14.1.1",
-      "jquery": "^3.7.1",
-      "jquery.cookie": "^1.4.1",
-      "sass": "^1.83.0",
-      "npm": "^9.7.2",
-      "parcel": "^2.13.3",
-      "pretty-checkbox": "^3.0.3",
-      "slick-carousel": "^1.8.1"
+        "http-server": "^14.1.1",
+        "jquery": "^3.7.1",
+        "jquery.cookie": "^1.4.1",
+        "node-sass": "^9.0.0",
+        "npm": "^9.7.2",
+        "parcel": "^2.13.3",
+        "pretty-checkbox": "^3.0.3",
+        "slick-carousel": "^1.8.1"
     },
     "devDependencies": {
-      "npm-run-all": "^4.1.5"
+        "npm-run-all": "^4.1.5"
     }
-  }
-  
+}

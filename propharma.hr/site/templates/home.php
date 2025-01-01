@@ -14,7 +14,7 @@
 
  
 <div id="content">
-	<div class="container">
+	<div class="container container-full-mobile">
 
 
 		<?php if ($page->rotator->count() > 0) { ?>

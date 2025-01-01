@@ -1,3 +1,5 @@
+<?php namespace ProcessWire; ?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -15,42 +17,38 @@
     <body>
         <header>
             <div class="container">
+                
                 <div class="logo">
                     <a href="<?php echo $home->url ?>"><img src="<?php echo $config->urls->templates; ?>img/Propharma__logo.svg" alt="Propharma" /></a>
                 </div>
-                <nav>
-                    <ul>
-						<li><a href="<?php echo $home->url ?>"><?php echo $home->title ?></a></li>
-                        <?php 
-						
-							foreach ($nav as $item) {
-								$cls = $item->numChildren > 0 ? ' class="has-children"' : '';
-								echo "<li><a href='{$item->url}'{$cls}>{$item->title}</a>";
-								if ($item->numChildren > 0) {
-									echo "<ul class='dropdown'>";
-									foreach ($item->children as $child) {
-										echo "<li><a href='{$child->url}'>{$child->title}</a></li>";
-									}
-									echo "</ul>";
-								}
-								echo "</li>";
-							} 
-							
-							$current_lang = $user->language;
-							echo "<li>";
-							echo "<a href='#' class='has-children'>{$current_lang->title}</a>";
-							echo "<ul class='dropdown'>";
-							foreach ($languages as $lang) {
-								if ($lang->id == $current_lang->id) continue;
-								echo "<li><a href='{$page->localUrl($lang)}'>{$lang->title}</a></li>";
-							}
-							echo "</ul>";
-							echo "</li>";
 
-						?>
-
-                    </ul>
+                <nav class="desktop">
+                    <?php
+                        echo wireRenderFile("partial/nav", array(
+                            'home' => $home,
+                            'nav' => $nav,
+                            'user' => $user,
+                            'languages' => $languages,
+                            'mobile' => false
+                        ));
+                    ?>
                 </nav>
+
+                <nav class="mobile">
+                    <?php
+                        echo wireRenderFile("partial/nav", array(
+                            'home' => $home,
+                            'nav' => $nav,
+                            'user' => $user,
+                            'languages' => $languages,
+                            'mobile' => true
+                        ));
+                    ?>
+                </nav>
+
+                <div class="menu-trigger">
+                    <img src="<?php echo $config->urls->templates; ?>img/menu-dots-circle.svg" alt="">
+                </div>
             </div>
         </header>
 
