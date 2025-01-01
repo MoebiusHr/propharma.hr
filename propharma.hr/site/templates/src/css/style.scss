@@ -1,7 +1,7 @@
 @use '../../node_modules/slick-carousel/slick/slick.scss'; 
 @use '../../node_modules/slick-carousel/slick/slick-theme.scss'; 
 
-@use '_include-media.scss'; 
+
 @use '_reset.scss'; 
 @use '_functions.scss'; 
 @use '_mixins.scss'; 
@@ -212,12 +212,17 @@ ul {
 
 .container {
     width: 100%;
-    max-width: 1800px;
+    max-width: 1920px;
     margin: 0 auto;
+
+    // @include media('max-width: 1024px') {
+    //     width: 90%;
+    // }
 
     .logo {
         margin-block: 1rem;
     }
+    
 }
 
 article {
@@ -312,10 +317,12 @@ header {
                     position: absolute;
                     min-width: 30ch;
                     padding: 2rem;
+                    padding-bottom: 1rem;
                     background-color: white;
                     font-size: 1rem;
                     margin-top: 2rem;
                     z-index: 100;
+                    border: solid 1px #6290fa55;
 
                     li {
                         margin-left: 0;
@@ -333,10 +340,12 @@ header {
 
                         a {
                             font-weight: normal;
+                            border-bottom-width: 0;
 
                             &:hover {
                                 color: #6290fa;
                                 font-weight: bold;
+                                border-bottom-width: 0;
                             }
                         }
 
