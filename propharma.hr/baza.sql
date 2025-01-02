@@ -1462,7 +1462,7 @@ INSERT INTO `templates` (`id`, `name`, `fieldgroups_id`, `flags`, `cache_time`, 
 	(3, 'user', 3, 8, 0, '{"useRoles":1,"noChildren":1,"parentTemplates":[2],"slashUrls":1,"pageClass":"User","noGlobal":1,"noMove":1,"noTrash":1,"noSettings":1,"noChangeTemplate":1,"nameContentTab":1}'),
 	(4, 'role', 4, 8, 0, '{"noChildren":1,"parentTemplates":[2],"slashUrls":1,"pageClass":"Role","noGlobal":1,"noMove":1,"noTrash":1,"noSettings":1,"noChangeTemplate":1,"nameContentTab":1}'),
 	(5, 'permission', 5, 8, 0, '{"noChildren":1,"parentTemplates":[2],"slashUrls":1,"guestSearchable":1,"pageClass":"Permission","noGlobal":1,"noMove":1,"noTrash":1,"noSettings":1,"noChangeTemplate":1,"nameContentTab":1}'),
-	(1, 'home', 1, 0, 0, '{"useRoles":1,"noParents":1,"slashUrls":1,"compile":0,"modified":1735673525,"ns":"ProcessWire","_lazy":1,"roles":[37]}'),
+	(1, 'home', 1, 0, 0, '{"useRoles":1,"noParents":1,"slashUrls":1,"compile":0,"modified":1735754951,"ns":"ProcessWire","_lazy":1,"roles":[37]}'),
 	(29, 'basic-page', 83, 0, 0, '{"slashUrls":1,"compile":0,"modified":1735672219,"ns":"ProcessWire","_lazy":1}'),
 	(43, 'language', 97, 8, 0, '{"parentTemplates":[2],"slashUrls":1,"pageClass":"Language","pageLabelField":"name","noGlobal":1,"noMove":1,"noTrash":1,"noChangeTemplate":1,"noUnpublish":1,"compile":3,"nameContentTab":1,"modified":1735210855}'),
 	(44, 'repeater_rotator', 98, 8, 0, '{"noChildren":1,"noParents":1,"slashUrls":1,"pageClass":"RepeaterPage","noGlobal":1,"compile":3,"modified":1735373067}'),
@@ -1474,7 +1474,7 @@ INSERT INTO `templates` (`id`, `name`, `fieldgroups_id`, `flags`, `cache_time`, 
 	(50, 'brand', 104, 0, 0, '{"slashUrls":1,"compile":0,"modified":1735422407,"_lazy":1}'),
 	(51, 'about', 105, 0, 0, '{"slashUrls":1,"compile":0,"modified":1735562339,"ns":"ProcessWire","_lazy":1}'),
 	(52, 'repeater_about_repeater', 106, 8, 0, '{"noChildren":1,"noParents":1,"slashUrls":1,"pageClass":"RepeaterPage","noGlobal":1,"compile":3,"modified":1735556430}'),
-	(53, 'contact', 107, 0, 0, '{"slashUrls":1,"compile":3,"modified":1735672735,"ns":"ProcessWire","_lazy":1}');
+	(53, 'contact', 107, 0, 0, '{"slashUrls":1,"compile":3,"modified":1735854032,"ns":"ProcessWire","_lazy":1}');
 /*!40000 ALTER TABLE `templates` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
