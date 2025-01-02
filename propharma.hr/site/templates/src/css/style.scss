@@ -407,8 +407,9 @@ header {
         }
 
 
+
         nav.mobile {
-            display: none;
+            display: flex;
             position: fixed;
             width: 100vw;
             height: 100vh;
@@ -418,6 +419,8 @@ header {
             left: 0;
             justify-content: flex-start;
             align-items: center;
+            transform: translateY(-100vh);
+            transition: transform .35s ease-in-out;
 
 
             .languages {
@@ -426,21 +429,34 @@ header {
                 left: 2.5rem;
 
                 a {
+                    color: #001689;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    font-size: 1.25rem;
+
+
                     &:first-child {
                         padding-right: 1rem;
                         margin-right: 1rem;
-                        border-right: solid 1px #e0e0e0;
+                        /*border-right: solid 1px #e0e0e0;*/
+                        
                     }
+                    
                 }
+
             }
 
             ul {
+
+                color: white;
+                font-weight: bold;
+
                 li {
                     display: block;
                     text-transform: uppercase;
                     line-height: 1.75rem;
                     margin-bottom: .75rem;
-                    font-size: 1rem;
+                    font-size: 1.5rem;
 
                     &::before {
                         background-image: none;
@@ -450,7 +466,7 @@ header {
                     ul {
                         margin-top: 1rem;
                         margin-bottom: 1rem;
-                        border-left: solid 1px #e0e0e0;    
+                        border-left: solid 3px rgba(255, 255, 255, .2);    
 
                         li {
                             padding-left: 1.25rem;
@@ -459,6 +475,13 @@ header {
                     }
                 }
             }
+        }
+
+
+        nav.mobile-menu-visible {
+            display: flex;
+            transform: translateY(0);
+            background-color: #55CCC9;
         }
 
     }
@@ -996,6 +1019,10 @@ ul#bread {
         width: 46ch;
     }
 
+    @include media('<=tablet') {
+        margin: 3rem 0 0 0;    
+    }
+
     li {
         display: inline-block;
         padding-right: 0;
@@ -1042,11 +1069,17 @@ ul#bread {
 
 
 .about-teaser {
+
     display: flex;
     padding-block: 3rem;
     position: relative;
     align-items: center;
     position: relative;
+
+    @include media('<=tablet') {
+        flex-direction: column;
+        padding-bottom: 1.5rem;
+    }
 
     > div.txt {
         flex: 0 0 50%;
@@ -1058,6 +1091,10 @@ ul#bread {
         z-index: 100;
         font-size: 1.125rem;
         line-height: 2rem;
+
+        @include media('<=desktop') {
+            padding: 3rem 3% 3rem 10%;
+        }
 
         p {
             width: 80%;
@@ -1087,18 +1124,34 @@ ul#bread {
 
     padding-block: 6rem;
 
+    @include media('<=tablet') {
+        padding-block: 3rem;
+    }
+
     .item {
         margin-left: 39%;
         display: flex;
 
-        .ico {
+        @include media('<=LGtablet') {
+            margin-left: 0;
+        }
 
+        img {
+            @include media('<=tablet') {
+                max-width: 100px;
+            }
         }
 
         .txt {
             padding-left: 6rem;
             font-size: 1.3125rem;
             line-height: 1.95rem;
+
+            @include media('<=tablet') {
+                padding-left: 3rem;
+                font-size: 1rem;
+                line-height: 1.5rem;
+            }
 
             h3 {
                 color: #001689;
@@ -1130,16 +1183,42 @@ ul#bread {
     align-items: center;
     margin-bottom: 3rem;
 
+    @include media('<=desktop') {
+        padding-left: 0;
+    }
+
+    @include media('<=LGtablet') {
+        flex-direction: column;
+    }
+
     .description {
+
         flex: 0 0 35%;
         line-height: 1.75rem;
         padding-right: 10rem;
+
+        @include media('<=LGtablet') {
+            flex: 0 0 100%;
+            padding-right: 0;
+        }
+
+        @include media('<=LGdesktop') {
+            padding-right: 4rem;
+        }
         
+        @include media('<=LGphone') {
+            padding-right: 0;
+        }
+
     }
 
     .filters {
         flex: 0 0 65%;
 
+        @include media('<=LGtablet') {
+            flex: 0 0 100%;
+            width: 100%;
+        }
 
     }
 }
@@ -1148,6 +1227,12 @@ ul#bread {
     display: inline-block;
     margin-right: 3rem;
     font-size: 1.125rem;
+    position: relative;
+
+    @include media('<=LGtablet') {
+        width: 90%;
+        margin-bottom: 2rem;
+   }
 
     &:last-child {
         margin-right: 0;
@@ -1161,6 +1246,19 @@ ul#bread {
         position: relative;
         margin-bottom: 0;
         transition: all 0.3s;
+
+        @include media('<=LGdesktop') {
+            width: 220px;
+        }
+
+        @include media('<=LGtablet') {
+             width: 100%;
+        }
+
+        @include media('<=LGphone') {
+            padding-right: 0;
+       }
+
 
         &::after {
             content: "";
@@ -1184,6 +1282,14 @@ ul#bread {
             border-bottom-left-radius: 1rem;
             border-bottom-right-radius: 1rem;
             padding-bottom: 2rem;
+
+            @include media('<=LGdesktop') {
+                width: calc(220px + 4rem);
+            }
+
+            @include media('<=LGtablet') {
+                width: calc(100% + 4rem)
+           }
 
             li {
 
@@ -1232,13 +1338,6 @@ ul#bread {
 }
 
 
-.main-image {
-
-    img {
-        border: solid 1px #e0e0e0;
-    }
-
-}
 
 
 .product {
@@ -1247,9 +1346,53 @@ ul#bread {
     gap: 2rem;
     margin-bottom: 3rem;
 
-    .thumbs {
-        display: flex;
+
+    @include media('<=desktop') {
+        flex-wrap: wrap;
+        gap: 0;
+    }
+
+
+    @include media('<=tablet') {
         flex-direction: column;
+    }
+
+    .main-image {
+
+        flex: 0 0 50%;
+        order: 1;
+        box-sizing: border-box;
+
+        @include media('<=desktop') {
+            order: 2;
+            padding-left: 2rem;
+        }
+
+        @include media('<=tablet') {
+            padding-left: 0;
+            margin-bottom: 2rem;
+        }
+
+        img {
+            border: solid 1px #e0e0e0;
+            width: 100%;
+        }
+    
+    }
+    
+
+    .thumbs {
+        flex: 0 0 10%;
+        display: flex;
+        order: 2;
+        flex-direction: column;
+
+        @include media('<=desktop') {
+            order: 3;
+            flex: 0 0 50%;
+            flex-direction: row;
+            gap: 1rem;
+        }
 
         .thumb {
 
@@ -1259,15 +1402,23 @@ ul#bread {
             img {
                 max-width: 150px;
                 border: solid 1px #e0e0e0;
+                width: 100%;
             }
             
         }
     }
 
     .product-content {
-
+        flex: 0 0 40%;
+        order: 3;
         max-width: 70ch;
         line-height: 1.75rem;
+
+        @include media('<=desktop') {
+            order: 1;
+            flex: 0 0 50%;
+            padding-bottom: 4rem;
+        }
 
         span.pre-title {
             display: block;
@@ -1295,6 +1446,10 @@ ul#bread {
             font-size: 2rem;
             margin-bottom: 6rem;
             line-height: 2.5rem;
+
+            @include media('<=desktop') {
+                margin-bottom: 1rem;
+            }
     
             &::after {
                 height: 0;
@@ -1318,6 +1473,10 @@ ul#bread {
     display: flex;
     flex-wrap: nowrap;
 
+    @include media('<=tablet') {
+        flex-direction: column;
+    }
+
     > div {
 
         flex: 0 0 20%;
@@ -1325,6 +1484,11 @@ ul#bread {
         &:last-child {
             padding-left: 3rem;
             flex: 0 0 80%;
+
+            @include media('<=tablet') {
+                padding-left: 0;
+            }
+
         }
 
     }

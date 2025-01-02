@@ -69,12 +69,15 @@ $(function() {
 
 
     $(".menu-trigger, img.close").on("click", function() {
-        if ($("nav.mobile").is(":visible")) {
-            $("nav.mobile").css("display", "none");
+        if ($("nav.mobile").hasClass("mobile-menu-visible")) {
+            //$("nav.mobile").css("display", "none");
+            $("nav.mobile").removeClass("mobile-menu-visible");
         } else {
-            $("nav.mobile").css("display", "flex");
+            //$("nav.mobile").css("display", "flex");
+            $("nav.mobile").addClass("mobile-menu-visible");
         }
     })
+
 
 
     function filterProductList(group_id, brand_id) {
