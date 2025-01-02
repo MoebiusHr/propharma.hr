@@ -31,7 +31,7 @@
                 <?php echo $page->content ?>
             </div>
             <div class="media">
-                <img src="<?php echo $page->slika->url ?>" alt="<?php echo $page->slika->description ?>" />
+                <img src="<?php echo $page->slika->webp->url ?>" alt="<?php echo $page->slika->description ?>" />
             </div>
         </div>
     </div>
@@ -42,7 +42,7 @@
             <div class="container">
                 <div class="item">
                     <div class="ico">
-                        <img src="<?php echo $item->slika->url ?>" alt="<?php echo $item->slika->description ?>" />
+                        <img src="<?php echo $item->slika->webp->url ?>" alt="<?php echo $item->slika->description ?>" loading="lazy" />
                     </div>
                     <div class="txt">
                         <h3><?php echo $item->title ?></h3>
@@ -54,7 +54,7 @@
     <?php } ?>
 
     <div class="container center">
-        <img src="<?php echo $page->slika_2->url ?>" alt="<?php echo $page->slika_2->description ?>" class="img-full" />
+        <img src="<?php echo $page->slika_2->webp->url ?>" alt="<?php echo $page->slika_2->description ?>" class="img-full" loading="lazy" />
     </div>
 
 

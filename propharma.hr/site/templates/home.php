@@ -30,7 +30,7 @@
 
 					<picture>
 						<source media="(max-width: 768px)" srcset="<?php echo $item->slika_mobile->url ?>">
-						<img src="<?php echo $item->slika->url ?>" alt="<?php echo $item->slika->description ?>" loading="lazy" />
+						<img src="<?php echo $item->slika->webp->url ?>" alt="<?php echo $item->slika->description ?>" loading="lazy" />
 					</picture>
 
 				</div>
@@ -81,7 +81,7 @@
 
 			<?php foreach ($page->call_to_action as $item) { ?>
 				<div class="item">
-					<img src="<?php echo $item->slika->url ?>" alt="<?php echo $item->slika->description ?>" />
+					<img src="<?php echo $item->slika->webp->url ?>" alt="<?php echo $item->slika->description ?>" loading="lazy" />
 					<p><?php echo $item->title ?></p>
 				</div>
 			<?php } ?>
