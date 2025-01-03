@@ -67,7 +67,7 @@
 
                     <?php foreach ($pages->find("parent=1045") as $item) { ?>
                         <div class="item">
-                            <img src="<?php echo $item->slika->webp->url ?>" alt="<?php echo $item->title ?>" />
+                            <img src="<?php echo $item->slika->webp->url ?>" alt="<?php echo $item->title ?>" width="<?php echo $item->slika->width ?>" height="<?php echo $item->slika->height ?>" />
                         </div>
                     <?php } ?>
 

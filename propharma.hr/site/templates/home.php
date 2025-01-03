@@ -26,11 +26,10 @@
 						<span><?php echo $item->title ?></span
 						>
 					</div>
-					
 
 					<picture>
-						<source media="(max-width: 768px)" srcset="<?php echo $item->slika_mobile->url ?>">
-						<img src="<?php echo $item->slika->webp->url ?>" alt="<?php echo $item->slika->description ?>" loading="lazy" />
+						<source media="(max-width: 768px)" srcset="<?php echo $item->slika_mobile->webp->url ?>" width="<?php echo $item->slika_mobile->width ?>" height="<?php echo $item->slika_mobile->height ?>">
+						<img src="<?php echo $item->slika->webp->url ?>" alt="<?php echo $item->slika->description ?>" width="<?php echo $item->slika->width ?>" height="<?php echo $item->slika->height ?>" />
 					</picture>
 
 				</div>
@@ -47,7 +46,7 @@
 	</div>
 
 	<div class="full-container">
-		<div class="prodajni-program">
+		<div class="prodajni-program" style="background-image: url('<?php echo $page->slika->webp->url ?>')">
 			<div>
 				<h2><?php echo $page->subtitle2 ?></h2>
 				<?php echo $page->short_description_2 ?>
@@ -81,7 +80,7 @@
 
 			<?php foreach ($page->call_to_action as $item) { ?>
 				<div class="item">
-					<img src="<?php echo $item->slika->webp->url ?>" alt="<?php echo $item->slika->description ?>" loading="lazy" />
+					<img src="<?php echo $item->slika->webp->url ?>" alt="<?php echo $item->slika->description ?>" loading="lazy" width="<?php echo $item->slika->width ?>" height="<?php echo $item->slika->height ?>" />
 					<p><?php echo $item->title ?></p>
 				</div>
 			<?php } ?>

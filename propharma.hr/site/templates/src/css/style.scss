@@ -526,6 +526,7 @@ header {
 
         img {
            display: inline-block;
+           height: auto;
 
             @include media('<=tablet') {
                 display: block;
@@ -616,7 +617,7 @@ header {
 
 .prodajni-program {
     display: flex;
-    background-image: url(../../img/pilule-farmaceutika.png);
+    // background-image: url(../../img/pilule-farmaceutika.png);
     background-repeat: no-repeat;
     background-size: 65%;
     background-position: right;
@@ -739,6 +740,7 @@ header {
             display: block;
             width: 100%;
             margin-bottom: 3rem;
+            height: auto;
         }
 
 
@@ -895,6 +897,7 @@ header {
         img {
             display: block;
             max-width: 100%;
+            height: auto;
 
             @include media('<=phone') {
                 display: inline;
@@ -1376,6 +1379,7 @@ ul#bread {
         img {
             border: solid 1px #e0e0e0;
             width: 100%;
+            height: auto;
         }
     
     }
@@ -1403,6 +1407,7 @@ ul#bread {
                 max-width: 150px;
                 border: solid 1px #e0e0e0;
                 width: 100%;
+                height: auto;
             }
             
         }
