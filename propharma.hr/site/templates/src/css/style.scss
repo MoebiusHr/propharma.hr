@@ -36,7 +36,7 @@ h2, h1 {
 
     color: #001689;
     font-size: 2.25rem;
-    font-weight: bold;
+    font-weight: 700;
     margin-bottom: 2.5rem;
     padding-bottom: 1rem;
     position: relative;
@@ -262,6 +262,11 @@ article {
 header {
     width: 100%;
     border-bottom: solid 5px #6290fa;
+    position: sticky;
+    z-index: 500000;
+    top: 0;
+    box-shadow: 0 6px 10px 0px rgba(0,0,0,0.1);
+    background-color: white;
 
     .container {
         display: flex;
@@ -818,6 +823,7 @@ header {
         img {
             display: inline-block;
             margin-bottom: 3rem;
+            height: auto;
 
             @include media('<=LGphone') {
                 max-width: 90px;
@@ -1362,9 +1368,14 @@ ul#bread {
 
     .main-image {
 
-        flex: 0 0 50%;
+        flex: 0 0 35%;
         order: 1;
         box-sizing: border-box;
+
+        @include media('<=LGdesktop') {
+            flex: 0 0 50%;
+        }
+
 
         @include media('<=desktop') {
             order: 2;
@@ -1414,10 +1425,14 @@ ul#bread {
     }
 
     .product-content {
-        flex: 0 0 40%;
+        flex: 0 0 55%;
         order: 3;
         max-width: 70ch;
         line-height: 1.75rem;
+
+        @include media('<=LGdesktop') {
+            flex: 0 0 50%;
+        }
 
         @include media('<=desktop') {
             order: 1;

@@ -8,8 +8,27 @@
         <title><?php echo $title ?></title>
         <meta name="description" content="<?php echo $description ?>" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <?php  if ($page->template == "home") { ?>   
+            <!-- Preload the LCP image with a high fetchpriority so it starts loading with the stylesheet. -->
+            <link rel="preload" fetchpriority="high" as="image" href="<?php echo $page->rotator->eq(0)->slika_mobile->webp->url ?>" type="image/webp">
+        <?php } ?>
+
+        <?php
+            echo "<meta property='og:title' content='{$title}' />\n";
+            echo "<meta property='og:description' content='{$description}' />\n";
+
+            if ($page->hasField('slika')) {
+                echo "<meta property='og:image' content='{$page->slika->webp->httpUrl}' />\n";
+            } else if ($page->hasField("slike") && $page->slike->count() > 0) {
+                echo "<meta property='og:image' content='{$page->slike->first->webp->httpUrl}' />\n";
+            }
+
+            echo "<meta property='og:url' content='{$page->httpUrl}' />\n";
+        ?>
+
+        <link rel="preload" href="<?php echo $config->urls->templates; ?>fonts/montserrat-v29-latin_latin-ext-regular.woff2" as="font">
+        <link rel="preload" href="<?php echo $config->urls->templates; ?>fonts/montserrat-v29-latin_latin-ext-700.woff2" as="font">
+
         <link rel="stylesheet" type="text/css" href="<?php echo $config->urls->templates; ?>fonts/fonts.css" />
         <link rel="stylesheet" type="text/css" href="<?php echo $config->urls->templates; ?>dist/css/style.css" />
         <title>Propharma</title>

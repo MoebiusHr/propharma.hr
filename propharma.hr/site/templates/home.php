@@ -29,7 +29,7 @@
 
 					<picture>
 						<source media="(max-width: 768px)" srcset="<?php echo $item->slika_mobile->webp->url ?>" width="<?php echo $item->slika_mobile->width ?>" height="<?php echo $item->slika_mobile->height ?>">
-						<img src="<?php echo $item->slika->webp->url ?>" alt="<?php echo $item->slika->description ?>" width="<?php echo $item->slika->width ?>" height="<?php echo $item->slika->height ?>" />
+						<img fetchpriority="high" src="<?php echo $item->slika->webp->url ?>" alt="<?php echo $item->slika->description ?>" width="<?php echo $item->slika->width ?>" height="<?php echo $item->slika->height ?>" />
 					</picture>
 
 				</div>
