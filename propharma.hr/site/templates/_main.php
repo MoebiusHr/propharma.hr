@@ -29,7 +29,7 @@
         <link rel="preload" href="<?php echo $config->urls->templates; ?>fonts/montserrat-v29-latin_latin-ext-regular.woff2" as="font">
         <link rel="preload" href="<?php echo $config->urls->templates; ?>fonts/montserrat-v29-latin_latin-ext-700.woff2" as="font">
 
-        <link rel="stylesheet" type="text/css" href="<?php echo $config->urls->templates; ?>fonts/fonts.css" />
+
         <link rel="stylesheet" type="text/css" href="<?php echo $config->urls->templates; ?>dist/css/style.css" />
         <title>Propharma</title>
     </head>
@@ -38,7 +38,7 @@
             <div class="container">
                 
                 <div class="logo">
-                    <a href="<?php echo $home->url ?>"><img src="<?php echo $config->urls->templates; ?>img/Propharma__logo.svg" alt="Propharma" /></a>
+                    <a href="<?php echo $home->url ?>"><img src="<?php echo $config->urls->templates; ?>img/Propharma__logo.svg" alt="Propharma" width="213" height="73" /></a>
                 </div>
 
                 <nav class="desktop">
@@ -66,7 +66,7 @@
                 </nav>
 
                 <div class="menu-trigger">
-                    <img src="<?php echo $config->urls->templates; ?>img/menu-dots-circle.svg" alt="">
+                    <img src="<?php echo $config->urls->templates; ?>img/menu-dots-circle.svg" alt="" width="60" height="60" />
                 </div>
             </div>
         </header>
@@ -135,7 +135,7 @@
                     </div>
                 </div>
                 <div class="footer-closure">
-                    <img src="<?php echo $config->urls->templates; ?>img/Propharma__footer_logo.svg" alt="Propharma" />
+                    <img src="<?php echo $config->urls->templates; ?>img/Propharma__footer_logo.svg" alt="Propharma" width="213" height="73" />
                     <p>
                         &copy; Propharma
                         2024.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

@@ -1,12 +1,13 @@
+@import '../../fonts/_fonts.scss'; 
+
 @import '../../node_modules/slick-carousel/slick/slick.scss'; 
 @import '../../node_modules/slick-carousel/slick/slick-theme.scss'; 
 
 @import '_include-media.scss'; 
 @import '_reset.scss'; 
 @import '_functions.scss'; 
-@import '_mixins.scss'; 
-@import '_helper.scss'; 
-@import '../../node_modules/pretty-checkbox/src/pretty-checkbox.scss';
+//@import '_helper.scss'; 
+// @import '../../node_modules/pretty-checkbox/src/pretty-checkbox.scss';
 
 
 html, body {
@@ -20,6 +21,8 @@ html, body {
 .center {
     text-align: center;
 }
+
+
 
 
 a {
