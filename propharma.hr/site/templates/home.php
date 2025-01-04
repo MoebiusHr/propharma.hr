@@ -52,7 +52,7 @@
 				<?php echo $page->short_description_2 ?>
 
 				<?php 
-					echo "<ul>";
+					echo "<ul class='arrows-move'>";
 					foreach ($program->children as $item) {
 						echo "<li><a href='{$item->url}'>{$item->title}</a></li>";
 					}

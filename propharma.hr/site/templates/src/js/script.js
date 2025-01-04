@@ -66,6 +66,10 @@ $(function() {
     $(".thumb").on("click", function() {
         var src = $(this).data("src");
         $(".main-image img").attr("src", src);
+
+        $(".thumb").removeClass("active");
+        $(this).addClass("active");
+
     })
 
 

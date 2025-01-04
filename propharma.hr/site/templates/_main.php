@@ -127,7 +127,7 @@
 
                     <div class="item">
                         <p class="title"><?php echo $about_top->title ?></p>
-                        <ul>
+                        <ul class="arrows-move">
                             <?php
                                 foreach ($about_top->children as $item) {
                                     echo "<li><a href='{$item->url}'>{$item->title}</a></li>";
@@ -137,7 +137,7 @@
                     </div>
                     <div class="item">
                         <p class="title"><?php echo $program->title ?></p>
-                        <ul>
+                        <ul class="arrows-move">
                         <?php
                                 foreach ($program->children as $item) {
                                     echo "<li><a href='{$item->url}'>{$item->title}</a></li>";

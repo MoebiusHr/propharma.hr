@@ -30,8 +30,10 @@ $related_products = $pages->find("template=product, has_parent={$page->parent},i
                 </div>
                 <div class="thumbs">
                     <?php
+                        $i = 0;
                         foreach ($page->slike as $item) {
-                            echo "<div class='thumb' data-src='{$item->webp->url}'><img src='{$item->webp->url}' alt='{$item->description}' loading='lazy' width='{$item->width}' height='{$item->height}' /></div>";
+                            echo "<div class='thumb" . ($i == 0 ? " active" : "") . "' data-src='{$item->webp->url}'><img src='{$item->webp->url}' alt='{$item->description}' loading='lazy' width='{$item->width}' height='{$item->height}' /></div>";
+                            $i++;
                         }
                     ?>
                 </div>

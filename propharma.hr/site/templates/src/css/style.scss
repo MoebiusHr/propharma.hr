@@ -1422,6 +1422,12 @@ ul#bread {
                 width: 100%;
                 height: auto;
             }
+
+            &.active {
+                img {
+                    border: solid 1px #55CCC9;
+                }
+            }
             
         }
     }
@@ -1512,6 +1518,38 @@ ul#bread {
             }
 
         }
+
+    }
+}
+
+
+ul.arrows-move {
+    li {
+
+
+        &::before {
+            transition: all 0.3s;
+        }
+        
+
+        &:hover {
+            &::before {
+                left: 5px;
+            }
+        }
+
+
+        > a {
+
+            text-decoration: underline 0.15em rgba(85, 204, 201, 0) !important;
+            transition: text-decoration-color 400ms;
+            text-underline-offset: .5em;
+
+            &:hover {
+                text-decoration-color: rgba(85, 204, 201, .75) !important;
+            }
+        }
+
 
     }
 }
