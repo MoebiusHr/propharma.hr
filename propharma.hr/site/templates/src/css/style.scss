@@ -1020,7 +1020,6 @@ ul#bread {
     text-transform: uppercase;
     margin: 3rem 0;    
     font-size: .875rem;
-
     width: 100%;
     white-space: nowrap;
     overflow: hidden;
@@ -1028,7 +1027,7 @@ ul#bread {
 
 
     @include media('<=LGphone') {
-        width: 46ch;
+        font-size: .675rem;
     }
 
     @include media('<=tablet') {
