@@ -8,6 +8,7 @@
         <title><?php echo $title ?></title>
         <meta name="description" content="<?php echo $description ?>" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="<?php echo $config->urls->templates; ?>dist/js/script.js"></script>
         <?php  if ($page->template == "home") { ?>   
             <!-- Preload the LCP image with a high fetchpriority so it starts loading with the stylesheet. -->
             <link rel="preload" fetchpriority="high" as="image" href="<?php echo $page->rotator->eq(0)->slika_mobile->webp->url ?>" type="image/webp">
@@ -29,8 +30,19 @@
         <link rel="preload" href="<?php echo $config->urls->templates; ?>fonts/montserrat-v29-latin_latin-ext-regular.woff2" as="font">
         <link rel="preload" href="<?php echo $config->urls->templates; ?>fonts/montserrat-v29-latin_latin-ext-700.woff2" as="font">
 
+        <?php
+            $path = realpath("") . "/dist/css/style.css";
+            $css = file_get_contents($path);
+            $css = str_replace("../../fonts", $config->urls->templates . "fonts", $css);
+            $css = str_replace("../../img", $config->urls->templates . "img", $css);
+            echo "<style>{$css}</style>";
+        ?>
 
-        <link rel="stylesheet" type="text/css" href="<?php echo $config->urls->templates; ?>dist/css/style.css" />
+        <?php if (false) { ?>
+            <link rel="stylesheet" type="text/css" href="<?php echo $config->urls->templates; ?>dist/css/style.css" />
+        <?php } ?>
+
+
         <title>Propharma</title>
     </head>
     <body>
@@ -145,7 +157,7 @@
             </div>
         </footer>
 
-        <script src="<?php echo $config->urls->templates; ?>dist/js/script.js"></script>
+        
 
 
 
