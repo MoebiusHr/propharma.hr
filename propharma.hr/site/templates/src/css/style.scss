@@ -1,7 +1,6 @@
 @import '../../fonts/_fonts.scss'; 
 
-@import '../../node_modules/slick-carousel/slick/slick.scss'; 
-@import '../../node_modules/slick-carousel/slick/slick-theme.scss'; 
+@import '../../node_modules/keen-slider/keen-slider.scss';
 
 @import '_include-media.scss'; 
 @import '_reset.scss'; 
@@ -527,8 +526,9 @@ header {
     }
 }
 
-.rotator {
-    .slide-item {
+.keen-slider {
+    margin-bottom: 2rem;
+    .keen-slider__slide {
         position: relative;
         text-align: right;
 

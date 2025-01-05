@@ -1,109 +1,158 @@
-import "./jquery-global.js";
-import $ from "jquery";
-
-//import '../../node_modules/jquery/dist/jquery.min.js';
-import '../../node_modules/slick-carousel/slick/slick.min.js';
-import '../../node_modules/jquery.cookie/jquery.cookie.js';
 
 
 var group_id = null;
 var brand_id = null;
 
-$(function() {
+document.addEventListener("DOMContentLoaded", function () {
 
-    $("header .container nav.desktop > ul > li > a.has-children").on("mouseenter", function() {
-        $("header ul.dropdown").hide();
-        $(this).next().show();
-        $(this).addClass("has-children-rotated");
-    })
-    
+  var slider = new KeenSlider(
+    "#keen",
+    {
+      loop: true,
+    },
+    [
+      (slider) => {
+        let timeout
+        let mouseOver = false
+        function clearNextTimeout() {
+          clearTimeout(timeout)
+        }
+        function nextTimeout() {
+          clearTimeout(timeout)
+          if (mouseOver) return
+          timeout = setTimeout(() => {
+            slider.next()
+          }, 4000)
+        }
+        slider.on("created", () => {
+          slider.container.addEventListener("mouseover", () => {
+            mouseOver = true
+            clearNextTimeout()
+          })
+          slider.container.addEventListener("mouseout", () => {
+            mouseOver = false
+            nextTimeout()
+          })
+          nextTimeout()
+        })
+        slider.on("dragStarted", clearNextTimeout)
+        slider.on("animationEnded", nextTimeout)
+        slider.on("updated", nextTimeout)
+      },
+    ]
+  )
 
 
-    $("header .container nav.desktop ul li ul").on("mouseleave", function() {
-        $(this).hide();
-        $(this).prev().removeClass("has-children-rotated");
-    })
-
-
-    $(".filter>p").on("click", function() {
-        $(this).toggleClass("active");
-    })
-
-    $(document).on( 
-        'keydown', function(event) { 
-        if (event.key == "Escape") { 
-            $("header .container ul li a + ul").hide();
-        } 
-    }); 
-
-
-    $(".rotator").slick({
-        fade: true,
-        dots: true,
-        arrows: false
+  // Show dropdown on hover
+  document.querySelectorAll("header .container nav.desktop > ul > li > a.has-children").forEach(function (element) {
+    element.addEventListener("mouseenter", function () {
+      document.querySelectorAll("header ul.dropdown").forEach(function (dropdown) {
+        dropdown.style.display = "none";
+      });
+      element.nextElementSibling.style.display = "block";
+      element.classList.add("has-children-rotated");
     });
-    
+  });
 
+  // Hide dropdown on mouse leave
+  document.querySelectorAll("header .container nav.desktop ul li ul").forEach(function (ul) {
+    ul.addEventListener("mouseleave", function () {
+      ul.style.display = "none";
+      ul.previousElementSibling.classList.remove("has-children-rotated");
+    });
+  });
 
+  // Toggle filter active class
+  document.querySelectorAll(".filter>p").forEach(function (element) {
+    element.addEventListener("click", function () {
+      element.classList.toggle("active");
+    });
+  });
 
-
-    $(".group-trigger").on("click", function() {
-        group_id = $(this).data("id");
-        $(this).parent().parent().prev().html($(this).html());
-        $(this).parent().parent().prev().removeClass("active");
-        filterProductList(group_id, brand_id);
-    })
-
-    $(".brand-trigger").on("click", function() {
-        brand_id = $(this).data("id");
-        $(this).parent().parent().prev().html($(this).html());
-        $(this).parent().parent().prev().removeClass("active");
-        filterProductList(group_id, brand_id);
-    })
-
-
-
-    $(".thumb").on("click", function() {
-        var src = $(this).data("src");
-        $(".main-image img").attr("src", src);
-
-        $(".thumb").removeClass("active");
-        $(this).addClass("active");
-
-    })
-
-
-    $(".menu-trigger, img.close").on("click", function() {
-        if ($("nav.mobile").hasClass("mobile-menu-visible")) {
-            //$("nav.mobile").css("display", "none");
-            $("nav.mobile").removeClass("mobile-menu-visible");
-        } else {
-            //$("nav.mobile").css("display", "flex");
-            $("nav.mobile").addClass("mobile-menu-visible");
-        }
-    })
-
-
-
-    function filterProductList(group_id, brand_id) {
-
-        console.log("group_id", group_id);
-        console.log("brand_id", brand_id);
-
-        $(".product-item-wrapper > div").hide();
-
-        if (group_id != null && brand_id == null) {
-            $(".product-item-wrapper > div[data-group='" + group_id + "']").show();
-        } else if (group_id == null && brand_id != null) {
-            $(".product-item-wrapper > div[data-brand='" + brand_id + "']").show();
-        } else if (group_id != null && brand_id != null) {
-            $(".product-item-wrapper > div[data-group='" + group_id + "'][data-brand='" + brand_id + "']").show();
-        } else if (group_id == null && brand_id == null) {
-            $(".product-item-wrapper > div").show();
-        }
-
+  // Hide dropdowns on Escape key press
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+      document.querySelectorAll("header .container ul li a + ul").forEach(function (ul) {
+        ul.style.display = "none";
+      });
     }
+  });
 
-    
+  // Slick slider functionality (assuming slick is replaced or added back as required)
 
-})
+  // Group trigger functionality
+  document.querySelectorAll(".group-trigger").forEach(function (element) {
+    element.addEventListener("click", function () {
+      group_id = element.getAttribute("data-id");
+      var parent = element.closest(".filter");
+      var prevElement = parent.previousElementSibling;
+      prevElement.innerHTML = element.innerHTML;
+      prevElement.classList.remove("active");
+      filterProductList(group_id, brand_id);
+    });
+  });
+
+  // Brand trigger functionality
+  document.querySelectorAll(".brand-trigger").forEach(function (element) {
+    element.addEventListener("click", function () {
+      brand_id = element.getAttribute("data-id");
+      var parent = element.closest(".filter");
+      var prevElement = parent.previousElementSibling;
+      prevElement.innerHTML = element.innerHTML;
+      prevElement.classList.remove("active");
+      filterProductList(group_id, brand_id);
+    });
+  });
+
+  // Thumbnail click functionality
+  document.querySelectorAll(".thumb").forEach(function (thumb) {
+    thumb.addEventListener("click", function () {
+      var src = thumb.getAttribute("data-src");
+      document.querySelector(".main-image img").setAttribute("src", src);
+
+      document.querySelectorAll(".thumb").forEach(function (t) {
+        t.classList.remove("active");
+      });
+      thumb.classList.add("active");
+    });
+  });
+
+  // Mobile menu toggle
+  document.querySelectorAll(".menu-trigger, img.close").forEach(function (trigger) {
+    trigger.addEventListener("click", function () {
+      var navMobile = document.querySelector("nav.mobile");
+      if (navMobile.classList.contains("mobile-menu-visible")) {
+        navMobile.classList.remove("mobile-menu-visible");
+      } else {
+        navMobile.classList.add("mobile-menu-visible");
+      }
+    });
+  });
+
+  function filterProductList(group_id, brand_id) {
+    console.log("group_id", group_id);
+    console.log("brand_id", brand_id);
+
+    document.querySelectorAll(".product-item-wrapper > div").forEach(function (div) {
+      div.style.display = "none";
+    });
+
+    if (group_id !== null && brand_id === null) {
+      document.querySelectorAll(`.product-item-wrapper > div[data-group='${group_id}']`).forEach(function (div) {
+        div.style.display = "block";
+      });
+    } else if (group_id === null && brand_id !== null) {
+      document.querySelectorAll(`.product-item-wrapper > div[data-brand='${brand_id}']`).forEach(function (div) {
+        div.style.display = "block";
+      });
+    } else if (group_id !== null && brand_id !== null) {
+      document.querySelectorAll(`.product-item-wrapper > div[data-group='${group_id}'][data-brand='${brand_id}']`).forEach(function (div) {
+        div.style.display = "block";
+      });
+    } else if (group_id === null && brand_id === null) {
+      document.querySelectorAll(".product-item-wrapper > div").forEach(function (div) {
+        div.style.display = "block";
+      });
+    }
+  }
+});

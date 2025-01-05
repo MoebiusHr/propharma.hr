@@ -8,7 +8,9 @@
         <title><?php echo $title ?></title>
         <meta name="description" content="<?php echo $description ?>" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="<?php echo $config->urls->templates; ?>dist/js/keen-slider.js"></script>
         <script src="<?php echo $config->urls->templates; ?>dist/js/script.js"></script>
+        
         <?php  if ($page->template == "home") { ?>   
             <!-- Preload the LCP image with a high fetchpriority so it starts loading with the stylesheet. -->
             <link rel="preload" fetchpriority="high" as="image" href="<?php echo $page->rotator->eq(0)->slika_mobile->webp->url ?>" type="image/webp">

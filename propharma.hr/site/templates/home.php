@@ -19,12 +19,12 @@
 
 		<?php if ($page->rotator->count() > 0) { ?>
 
-		<div class="rotator">
+		<div id="keen" class="keen-slider">
+			
 			<?php foreach ($page->rotator as $item) { ?>
-				<div class="slide-item">
+				<div class="keen-slider__slide">
 					<div class="cta">
-						<span><?php echo $item->title ?></span
-						>
+						<span><?php echo $item->title ?></span>
 					</div>
 
 					<picture>
@@ -34,6 +34,7 @@
 
 				</div>
 			<?php } ?>
+			
 		</div>
 
 		<?php } ?>
