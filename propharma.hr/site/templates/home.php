@@ -65,7 +65,7 @@
 
 	<div class="container">
 		<div class="prodajni-program-izdvojeno">
-			<h3><?php echo __("Izdvojeno iz proizvodnog programa") ?></h3>
+			<h3><?php echo __("Izdvojeno iz prodajnog programa") ?></h3>
 		</div>
         <?php
             echo wireRenderFile("partial/product-list", array(

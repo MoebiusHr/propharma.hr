@@ -264,7 +264,8 @@ article {
 
 header {
     width: 100%;
-    border-bottom: solid 5px #6290fa;
+    // border-bottom: solid 5px #6290fa;
+    border-bottom: solid 5px #0063af;
     position: sticky;
     z-index: 500000;
     top: 0;
@@ -559,9 +560,11 @@ header {
                 top: 10%;
             }
 
+
             span {
                 background-color: blue;
-                background: linear-gradient(90deg, rgba(0,26,134,1) 30%, rgba(80,139,176,1) 100%);
+                // background: linear-gradient(90deg, rgba(0,26,134,1) 30%, rgba(80,139,176,1) 100%);
+                background: linear-gradient(90deg, #0063af 30%, #61c0c2 100%);
                 color:white;
                 font-size: 3.5rem;
                 font-weight: bold;
@@ -655,7 +658,8 @@ header {
     > div {
         box-sizing: border-box;
         flex: 0 0 45%;
-        background-color: rgba(5, 42, 67, .97);
+        // background-color: rgba(5, 42, 67, .97);
+        background-color: #0063af;
         padding: 7rem 5% 7rem 15%;
         color: white;
 
@@ -765,7 +769,8 @@ header {
 
 
 .teaser-wrapper {
-    background-color: #000C4D;
+    // background-color: #000C4D;
+    background-color: #0063af;
     position: relative;
     margin-bottom: 6rem;
     position: relative;
@@ -803,7 +808,8 @@ header {
     .item {
         position: relative;
         background-color: red;
-        background: linear-gradient(180deg, #618ef8 30%, #02114a 100%);
+        // background: linear-gradient(180deg, #618ef8 30%, #02114a 100%);
+        background: linear-gradient(180deg, #61c0c2 0, #0063af 100%);
         flex: 0 0 10%;
         padding: 3rem;
         text-align: center;
@@ -930,7 +936,8 @@ header {
 
 footer {
 
-    background-color: #000C4D;
+    // background-color: #000C4D;
+    background-color: #0063af;
     padding: 6rem 0;
 
     @include media('<=LGtablet') {

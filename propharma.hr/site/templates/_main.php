@@ -50,7 +50,7 @@
             <div class="container">
                 
                 <div class="logo">
-                    <a href="<?php echo $home->url ?>"><img src="<?php echo $config->urls->templates; ?>img/Propharma__logo.svg" alt="Propharma" width="213" height="73" /></a>
+                    <a href="<?php echo $home->url ?>"><img src="<?php echo $config->urls->templates; ?>img/Propharma__logo.png" alt="Propharma" width="213" height="47" /></a>
                 </div>
 
                 <nav class="desktop">
@@ -92,7 +92,7 @@
         
         <div class="full-container">
             <div class="brands">
-                <h5><span>Izdvojeni brandovi</span></h5>
+                <h5><span><?php echo __("Izdvojeni brandovi") ?></span></h5>
 
                 <div class="container list">
 
@@ -147,10 +147,10 @@
                     </div>
                 </div>
                 <div class="footer-closure">
-                    <img src="<?php echo $config->urls->templates; ?>img/Propharma__footer_logo.svg" alt="Propharma" width="213" height="73" />
+                    <img src="<?php echo $config->urls->templates; ?>img/Propharma__footer_logo.png" alt="Propharma" width="213" height="47" />
                     <p>
                         &copy; Propharma
-                        2024.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        2025.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <a href="<?php echo $company_info->url ?>"><?php echo $company_info->title ?></a>
                     </p>
                 </div>
