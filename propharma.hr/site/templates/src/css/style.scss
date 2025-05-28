@@ -233,12 +233,19 @@ ul {
     max-width: 1920px;
     margin: 0 auto;
 
-    @include media('<=LGdesktop') {
-         width: 90%;
-    }
+    // @include media('<=LGdesktop') {
+    //      width: 90%;
+    // }
 
     .logo {
         margin-block: 1rem;
+
+
+        @include media('<=LGdesktop') {
+            margin-left: 2rem;
+        }
+
+
     }
     
 }
@@ -550,6 +557,11 @@ header {
             top: 25%;
             width: 40%;
             text-align: left;
+            padding-left: 2rem;
+
+            @include media('<=LGtablet') {
+                padding-left: 2rem;
+            }
 
             @include media('<=desktop') {
                 width: 60%;
@@ -559,6 +571,9 @@ header {
                 left: 2rem;
                 top: 10%;
             }
+
+
+            
 
 
             span {
@@ -725,7 +740,7 @@ header {
     flex-wrap: wrap;
     margin-bottom: 6rem;
     gap: 2rem;
-    justify-content: center;
+    justify-content: center !important;
 
     @include media('<=tablet') {
         flex-direction: column;
@@ -1102,7 +1117,8 @@ ul#bread {
     > div.txt {
         flex: 0 0 50%;
         box-sizing: border-box;
-        background: linear-gradient(180deg, rgba(0,26,134,.95) 30%, rgba(80,139,176,.95) 100%);
+        // background: linear-gradient(180deg, rgba(0,26,134,.95) 30%, rgba(80,139,176,.95) 100%);
+        background: linear-gradient(315deg, #0063af 30%, #61c0c2 100%);
         padding: 10rem 5% 10rem 15%;
         color: white;
         position: relative;
