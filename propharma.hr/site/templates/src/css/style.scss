@@ -735,6 +735,14 @@ header {
 }
 
 
+#content {
+    padding-inline: 2rem;
+}
+
+.home-content {
+    padding-inline: 0rem !important;
+}
+
 .product-item-wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -742,18 +750,40 @@ header {
     gap: 2rem;
     justify-content: center !important;
 
+
     @include media('<=tablet') {
         flex-direction: column;
         margin-bottom: 3rem;
     }
 
-    .item {
-        flex: 0 0 23.4%;
-        border: #DCE3E1 solid 1px;
-        padding: 3rem;
-        transition: border .3s;
 
-        @include media('<=tablet') {
+    .item {
+        //flex: 0 0 23.4%;
+        flex: 0 0 calc(33.33333% - 1.6rem);
+        border: #DCE3E1 solid 1px;
+        // padding: 3rem;
+        transition: border .3s;
+        min-width: 0;
+
+
+        > div {
+            padding: 3rem;
+
+            @include media('<=LGtablet') {
+                padding: 1.5rem;
+            }
+
+        }
+
+        @include media('<=LGtablet') {
+            flex: 0 0 calc(50% - 1.4rem);
+        }
+
+        @include media('<=desktopMax') {
+            // flex: 0 0 24%;
+        }
+
+        @include media('<=LGtablet') {
             flex: 0 0 50%;
             padding: 1.5rem;
         }
@@ -956,7 +986,7 @@ footer {
     padding: 6rem 0;
 
     @include media('<=LGtablet') {
-        padding: 3rem 0;
+        padding: 3rem 2rem;
     }
 
     .footer-links {
@@ -1212,7 +1242,7 @@ ul#bread {
 
 
 .group-intro {
-    padding-left: 11rem;
+    // padding-left: 11rem;
     display: flex;
     align-items: center;
     margin-bottom: 3rem;

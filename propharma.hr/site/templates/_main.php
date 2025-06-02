@@ -3,6 +3,211 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <script src="<?php echo $config->urls->templates?>scripts/cookieconsent.min.js"></script>
+
+<script>
+            window.CookieConsent.init({
+                modalMainTextMoreLink: null,
+                theme: {
+                    barColor: '#2d4227',
+                    barTextColor: '#fff',
+                    barMainButtonColor: '#FFF',
+                    barMainButtonTextColor: '#2C7CBF',
+                    modalMainButtonColor: '#4285F4',
+                    modalMainButtonTextColor: '#FFF',
+                },
+            language: {
+                current: '<?php echo $user->language->title; ?>',
+                locale: {
+                    hr: {
+                        barMainText: 'Ova web stranica koristi kolačiće kako bi vam osigurala najbolje iskustvo na našoj web stranici.',
+                        closeAriaLabel: 'zatvori',
+                        barLinkSetting: 'Postavke kolačića',
+                        barBtnAcceptAll: 'Prihvati sve kolačiće',
+                        modalMainTitle: 'Postavke kolačića',
+                        modalMainText: 'Kolačići su mali dijelovi podataka koji se šalju s web stranice i pohranjuju na korisnikovo računalo od strane korisnikovog web preglednika dok korisnik pregledava. Vaš preglednik pohranjuje svaku poruku u malu datoteku koja se zove kolačić. Kada zatražite drugu stranicu od poslužitelja, vaš preglednik šalje kolačić natrag na poslužitelj. Kolačići su osmišljeni kao pouzdan mehanizam za web stranice za pamćenje informacija ili za bilježenje korisnikove aktivnosti pregledavanja.',
+                        modalBtnSave: 'Snimi trenutne postavke',
+                        modalBtnAcceptAll: 'Prihvati sve kolačiće i zatvori',
+                        modalAffectedSolutions: 'Zahvaćena rješenja:',
+                        learnMore: 'Saznaj više',
+                        on: "Uključeno",
+                        off: "Isključeno",
+                    },
+                    en: {
+                        barMainText: 'This website uses cookies to provide you with the best experience on our website.',
+                        closeAriaLabel: 'close',
+                        barLinkSetting: 'Cookie settings',
+                        barBtnAcceptAll: 'Accept all cookies',
+                        modalMainTitle: 'Cookie settings',
+                        modalMainText: 'Cookies are small pieces of data that are sent from a website and stored on the user\'s computer by the user\'s web browser while the user is browsing. Your browser stores each message in a small file called a cookie. When you request another page from the server, your browser sends a cookie back to the server. Cookies are designed as a reliable mechanism for websites to remember information or to record the user\'s browsing activity.',
+                        modalBtnSave: 'Save current settings',
+                        modalBtnAcceptAll: 'Accept all cookies and close',
+                        modalAffectedSolutions: 'Affected solutions:',
+                        learnMore: 'Learn More',
+                        on: "On",
+                        off: "Off",
+                    }
+                }
+            },
+            categories: {
+                necessary: {
+                needed: true,
+                wanted: true,
+                checked: true,
+                language: {
+                    locale: {
+                        en: {
+                            name: 'Necessary Cookies',
+                            description: 'Cookies that enable the basic functionality of the website and basic analysis of the use of the website with the aim of improving the operation and efficiency of the website.',
+                        },
+                        hr: {
+                            name: 'Nužni kolačići',
+                            description: 'Kolačići koji omogućuju osnovne funkcionalnosti mrežne stranice i bazičnu analizu upotrebe mrežne stranice s ciljem poboljšanja rada i učinkovitosti mrežne stranice.',
+                        }
+                    }
+                }
+                },
+                analytics: {
+                needed: false,
+                wanted: false,
+                checked: false,
+                language: {
+                    locale: {
+                        en: {
+                            name: 'Analytics',
+                            description:
+                            '',
+                        },
+                        hr: {
+                            name: 'Analitika',
+                            description:
+                            '',
+                        }
+                    },
+                },
+                        },
+                marketing: {
+                needed: false,
+                wanted: false,
+                checked: false,
+                language: {
+                    locale: {
+                        en: {
+                            name: 'Marketing',
+                            description:
+                            '',
+                        },
+                        hr: {
+                            name: 'Marketing',
+                            description:
+                            '',
+                        }
+                    },
+                },
+                        },
+                various: {
+                needed: false,
+                wanted: false,
+                checked: false,
+                language: {
+                    locale: {
+                        en: {
+                            name: 'Other cookies',
+                            description: '',
+                        },
+                        hr: {
+                            name: 'Ostali kolačići',
+                            description: '',
+                        }
+                    }
+                }
+                }
+            },
+            consentModeControls: {
+                ad_storage: 'marketing',
+                ad_user_data: 'marketing',
+                ad_personalization: 'marketing',
+                analytics_storage: 'analytics'
+            },
+            services: {
+                googleAnalytics: {
+                category: 'analytics',
+                type: '',
+                search: '',
+                language: {
+                    locale: {
+                        en: {
+                            name: 'Google Analytics (analytics_storage)'
+                        },
+                        hr: {
+                            name: 'Google Analitika (analytics_storage)'
+                        }
+                    }
+                }
+                },
+                googleAds: {
+                    category: 'marketing',
+                    type: '',
+                    search: '',
+                    language: {
+                        locale: {
+                            en: {
+                                name: 'Google Ads (ad_storage, ad_user_data, ad_personalization)'
+                            },
+                            hr: {
+                                name: 'Google Ads (ad_storage, ad_user_data, ad_personalization)'
+                            }
+                        }
+                    }
+                },
+                localcookie: {
+                category: 'various',
+                type: 'localcookie',
+                search: 'localcookie',
+                language: {
+                    locale: {
+                        en: {
+                            name: 'Local cookie'
+                        },
+                        hr: {
+                            name: 'Local cookie'
+                        }
+                    }
+                }
+                }
+            }
+            });
+        </script>
+
+
+
+        <!-- Google Tag Manager -->
+        <script>
+
+            window.dataLayer = window.dataLayer || []
+            function gtag() {dataLayer.push(arguments);}
+
+            if(localStorage.getItem('consentMode') === null) {
+                gtag('consent', 'default', {
+                    'ad_storage': 'denied',
+                    'ad_user_data': 'denied',
+                    'ad_personalization': 'denied',
+                    'analytics_storage': 'denied'
+                    });
+            } else {
+                gtag('consent', 'default', JSON.parse(localStorage.getItem('consentMode')));
+            }
+        
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-XXXXXXX');
+        
+        </script>
+        <!-- End Google Tag Manager -->
+
+
         <meta charset="UTF-8" />
         <meta name="robots" content="noindex, nofollow">
         <title><?php echo $title ?></title>
@@ -41,11 +246,13 @@
         <?php if (false) { ?>
             <link rel="stylesheet" type="text/css" href="<?php echo $config->urls->templates; ?>dist/css/style.css" />
         <?php } ?>
+        <link rel="stylesheet" type="text/css" href="<?php echo $config->urls->templates; ?>styles/cookieconsent-override.css?g=13" />
 
 
         <title>Propharma</title>
     </head>
     <body>
+
         <header>
             <div class="container">
                 
@@ -154,11 +361,36 @@
                         <a href="<?php echo $company_info->url ?>"><?php echo $company_info->title ?></a>
                     </p>
                 </div>
+
+
+                <p class="cookie-again">
+                <?php
+                    if ($user->language->title == "en") {
+                        echo "<a class='ccb__edit' href='javascript:;'>Cookie settings</a>";
+                    } else {
+                        echo "<a class='ccb__edit' href='javascript:;'>Postavke kolačića</a>";
+                    }
+                ?>
+                </p>
+
             </div>
         </footer>
 
         
+        <script>
+            base = "<?php echo $page->url ?>";
+            <?php 
+            $cookiePage = $pages->get(1026);
+                $linkCookiesMore = " <p>Više o kolačićima pročitajte <a href=\"" . $cookiePage->url . "\">ovdje</a></p>";
+                if ($user->language->title == "en") {
+                    $linkCookiesMore = " <p>Read more about cookies <a href=\"" . $cookiePage->url . "\">here</a></p>";
+                } 
+            ?>
 
+            jQuery(document).ready(function() { 
+                jQuery(".cc-text").append('<?php echo $linkCookiesMore ?>');
+            })
+        </script>
 
 
     </body>

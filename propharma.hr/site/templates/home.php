@@ -13,7 +13,7 @@
 ?>
 
  
-<div id="content">
+<div id="content" class="home-content">
 	<div class="container container-full-mobile">
 
 
