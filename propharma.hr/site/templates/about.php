@@ -54,9 +54,12 @@
     <?php } ?>
 
     <div class="container center">
-        <img src="<?php echo $page->slika_2->webp->url ?>" alt="<?php echo $page->slika_2->description ?>" class="img-full" loading="lazy" />
+        <?php if ($user->language->title == "hr") { ?>
+            <img src="<?php echo $page->slika_2_hr->webp->url ?>" alt="<?php echo $page->slika_2_hr->description ?>" class="img-full" loading="lazy" />
+        <?php } else { ?>
+            <img src="<?php echo $page->slika_2->webp->url ?>" alt="<?php echo $page->slika_2->description ?>" class="img-full" loading="lazy" />
+        <?php } ?>
     </div>
-
 
 </div>	
 

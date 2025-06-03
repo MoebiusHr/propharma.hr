@@ -1407,7 +1407,7 @@ ul#bread {
 .product {
 
     display: flex;
-    gap: 2rem;
+    // gap: 2rem;
     margin-bottom: 3rem;
 
 
@@ -1457,6 +1457,7 @@ ul#bread {
         order: 2;
         flex-direction: column;
 
+
         @include media('<=desktop') {
             order: 3;
             flex: 0 0 50%;
@@ -1464,8 +1465,13 @@ ul#bread {
             gap: 1rem;
         }
 
+        > div {
+            padding-inline: 2rem;
+        }
+
         .thumb {
 
+            
             cursor: pointer;
             margin-bottom: 1.5rem;
 

@@ -22,16 +22,16 @@
 		<div class="rotator">
 			<?php foreach ($page->rotator as $item) { ?>
 				<div class="slide-item">
-					<div class="cta">
-						<span><?php echo $item->title ?></span
-						>
-					</div>
-
-					<picture>
-						<source media="(max-width: 768px)" srcset="<?php echo $item->slika_mobile->webp->url ?>" width="<?php echo $item->slika_mobile->width ?>" height="<?php echo $item->slika_mobile->height ?>">
-						<img fetchpriority="high" src="<?php echo $item->slika->webp->url ?>" alt="<?php echo $item->slika->description ?>" width="<?php echo $item->slika->width ?>" height="<?php echo $item->slika->height ?>" />
-					</picture>
-
+					<a href="<?php echo $item->link->url ?>">
+						<div class="cta">
+							<span><?php echo $item->title ?></span
+							>
+						</div>
+						<picture>
+							<source media="(max-width: 768px)" srcset="<?php echo $item->slika_mobile->webp->url ?>" width="<?php echo $item->slika_mobile->width ?>" height="<?php echo $item->slika_mobile->height ?>">
+							<img fetchpriority="high" src="<?php echo $item->slika->webp->url ?>" alt="<?php echo $item->slika->description ?>" width="<?php echo $item->slika->width ?>" height="<?php echo $item->slika->height ?>" />
+						</picture>
+					</a>
 				</div>
 			<?php } ?>
 		</div>

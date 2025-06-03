@@ -29,6 +29,7 @@ $related_products = $pages->find("template=product, has_parent={$page->parent},i
                     <img src="<?php echo $page->slike->eq(0)->webp->url ?>" alt="<?php echo $page->slike->eq(0)->description ?>" loading="lazy" width="<?php echo $page->slike->eq(0)->width ?>" height="<?php echo $page->slike->eq(0)->height ?>" />
                 </div>
                 <div class="thumbs">
+                    <div>
                     <?php
                         $i = 0;
                         foreach ($page->slike as $item) {
@@ -36,6 +37,7 @@ $related_products = $pages->find("template=product, has_parent={$page->parent},i
                             $i++;
                         }
                     ?>
+                    </div>
                 </div>
                 <div class="product-content">
                     <span class="pre-title"><?php echo $page->brand->title ?></span>

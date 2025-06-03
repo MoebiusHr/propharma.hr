@@ -24,3 +24,4 @@
 2024-12-30 13:42:39	admin	http://localhost:8888/backend/page/edit/?id=1069&InputfieldFileAjax=1	Image: VALID: /site/assets/files/1069/ikona_products.png
 2024-12-31 20:25:07	admin	http://localhost:8888/backend/page/edit/?id=1032&InputfieldFileAjax=1	Image: VALID: /site/assets/files/1032/mobile1.jpg
 2024-12-31 20:25:12	admin	http://localhost:8888/backend/page/edit/?id=1034&InputfieldFileAjax=1	Image: VALID: /site/assets/files/1034/mobile2.jpg
+2025-06-03 20:22:16	admin	http://localhost:8888/backend/page/edit/?id=1024&InputfieldFileAjax=1	Image: VALID: /site/assets/files/1024/key-values-hrv.jpg
