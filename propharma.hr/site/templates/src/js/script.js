@@ -40,7 +40,9 @@ $(function() {
     $(".rotator").slick({
         fade: true,
         dots: true,
-        arrows: false
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 3000
     });
     
 
