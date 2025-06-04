@@ -231,11 +231,19 @@ ul {
 .container {
     width: 100%;
     max-width: 1920px;
+    max-width: 1680px;
     margin: 0 auto;
 
-    // @include media('<=LGdesktop') {
-    //      width: 90%;
-    // }
+    @include media('<=XLGdesktop') {
+          width: 80%;
+    }
+
+
+    @include media('<=LGdesktop') {
+          width: 80%;
+    }
+
+
 
     .logo {
         margin-block: 1rem;
@@ -736,7 +744,7 @@ header {
 
 
 #content {
-    padding-inline: 2rem;
+    // padding-inline: 2rem;
 }
 
 .home-content {
@@ -1414,11 +1422,13 @@ ul#bread {
     @include media('<=desktop') {
         flex-wrap: wrap;
         gap: 0;
+        width: 100%;
     }
 
 
     @include media('<=tablet') {
         flex-direction: column;
+        width: 100%;
     }
 
     .main-image {
@@ -1467,6 +1477,12 @@ ul#bread {
 
         > div {
             padding-inline: 2rem;
+
+            @include media('<=desktop') {
+                padding-inline: 0;
+                padding-right: 2rem;
+            }
+
         }
 
         .thumb {
