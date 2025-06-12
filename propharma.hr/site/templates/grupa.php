@@ -45,17 +45,19 @@ $brands_filtered = $brands_filtered->unique();
         <?php if (count($products) > 0) { ?>
 
         <div class="filters">
-            <div class="filter">
-                <p><?php echo __("Svi UREĐAJI") ?></p>
-                <ul>
-                    <li><a href="javascript:;" class="group-trigger" data-id=null><?php echo __("Svi UREĐAJI") ?></a></li>
-                    <?php 
-                        foreach ($podgrupe_filtered as $item) {
-                            echo "<li><a href='javascript:;' class='group-trigger' data-id='{$item->id}'>{$item->title}</a></li>";
-                        }
-                    ?>
-                </ul>
-            </div>
+            <?php if ($page->id != 1043 && $page->id != 1029) { ?>
+                <div class="filter">
+                    <p><?php echo __("Svi UREĐAJI") ?></p>
+                    <ul>
+                        <li><a href="javascript:;" class="group-trigger" data-id=null><?php echo __("Svi UREĐAJI") ?></a></li>
+                        <?php 
+                            foreach ($podgrupe_filtered as $item) {
+                                echo "<li><a href='javascript:;' class='group-trigger' data-id='{$item->id}'>{$item->title}</a></li>";
+                            }
+                        ?>
+                    </ul>
+                </div>
+            <?php } ?>
 
             <div class="filter">
                 <p><?php echo __("Svi BRANDOVI") ?></p>

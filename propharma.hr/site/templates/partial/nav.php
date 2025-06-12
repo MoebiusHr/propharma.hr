@@ -29,6 +29,7 @@
             if ($item->numChildren > 0) {
                 echo "<ul class='dropdown'>";
                 foreach ($item->children as $child) {
+                    if ($user->language->title == "en" && $child->id == 1029) continue; 
                     echo "<li><a href='{$child->url}'>{$child->title}</a></li>";
                 }
                 echo "</ul>";

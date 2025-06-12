@@ -16,6 +16,17 @@ if ($page->redirect) {
     header("Location: ".$page->redirect->url);
 }
 
+
+if ($user->language->title == "en") {
+    foreach($page->parents() as $parent) {
+        if ($page->id == 1029 || $parent->id == 1029) {
+            throw new Wire404Exception(); 
+        }
+    }
+    //
+}
+
+
 $options = array(
     'quality' => 65
 );
