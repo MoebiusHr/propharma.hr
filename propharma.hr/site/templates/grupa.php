@@ -87,7 +87,7 @@ $brands_filtered = $brands_filtered->unique();
                     'center' => false
                 ));
             } else {
-                echo "<p>" . __("Trenutno nema artikala u ovoj grupi") . "</p>";
+                //echo "<p>" . __("Trenutno nema artikala u ovoj grupi") . "</p>";
             }
         ?>
     </div>

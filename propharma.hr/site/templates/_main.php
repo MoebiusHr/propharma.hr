@@ -297,34 +297,37 @@
 		<div id="content">
 		</div>
         
-        <div class="full-container">
-            <div class="brands">
-                <h5><span><?php echo __("Izdvojeni brandovi") ?></span></h5>
 
-                <div class="container list">
+        <?php if ($user->language->title == "hr") { ?>
+            <div class="full-container">
+                <div class="brands">
+                    <h5><span><?php echo __("Izdvojeni brandovi") ?></span></h5>
 
-                    <?php foreach ($pages->find("parent=1045") as $item) { ?>
-                        <div class="item">
-                            <img src="<?php echo $item->slika->webp->url ?>" alt="<?php echo $item->title ?>" width="<?php echo $item->slika->width ?>" height="<?php echo $item->slika->height ?>" />
-                        </div>
-                    <?php } ?>
+                    <div class="container list">
 
+                        <?php foreach ($pages->find("parent=1045") as $item) { ?>
+                            <div class="item">
+                                <img src="<?php echo $item->slika->webp->url ?>" alt="<?php echo $item->title ?>" width="<?php echo $item->slika->width ?>" height="<?php echo $item->slika->height ?>" />
+                            </div>
+                        <?php } ?>
+
+                    </div>
                 </div>
             </div>
-        </div>
+        <?php } ?>
 
         <footer>
             <div class="container">
                 <div class="footer-links">
                     <div class="item">
-                        <p class="title">Kontakt</p>
+                        <p class="title"><?php echo __("Kontakt") ?></p>
                         <p>
                             Propharma d.o.o.<br />Slovenska 1, Zagreb<br />Hrvatska
                         </p>
                         <p>
                             Email:
-                            <a href="mailto:info@propharma.hr"
-                                >info@propharma.hr</a
+                            <a href="javascript:;"
+                                >info(at)propharma.hr</a
                             >
                         </p>
                         <p>
@@ -347,6 +350,7 @@
                         <ul class="arrows-move">
                         <?php
                                 foreach ($program->children as $item) {
+                                    if ($item->id == 1029 && $user->language->title == "en") continue; 
                                     echo "<li><a href='{$item->url}'>{$item->title}</a></li>";
                                 }
                             ?>

@@ -54,6 +54,7 @@
 				<?php 
 					echo "<ul class='arrows-move'>";
 					foreach ($program->children as $item) {
+						if ($item->id == 1029 && $user->language->title == "en") continue; // Skip "Ostali uređaji" group
 						echo "<li><a href='{$item->url}'>{$item->title}</a></li>";
 					}
 					echo "</ul>";
@@ -63,17 +64,24 @@
 		</div>
 	</div>
 
-	<div class="container">
-		<div class="prodajni-program-izdvojeno">
-			<h3><?php echo __("Izdvojeno iz prodajnog programa") ?></h3>
+	<?php
+		$products = ($user->language->title == "en" ? $page->products_on_homepage : $page->products_on_homepage_hr);
+	?>
+
+	<?php if (count($products) > 0) { ?>
+		<div class="container">
+			<div class="prodajni-program-izdvojeno">
+				<h3><?php echo __("Izdvojeno iz prodajnog programa") ?></h3>
+			</div>
+			<?php
+				echo wireRenderFile("partial/product-list", array(
+					'products' => $products,
+					'center' => true
+				));
+			?>
 		</div>
-        <?php
-            echo wireRenderFile("partial/product-list", array(
-                'products' => $page->products_on_homepage,
-				'center' => true
-            ));
-        ?>
-	</div>
+	<?php } ?>	
+
 
 	<div class="full-container teaser-wrapper">
 		<div class="teaser">
