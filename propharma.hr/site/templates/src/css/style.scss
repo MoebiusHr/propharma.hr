@@ -63,6 +63,11 @@ h1 {
     &.program {
         padding-left: 5.5rem;
 
+        @include media("<=LGphone") {
+            font-size: 1.5rem;
+            padding-left: 3.5rem;
+        }
+
         &::before {
             content: "";
             position: absolute;
@@ -77,6 +82,11 @@ h1 {
 
         &::after {
             left: 5.5rem;
+
+            @include media("<=LGphone") {
+                left: 3.5rem;
+        }
+
         }
     }
 }
@@ -138,7 +148,8 @@ h5 {
 
 .slick-dots {
     text-align: left;
-    bottom: 30px;
+    // bottom: 30px;
+    bottom: -50px;
 
     li::before {
         background-image: none;
@@ -454,7 +465,7 @@ header {
     width: 100%;
 
     img {
-        width: 60px;
+        width: 43px;
         cursor: pointer;
     }
 
@@ -498,10 +509,10 @@ header {
             top: 25%;
             width: 40%;
             text-align: left;
-            padding-left: 2rem;
+            padding-left: 1rem;
 
             @include media("<=LGtablet") {
-                padding-left: 2rem;
+                padding-left: 1rem;
             }
 
             @include media("<=desktop") {
@@ -509,8 +520,14 @@ header {
             }
 
             @include media("<=tablet") {
-                left: 2rem;
-                top: 10%;
+                left: 1rem;
+                top: 50%;
+                width: 75%;
+            }
+
+            @include media("<=LGphone") {
+                width: 90%;
+                top: 55%;
             }
 
             span {
@@ -526,8 +543,6 @@ header {
                 display: inline;
                 padding: 0.35rem;
                 padding-inline: 1rem;
-
-                /* Needs prefixing */
                 box-decoration-break: clone;
                 -webkit-box-decoration-break: clone;
 
@@ -537,13 +552,13 @@ header {
                 }
 
                 @include media("<=tablet") {
-                    font-size: 2rem;
-                    line-height: 4rem;
+                    font-size: 1.75rem;
+                    line-height: 3.5rem;
                 }
 
                 @include media("<=LGphone") {
-                    font-size: 1.75rem;
-                    line-height: 3.5rem;
+                    font-size: 1.25rem;
+                    line-height: 2.5rem;
                 }
             }
         }
@@ -558,6 +573,7 @@ header {
 
     @include media("<=tablet") {
         width: 80%;
+        margin-top: 2rem;
     }
 
     h2 {
@@ -936,6 +952,37 @@ footer {
             font-size: 0.85rem;
         }
 
+        p {
+            margin-bottom: 1.15rem;
+        }
+
+        p > span {
+            display: inline-block;
+            margin-right: 1rem;
+            position: relative;
+
+            @include media("<=LGphone") {
+                display: block;
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
+
+            &:first-child::after {
+                position: absolute;
+                content: "";
+                width: 1px;
+                height: 100%;
+                background-color: white;
+                top: 0;
+                right: -.6rem;
+
+                @include media("<=LGphone") {
+                    background-color: transparent;
+                }
+
+            }
+        }
+
         img {
             display: inline-block;
             margin-bottom: 2rem;
@@ -1071,20 +1118,19 @@ ul#bread {
     }
 
     .item {
-        margin-left: 39%;
+        margin-left: 23%;
         display: flex;
 
-        @include media("<=tablet") {
-            flex-direction: column;
-            margin-left: 0;
-        }
-
-
         @include media("<=desktop") {
-            margin-left: 20%;
+            margin-left: 10%;
         }
 
         @include media("<=LGtablet") {
+            margin-left: 10%;
+        }
+
+        @include media("<=tablet") {
+            flex-direction: column;
             margin-left: 0;
         }
 

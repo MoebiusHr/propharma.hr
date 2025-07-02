@@ -213,7 +213,7 @@
         <title><?php echo $title ?></title>
         <meta name="description" content="<?php echo $description ?>" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <script src="<?php echo $config->urls->templates; ?>dist/js/script.js?c=1"></script>
+        <script src="<?php echo $config->urls->templates; ?>dist/js/script.js?c=2"></script>
         <?php  if ($page->template == "home") { ?>   
             <!-- Preload the LCP image with a high fetchpriority so it starts loading with the stylesheet. -->
             <link rel="preload" fetchpriority="high" as="image" href="<?php echo $page->rotator->eq(0)->slika_mobile->webp->url ?>" type="image/webp">
@@ -360,9 +360,8 @@
                 <div class="footer-closure">
                     <img src="<?php echo $config->urls->templates; ?>img/Propharma__footer_logo.png" alt="Propharma" width="213" height="47" />
                     <p>
-                        &copy; Propharma
-                        2025.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="<?php echo $company_info->url ?>"><?php echo $company_info->title ?></a>
+                        <span>&copy; Propharma 2025.</span>
+                        <span><a href="<?php echo $company_info->url ?>"><?php echo $company_info->title ?></a></span>
                     </p>
                 </div>
 

@@ -38,11 +38,21 @@ $(function() {
 
 
     $(".rotator").slick({
+        draggable: true,
+        swipe: true,
         fade: true,
         dots: true,
         arrows: false,
         autoplay: true,
-        autoplaySpeed: 3000
+        autoplaySpeed: 3000,
+        responsive: [
+            {
+            breakpoint: 768, // below 768px
+            settings: {
+                dots: false
+            }
+            }
+        ]
     });
     
 
