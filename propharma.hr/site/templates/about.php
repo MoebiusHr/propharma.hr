@@ -54,11 +54,15 @@
     <?php } ?>
 
     <div class="container center">
-        <?php if ($user->language->title == "hr") { ?>
-            <img src="<?php echo $page->slika_2_hr->webp->url ?>" alt="<?php echo $page->slika_2_hr->description ?>" class="img-full" loading="lazy" />
-        <?php } else { ?>
-            <img src="<?php echo $page->slika_2->webp->url ?>" alt="<?php echo $page->slika_2->description ?>" class="img-full" loading="lazy" />
-        <?php } ?>
+        <picture>
+            <?php if ($user->language->title == "hr") { ?>
+                <source media="(max-width: 999px)" srcset="<?php echo $page->slika_2_hr_mobile->width(1000)->webp->url ?>">
+                <img src="<?php echo $page->slika_2_hr->webp->url ?>" alt="<?php echo $page->slika_2_hr->description ?>" class="img-full" loading="lazy" />
+            <?php } else { ?>
+                <source media="(max-width: 999px)" srcset="<?php echo $page->slika_2_mobile->width(1000)->webp->url ?>">
+                <img src="<?php echo $page->slika_2->webp->url ?>" alt="<?php echo $page->slika_2->description ?>" class="img-full" loading="lazy" />
+            <?php } ?>
+        </picture>
     </div>
 
 </div>	

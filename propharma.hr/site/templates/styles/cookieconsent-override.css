@@ -1,114 +1,103 @@
-
 #cconsent-bar a {
-	color: #55CCC9;
-	text-decoration: underline !important;
+    color: #55ccc9;
+    text-decoration: underline !important;
 }
 
-
 #cconsent-bar a:hover {
-	color: #55CCC9;
-	text-decoration: none !important;
+    color: #55ccc9;
+    text-decoration: none !important;
 }
 
 #cconsent-bar {
-	padding: 15px 35px !important;
-	top: 50% !important;
+    padding: 15px 35px !important;
+    top: 50% !important;
     transform: translate(-50%, -50%) !important;
     display: flex !important;
     left: 50% !important;
     width: 40% !important;
-	border-radius: 15px;
-	max-height: 300px;
-	line-height: 30px !important;
-	background-color: white !important;
-	color: #333 !important;
-	box-shadow: 0 32px 68px rgba(0,0,0,.3);
-	border: solid 2px #55CCC9;
-	z-index: 99999 !important;
+    border-radius: 15px;
+    max-height: 300px;
+    line-height: 30px !important;
+    background-color: white !important;
+    color: #333 !important;
+    box-shadow: 0 32px 68px rgba(0, 0, 0, 0.3);
+    border: solid 2px #55ccc9;
+    z-index: 99999 !important;
 }
 
-#cconsent-bar button.consent-give, #cconsent-bar button.ccb__edit {
-	color: white !important;
-	text-decoration: none !important;
+#cconsent-bar button.consent-give,
+#cconsent-bar button.ccb__edit {
+    color: white !important;
+    text-decoration: none !important;
 }
-
-
 
 #cconsent-bar .ccb__left {
-	text-align: center !important;
+    text-align: center !important;
 }
 
 #cconsent-bar .ccb__wrapper {
-	justify-content: space-around !important;
+    justify-content: space-around !important;
 }
 
 .cc-text {
-	font-size: 1.5rem !important;
+    font-size: 1.5rem !important;
 }
 
 .cc-text p {
-	font-size: 1rem !important;
-	margin-top: 1rem;
+    font-size: 1rem !important;
+    margin-top: 1rem;
 }
 
 #cconsent-modal.ccm--visible {
-	z-index: 9999999;
+    z-index: 9999999;
 }
-
 
 #cconsent-bar.ccb--hidden {
     display: none !important;
 }
 
 .ccb__button button {
-	background-color: #55CCC9 !important;
-	padding: 10px !important;
-	border-radius: 7px !important;	
+    background-color: #55ccc9 !important;
+    padding: 10px !important;
+    border-radius: 7px !important;
 }
-
 
 .ccb__button button:hover {
-	background-color: #001689 !important;
+    background-color: #0063af !important;
 }
-
 
 #cconsent-modal .ccm__footer button {
-	background-color: #55CCC9 !important;
-	border-radius: 7px !important;
+    background-color: #55ccc9 !important;
+    border-radius: 7px !important;
 }
-
 
 #cconsent-modal .ccm__footer button:hover {
-	background-color: #001689 !important;
+    background-color: #0063af !important;
 }
 
-@media only screen and (max-width : 992px) { 
+@media only screen and (max-width: 992px) {
+    #cconsent-bar {
+        width: 90% !important;
+    }
 
-	#cconsent-bar {
-		width: 90% !important;
-	}
+    .cc-text {
+        font-size: 1.35rem !important;
+    }
 
+    .cc-text p {
+        font-size: 1rem !important;
+        margin-top: 1rem;
+    }
 
-	.cc-text {
-		font-size: 1.35rem !important;
-	}
-	
-	.cc-text p {
-		font-size: 1rem !important;
-		margin-top: 1rem;
-	}
-
-	#cconsent-bar button.consent-give, #cconsent-bar button.ccb__edit {
-		font-size: 14px;
-	}
-
+    #cconsent-bar button.consent-give,
+    #cconsent-bar button.ccb__edit {
+        font-size: 14px;
+    }
 }
-
 
 #cconsent-modal .ccm__content > .ccm__content__heading h2 {
-	margin-bottom: 1rem !important;
+    margin-bottom: 1rem !important;
 }
-
 
 .cookie-again {
     text-align: center !important;

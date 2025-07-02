@@ -285,7 +285,7 @@
                 </nav>
 
                 <div class="menu-trigger">
-                    <img src="<?php echo $config->urls->templates; ?>img/menu-dots-circle.svg" alt="" width="60" height="60" />
+                    <img src="<?php echo $config->urls->templates; ?>img/menu-lines.svg" alt="" width="60" height="60" />
                 </div>
             </div>
         </header>
