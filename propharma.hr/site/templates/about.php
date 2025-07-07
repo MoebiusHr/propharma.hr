@@ -29,6 +29,13 @@
             <div class="txt">
                 <h2><?php echo $page->subtitle ?></h2>
                 <?php echo $page->content ?>
+
+                <div class="show-more"><?php echo __("Show more") ?></div>
+                
+                <div class="hidden-content">
+                    <?php echo $page->content_more ?>
+                </div>
+                    
             </div>
             <div class="media">
                 <img src="<?php echo $page->slika->webp->url ?>" alt="<?php echo $page->slika->description ?>" />

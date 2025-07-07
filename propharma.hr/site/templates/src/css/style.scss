@@ -187,7 +187,7 @@ ul {
             position: absolute;
             content: "";
             position: absolute;
-            top: -5px;
+            top: 0px;
             left: 0;
             background-image: url(../../img/arrow-right.svg);
             background-repeat: no-repeat;
@@ -1090,6 +1090,32 @@ ul#bread {
         p {
             width: 80%;
         }
+
+        div.show-more {
+            font-size: 1.5rem;
+            opacity: .6;
+            position: relative;
+            padding-left: 3rem;
+            cursor: pointer;
+
+            &::before {
+                position: absolute;
+                content: "";
+                position: absolute;
+                top: 0px;
+                left: 0;
+                background-image: url(../../img/arrow-right-white.svg);
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 35px;
+                height: 30px;
+            }
+        }
+
+
+        .hidden-content {
+            display: none;
+        }
     }
 
     > div.media {
@@ -1173,8 +1199,12 @@ ul#bread {
     }
 }
 
-.facts + .facts {
-    background-color: rgba(142, 172, 182, 0.14);
+// .facts + .facts {
+//     background-color: rgba(142, 172, 182, 0.14);
+// }
+
+.facts:nth-of-type(2n) {
+  background-color: rgba(142, 172, 182, 0.14);
 }
 
 .group-intro {

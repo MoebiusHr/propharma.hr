@@ -57,6 +57,11 @@ $(function() {
     
 
 
+    $(".show-more").on("click", function() {
+        $(this).hide();
+        $(this).parent().find(".hidden-content").slideToggle();
+    });
+
 
 
     $(".group-trigger").on("click", function() {

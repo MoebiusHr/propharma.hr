@@ -213,7 +213,7 @@
         <title><?php echo $title ?></title>
         <meta name="description" content="<?php echo $description ?>" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <script src="<?php echo $config->urls->templates; ?>dist/js/script.js?c=2"></script>
+        <script src="<?php echo $config->urls->templates; ?>dist/js/script.js?c=3"></script>
         <?php  if ($page->template == "home") { ?>   
             <!-- Preload the LCP image with a high fetchpriority so it starts loading with the stylesheet. -->
             <link rel="preload" fetchpriority="high" as="image" href="<?php echo $page->rotator->eq(0)->slika_mobile->webp->url ?>" type="image/webp">
@@ -257,7 +257,15 @@
             <div class="container">
                 
                 <div class="logo">
-                    <a href="<?php echo $home->url ?>"><img src="<?php echo $config->urls->templates; ?>img/Propharma__logo.png" alt="Propharma" width="213" height="47" /></a>
+                    <a href="<?php echo $home->url ?>">
+                        
+
+                        <?php if ($user->language->title == "hr") { ?>
+                            <img src="<?php echo $config->urls->templates; ?>img/Propharma__logo_25_HRV.png" alt="Propharma" width="213" />       
+                        <?php } else { ?>
+                            <img src="<?php echo $config->urls->templates; ?>img/Propharma__logo_25_ENG.png" alt="Propharma" width="213" />
+                        <?php } ?>
+                    </a>
                 </div>
 
                 <nav class="desktop">
