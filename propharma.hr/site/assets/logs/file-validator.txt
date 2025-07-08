@@ -27,3 +27,4 @@
 2025-06-03 20:22:16	admin	http://localhost:8888/backend/page/edit/?id=1024&InputfieldFileAjax=1	Image: VALID: /site/assets/files/1024/key-values-hrv.jpg
 2025-07-02 17:40:31	admin	http://localhost:8888/backend/page/edit/?id=1024&InputfieldFileAjax=1	Image: VALID: /site/assets/files/1024/key-values-mob.jpg
 2025-07-02 17:40:34	admin	http://localhost:8888/backend/page/edit/?id=1024&InputfieldFileAjax=1	Image: VALID: /site/assets/files/1024/nase-vrijednosti-hrv-mob.jpg
+2025-07-08 22:41:20	admin	http://localhost:8888/backend/page/edit/?id=1024&InputfieldFileAjax=1	Image: VALID: /site/assets/files/1024/o-nama_mob_propharma.jpg
