@@ -209,7 +209,7 @@
 
 
         <meta charset="UTF-8" />
-        <meta name="robots" content="noindex, nofollow">
+        <meta name="robots" content="index, follow">
         <title><?php echo $title ?></title>
         <meta name="description" content="<?php echo $description ?>" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />

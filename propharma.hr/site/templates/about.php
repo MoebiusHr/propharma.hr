@@ -39,6 +39,12 @@
             </div>
             <div class="media">
                 <img src="<?php echo $page->slika->webp->url ?>" alt="<?php echo $page->slika->description ?>" />
+                <?php if (false) { ?>
+                    <picture>
+                        <source media="(max-width: 999px)" srcset="<?php echo $page->slika_main_mobile->width(1000)->webp->url ?>">
+                        <img src="<?php echo $page->slika->webp->url ?>" alt="<?php echo $page->slika->description ?>" />
+                    </picture>
+                <?php } ?>
             </div>
         </div>
     </div>

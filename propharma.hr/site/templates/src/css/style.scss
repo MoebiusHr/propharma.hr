@@ -1065,6 +1065,7 @@ ul#bread {
     position: relative;
     align-items: center;
     position: relative;
+    overflow: hidden;
 
     @include media("<=tablet") {
         flex-direction: column;
@@ -1125,9 +1126,35 @@ ul#bread {
         z-index: 10;
         left: -200px;
 
+
+        @include media("<=desktopMax") {
+            left: -150px;
+        }
+
+        @include media("<=desktop") {
+            left: -125px;
+        }
+
+        @include media("<=LGtablet") {
+            left: -100px;
+        }
+
         img {
             width: calc(100% + 200px);
             display: block;
+
+            @include media("<=desktopMax") {
+                width: calc(100% + 150px);
+            }
+
+            @include media("<=desktop") {
+                width: calc(100% + 125px);
+            }
+
+            @include media("<=LGtablet") {
+                width: calc(100% + 100px);
+            }
+
         }
     }
 
