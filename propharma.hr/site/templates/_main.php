@@ -202,7 +202,7 @@
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
             j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-XXXXXXX');
+            })(window,document,'script','dataLayer','GTM-57PBP8S4');
         
         </script>
         <!-- End Google Tag Manager -->
@@ -252,6 +252,13 @@
         <title>Propharma</title>
     </head>
     <body>
+
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-57PBP8S4"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+
+        <!-- <?php echo $page->id ?> -->
 
         <header>
             <div class="container">
@@ -306,7 +313,7 @@
 		</div>
         
 
-        <?php if ($user->language->title == "hr") { ?>
+        <?php if ($user->language->title == "hr" && $page->id != 1027) { ?>
             <div class="full-container">
                 <div class="brands">
                     <h5><span><?php echo __("Izdvojeni brandovi") ?></span></h5>
